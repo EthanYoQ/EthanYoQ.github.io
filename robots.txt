@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ethanyoq.github.io/sitemap.xml
+Sitemap: https://www.orz.md/sitemap.xml

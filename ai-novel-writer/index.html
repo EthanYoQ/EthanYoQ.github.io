@@ -1,18 +1,100 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="project-page">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI 小说创作软件：从灵感到审稿修稿 | AI-Novel-Writer</title>
-  <meta name="description" content="开源 AI 小说创作桌面软件，把人物、世界观、大纲、章节蓝图、写作、审稿和修稿组织成完整流程，提供 Windows 与 macOS 安装包。">
-  <link rel="canonical" href="https://ethanyoq.github.io/ai-novel-writer/"><link rel="stylesheet" href="/styles.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"AI-Novel-Writer","applicationCategory":"MultimediaApplication","operatingSystem":"Windows, macOS","url":"https://ethanyoq.github.io/ai-novel-writer/","downloadUrl":"https://github.com/EthanYoQ/AI-Novel-Writer/releases/tag/v0.8.5","codeRepository":"https://github.com/EthanYoQ/AI-Novel-Writer","license":"https://www.gnu.org/licenses/gpl-3.0.html"}</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 小说创作软件：从故事前提到审稿修稿 | AI Novel Writer</title>
+  <meta name="description" content="AI Novel Writer 的完整作品介绍：把人物、世界观、章节蓝图、草稿、审稿、修稿和定稿组织成可追溯的长篇创作流程。">
+  <link rel="canonical" href="https://www.orz.md/ai-novel-writer/">
+  <link rel="stylesheet" href="/home.css">
+  <link rel="stylesheet" href="/project.css?v=20260830-stacked">
+  <script>document.documentElement.classList.add("js")</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"AI Novel Writer","softwareVersion":"0.8.6","applicationCategory":"MultimediaApplication","operatingSystem":"Windows, macOS","url":"https://www.orz.md/ai-novel-writer/","downloadUrl":"https://github.com/EthanYoQ/AI-Novel-Writer/releases/latest","codeRepository":"https://github.com/EthanYoQ/AI-Novel-Writer","license":"https://www.gnu.org/licenses/gpl-3.0.html"}</script>
 </head>
-<body>
-  <header><nav class="shell"><a href="/">EthanYoQ 开源工具</a><a href="https://github.com/EthanYoQ/AI-Novel-Writer">查看源码</a></nav></header>
-  <main class="shell">
-    <section class="hero"><div class="eyebrow">AI-Novel-Writer</div><h1>写小说，不必再拼散落的聊天记录。</h1><p class="lead">在一个桌面工作台里管理灵感、人物、世界观、大纲、章节蓝图、正文、审稿和修稿。适合已经用 AI 尝试创作，但需要更完整流程的小说作者。</p><div class="actions"><a class="button primary" href="https://github.com/EthanYoQ/AI-Novel-Writer/releases/tag/v0.8.5">下载桌面版</a><a class="button" href="https://github.com/EthanYoQ/AI-Novel-Writer">阅读说明与源码</a></div></section>
-    <section class="section"><img class="proof" src="https://raw.githubusercontent.com/EthanYoQ/AI-Novel-Writer/master/docs/assets/readme/hero-zh-v2.png" alt="AI 小说创作桌面工作台，展示从项目资料到章节写作的界面"></section>
-    <section class="section"><h2>一条完整的创作路径</h2><ul class="facts"><li>人物、世界观与知识资料</li><li>大纲与章节蓝图</li><li>章节写作与版本修订</li><li>审稿建议与人工确认</li></ul><p>支持自行配置模型和 Ollama。DeepSeek Harness 插件是独立的开发预览入口，不与桌面版成熟度混为一谈。</p></section>
-  </main><footer><div class="shell">真实表现受所选模型、提示和素材影响；本项目不承诺自动完成高质量长篇小说。</div></footer>
+<body data-title-zh="AI 小说创作软件：从故事前提到审稿修稿 | AI Novel Writer" data-title-en="AI Novel Writer: a traceable long-form writing workspace">
+  <a class="skip-link" href="#project-readme">跳到项目说明</a>
+  <header class="site-header">
+    <nav class="nav shell" aria-label="主导航">
+      <a class="brand" href="/"><span class="brand-name">Ethan</span><span class="brand-slash">/</span><span class="brand-lab">AI LAB</span></a>
+      <div class="nav-links">
+        <a href="/" data-copy="zh">全部作品</a><a href="/" data-copy="en" hidden>All work</a>
+        <a href="#project-readme" data-copy="zh">项目说明</a><a href="#project-readme" data-copy="en" hidden>Project notes</a>
+        <a href="https://github.com/EthanYoQ/AI-Novel-Writer" target="_blank" rel="noreferrer">GitHub</a>
+        <div class="language-switch" aria-label="语言切换"><button type="button" data-lang="zh" aria-pressed="true">中</button><span>/</span><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="project-hero shell reveal">
+      <div class="project-hero-copy">
+        <p class="project-breadcrumb"><a href="/">Ethan AI Lab</a> / AI Novel Writer</p>
+        <div class="project-identity"><img src="/assets/icons/ai-novel-writer.png" alt="AI Novel Writer 图标" width="54" height="54"><div><strong>AI Novel Writer</strong><span>DESKTOP · V0.8.6</span></div></div>
+        <div data-copy="zh">
+          <h1>让长篇创作的上下文，可以被管理、回看和继续写。</h1>
+          <p class="project-lead">这是一个本地优先的桌面写作工作台。它把故事前提、角色、世界观、章节蓝图、草稿、审稿、修稿和定稿组织成一条可追溯流程，而不是把整本小说塞进一次聊天。</p>
+          <ul class="project-meta"><li>Windows / macOS</li><li>本地优先</li><li>GPL-3.0</li><li>自选模型</li></ul>
+          <div class="hero-actions"><a class="button button-primary" href="https://github.com/EthanYoQ/AI-Novel-Writer/releases/latest">下载桌面版</a><a class="button button-ghost" href="https://github.com/EthanYoQ/AI-Novel-Writer" target="_blank" rel="noreferrer">查看 GitHub 仓库</a></div>
+        </div>
+        <div data-copy="en" hidden>
+          <h1>Keep long-form context manageable, reviewable, and ready for the next chapter.</h1>
+          <p class="project-lead">A local-first desktop writing workspace that connects premise, characters, worldbuilding, chapter blueprints, drafts, review, revision, and final copy into one traceable process.</p>
+          <ul class="project-meta"><li>Windows / macOS</li><li>Local first</li><li>GPL-3.0</li><li>Bring your own model</li></ul>
+          <div class="hero-actions"><a class="button button-primary" href="https://github.com/EthanYoQ/AI-Novel-Writer/releases/latest">Download desktop app</a><a class="button button-ghost" href="https://github.com/EthanYoQ/AI-Novel-Writer" target="_blank" rel="noreferrer">Open GitHub repository</a></div>
+        </div>
+      </div>
+      <figure class="project-proof"><figcaption><span data-copy="zh">当前中文桌面工作区</span><span data-copy="en" hidden>Current Chinese desktop workspace</span><span>2560 × 1280</span></figcaption><img src="/assets/screens/ai-novel-writer.png" alt="AI Novel Writer 项目配置与章节工作区" width="2560" height="1280"></figure>
+    </section>
+
+    <div class="project-body shell" id="project-readme">
+      <aside class="project-toc" aria-label="页面目录">
+        <p>README / 01</p>
+        <nav data-copy="zh"><a href="#positioning">产品定位</a><a href="#workflow">创作流程</a><a href="#capabilities">核心能力</a><a href="#demo">真实录屏</a><a href="#data">模型与数据</a><a href="#install">安装方式</a><a href="#boundaries">当前边界</a><a class="readme-source" href="https://github.com/EthanYoQ/AI-Novel-Writer#readme" target="_blank" rel="noreferrer">阅读原始 README</a></nav>
+        <nav data-copy="en" hidden><a href="#positioning">Positioning</a><a href="#workflow">Writing flow</a><a href="#capabilities">Capabilities</a><a href="#demo">Live recording</a><a href="#data">Models and data</a><a href="#install">Install</a><a href="#boundaries">Boundaries</a><a class="readme-source" href="https://github.com/EthanYoQ/AI-Novel-Writer/blob/master/README_en.md" target="_blank" rel="noreferrer">Read original README</a></nav>
+      </aside>
+
+      <article class="readme">
+        <section class="readme-section reveal" id="positioning">
+          <div data-copy="zh"><p class="readme-eyebrow">PRODUCT POSITION</p><h2>它提供的是创作编排层，不是又一个生成按钮。</h2><p>AI Novel Writer 不内置模型额度，也不是在线小说平台。它负责保存项目状态、组织提示词和上下文、管理章节蓝图与草稿版本，并把生成、审稿和修稿串起来。</p><p>长篇创作时，系统围绕当前章节蓝图、相关角色、世界观、历史摘要和可选参考文风组织上下文。作者仍然决定故事写什么、哪些修改被接受、何时形成定稿。</p><blockquote><p>v0.8.6 加固了作者原稿导入、可靠续写、明确模型路由与人工审稿闭环。作者确认后，原稿和审稿意见才会进入权威项目状态。</p></blockquote></div>
+          <div data-copy="en" hidden><p class="readme-eyebrow">PRODUCT POSITION</p><h2>An orchestration layer for writing, not another generate button.</h2><p>AI Novel Writer does not sell model access and is not an online fiction platform. It stores project state, assembles context, manages chapter blueprints and draft versions, and connects generation, review, revision, and approval.</p><p>For each chapter, the workspace selects the relevant blueprint, characters, world facts, history summaries, and optional style references. The author remains responsible for the story and every accepted revision.</p><blockquote><p>Version 0.8.6 strengthens manuscript import, reliable continuation, explicit model routing, and the human review loop.</p></blockquote></div>
+        </section>
+
+        <section class="readme-section reveal" id="workflow">
+          <div data-copy="zh"><p class="readme-eyebrow">TRACEABLE FLOW</p><h2>从故事前提，一直走到下一章的上下文。</h2><ol class="workflow-list"><li><strong>建立创作前提</strong><span>保存作品方向、关键矛盾和作者已经确认的原稿。</span></li><li><strong>组织角色与世界观</strong><span>把人物、关系、规则和知识资料放回项目内部。</span></li><li><strong>拆成大纲与章节蓝图</strong><span>让每一章有明确目标，而不是仅依赖一段临时提示词。</span></li><li><strong>生成或导入章节草稿</strong><span>围绕当前章节资料调用本地或云端模型。</span></li><li><strong>审稿、修稿、人工确认</strong><span>审稿意见可编辑和取舍，修订稿由作者决定是否合并。</span></li><li><strong>形成定稿并继续</strong><span>定稿进入后续章节的连续性上下文。</span></li></ol></div>
+          <div data-copy="en" hidden><p class="readme-eyebrow">TRACEABLE FLOW</p><h2>From premise to the context that carries the next chapter.</h2><ol class="workflow-list"><li><strong>Define the premise</strong><span>Keep direction, conflict, and approved manuscript material together.</span></li><li><strong>Build characters and world facts</strong><span>Store relationships, rules, and source material inside the project.</span></li><li><strong>Create outline and chapter blueprints</strong><span>Give every chapter a deliberate target beyond a temporary prompt.</span></li><li><strong>Generate or import a draft</strong><span>Call a local or cloud model with chapter-specific context.</span></li><li><strong>Review, revise, approve</strong><span>Edit and select review notes before accepting a revision.</span></li><li><strong>Finalize and continue</strong><span>Approved copy becomes continuity context for future chapters.</span></li></ol></div>
+        </section>
+
+        <section class="readme-section reveal" id="capabilities">
+          <div data-copy="zh"><p class="readme-eyebrow">CORE CAPABILITIES</p><h2>作品、资料与生成过程，都留在同一个项目里。</h2><div class="capability-grid"><div class="capability"><span>01</span><strong>结构化创作流程</strong><p>按阶段组织前提、角色、世界观、蓝图、草稿与定稿。</p></div><div class="capability"><span>02</span><strong>章节级上下文</strong><p>只取当前章节真正相关的资料，减少跨章跑题。</p></div><div class="capability"><span>03</span><strong>审稿与修稿闭环</strong><p>先形成可编辑审稿意见，再生成待合并修订稿。</p></div><div class="capability"><span>04</span><strong>角色卡与项目资料</strong><p>资料与小说项目绑定，避免旧窗口写入错误项目。</p></div><div class="capability"><span>05</span><strong>参考文本与检索</strong><p>导入常见文本格式；没有 embedding 时仍可全文检索。</p></div><div class="capability"><span>06</span><strong>批量章节任务</strong><p>单次 1–10 章，支持暂停与取消，失败会停止后续处理。</p></div></div></div>
+          <div data-copy="en" hidden><p class="readme-eyebrow">CORE CAPABILITIES</p><h2>Story assets and generation history stay inside one project.</h2><div class="capability-grid"><div class="capability"><span>01</span><strong>Structured writing flow</strong><p>Organize premise, characters, world facts, blueprints, drafts, and finals by stage.</p></div><div class="capability"><span>02</span><strong>Chapter-level context</strong><p>Use only material relevant to the current chapter.</p></div><div class="capability"><span>03</span><strong>Review and revision</strong><p>Edit review notes before generating a revision for approval.</p></div><div class="capability"><span>04</span><strong>Project-scoped knowledge</strong><p>Keep character cards and knowledge attached to the correct project.</p></div><div class="capability"><span>05</span><strong>Reference search</strong><p>Import common text formats and retain full-text search without embeddings.</p></div><div class="capability"><span>06</span><strong>Batch chapter tasks</strong><p>Run 1–10 chapters with pause, cancel, and fail-closed post-processing.</p></div></div></div>
+        </section>
+
+        <section class="readme-section reveal" id="demo">
+          <div data-copy="zh"><p class="readme-eyebrow">REAL PRODUCT PROOF</p><h2>不是概念动效，这是当前软件的真实操作录屏。</h2><p>录屏展示项目资料与写作工作区的实际界面。可以使用原生控制条暂停、拖动和全屏查看。</p></div>
+          <div data-copy="en" hidden><p class="readme-eyebrow">REAL PRODUCT PROOF</p><h2>This is the current product, not a concept animation.</h2><p>The recording shows the real project and writing workspace. Use the native controls to pause, seek, or enter full screen.</p></div>
+          <figure class="readme-demo"><figcaption><span data-copy="zh">AI Novel Writer 真实录屏</span><span data-copy="en" hidden>AI Novel Writer live recording</span><span>50 SEC</span></figcaption><video muted loop playsinline controls preload="metadata" poster="/assets/screens/ai-novel-writer.png" data-autoplay><source src="/assets/video/ai-novel-writer.mp4" type="video/mp4"></video></figure>
+        </section>
+
+        <section class="readme-section reveal" id="data">
+          <div data-copy="zh"><p class="readme-eyebrow">MODELS AND DATA</p><h2>模型由你配置，项目资料默认留在本机。</h2><table class="readme-table"><thead><tr><th>项目</th><th>实际位置或去向</th></tr></thead><tbody><tr><td>小说项目、角色、蓝图、草稿与定稿</td><td>项目目录与本地 SQLite 数据库</td></tr><tr><td>参考资料</td><td>保留在本地项目；选择云端模型时，相关上下文会发送给该服务</td></tr><tr><td>模型协议</td><td>OpenAI-compatible 与 Gemini 原生协议</td></tr><tr><td>API Key</td><td>当前保存在本机用户目录的模型配置文件中</td></tr></tbody></table><p>可接入 OpenAI、DeepSeek、Gemini、Ollama 以及兼容端点。自定义地址并不等于支持任意 HTTP 协议；不同原生协议需要单独适配。</p></div>
+          <div data-copy="en" hidden><p class="readme-eyebrow">MODELS AND DATA</p><h2>You configure the model; project data stays local by default.</h2><table class="readme-table"><thead><tr><th>Item</th><th>Location or destination</th></tr></thead><tbody><tr><td>Projects, characters, blueprints, drafts, finals</td><td>Project directory and local SQLite database</td></tr><tr><td>Reference material</td><td>Local project storage; relevant context is sent when a cloud model is selected</td></tr><tr><td>Protocols</td><td>OpenAI-compatible and native Gemini</td></tr><tr><td>API keys</td><td>Stored in the local user model configuration</td></tr></tbody></table><p>OpenAI, DeepSeek, Gemini, Ollama, and compatible endpoints can be configured. A custom URL does not imply support for every native API protocol.</p></div>
+        </section>
+
+        <section class="readme-section reveal" id="install">
+          <div data-copy="zh"><p class="readme-eyebrow">INSTALL</p><h2>Windows 与两种 Mac 架构，都从同一个 Release 下载。</h2><div class="note-grid"><div class="note-card"><strong>Windows x64</strong><p>下载 NSIS 安装程序。当前未代码签名，安装前请确认来源为官方 GitHub Release。</p></div><div class="note-card"><strong>macOS Apple Silicon / Intel</strong><p>分别下载 arm64 或 x64 DMG。当前未使用 Developer ID 签名且未公证。</p></div></div><pre class="code-block">ai-novel-writer-setup-&lt;version&gt;.exe&#10;ai-novel-writer-mac-arm64-&lt;version&gt;-installer.dmg&#10;ai-novel-writer-mac-x64-&lt;version&gt;-installer.dmg</pre></div>
+          <div data-copy="en" hidden><p class="readme-eyebrow">INSTALL</p><h2>Windows and both Mac architectures ship through one release.</h2><div class="note-grid"><div class="note-card"><strong>Windows x64</strong><p>Download the NSIS installer. It is currently unsigned, so verify the official GitHub Release before continuing.</p></div><div class="note-card"><strong>macOS Apple Silicon / Intel</strong><p>Choose the arm64 or x64 DMG. Current packages are not Developer ID signed or notarized.</p></div></div><pre class="code-block">ai-novel-writer-setup-&lt;version&gt;.exe&#10;ai-novel-writer-mac-arm64-&lt;version&gt;-installer.dmg&#10;ai-novel-writer-mac-x64-&lt;version&gt;-installer.dmg</pre></div>
+        </section>
+
+        <section class="readme-section reveal" id="boundaries">
+          <div data-copy="zh"><p class="readme-eyebrow">CURRENT BOUNDARIES</p><h2>它帮助你管理创作，但不会替代作者的判断。</h2><ul><li>不承诺任意第三方 API 只换 URL 和 Key 就能接入。</li><li>不替代作者的创意、事实核查、版权判断与最终审校。</li><li>不提供在线发布、阅读社区或云端模型账号。</li><li>DeepSeek Harness 插件仍是早期 MVP，能力不足桌面版的 10%，不能替代完整桌面工作流。</li></ul></div>
+          <div data-copy="en" hidden><p class="readme-eyebrow">CURRENT BOUNDARIES</p><h2>It manages the process; it does not replace the author.</h2><ul><li>Not every third-party API works by changing only a URL and key.</li><li>Creative decisions, fact checking, copyright judgment, and final review remain with the author.</li><li>It does not provide publishing, a reader community, or hosted model accounts.</li><li>The DeepSeek Harness plugin is an early MVP with less than 10% of the desktop app's capability.</li></ul></div>
+          <div class="project-cta"><div data-copy="zh"><p class="readme-eyebrow">OPEN SOURCE</p><h2>下载软件，或者直接查看它如何工作。</h2><p>这个页面依据仓库当前 README 整理，版本信息同步至 2026-08-30。完整安装说明、限制和更新记录以 GitHub 为准。</p><div class="hero-actions"><a class="button button-primary" href="https://github.com/EthanYoQ/AI-Novel-Writer/releases/latest">下载最新版本</a><a class="button button-ghost" href="https://github.com/EthanYoQ/AI-Novel-Writer#readme" target="_blank" rel="noreferrer">阅读完整 README</a></div></div><div data-copy="en" hidden><p class="readme-eyebrow">OPEN SOURCE</p><h2>Download the app or inspect exactly how it works.</h2><p>This page is adapted from the current repository README and synced on August 30, 2026. GitHub remains the source of truth for releases and limitations.</p><div class="hero-actions"><a class="button button-primary" href="https://github.com/EthanYoQ/AI-Novel-Writer/releases/latest">Download latest release</a><a class="button button-ghost" href="https://github.com/EthanYoQ/AI-Novel-Writer/blob/master/README_en.md" target="_blank" rel="noreferrer">Read full README</a></div></div></div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="footer-grid shell"><div class="project-footer-note"><strong>Ethan / AI Lab</strong><p data-copy="zh">把真实工作中的重复步骤，做成可以下载、验证和共同改进的工具。</p><p data-copy="en" hidden>Turning repeated work into tools people can download, verify, and improve.</p></div><div class="footer-links"><a href="/">Portfolio</a><a href="https://github.com/EthanYoQ" target="_blank" rel="noreferrer">GitHub</a></div><p class="copyright">© <span id="year"></span> EthanYoQ</p></div></footer>
+  <script src="/project.js" defer></script>
 </body>
 </html>

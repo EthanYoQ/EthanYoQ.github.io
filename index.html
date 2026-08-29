@@ -3,26 +3,157 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>EthanYoQ 开源桌面工具</title>
-  <meta name="description" content="面向小说创作、内容工作、发票整理和中文语音输入的四款开源桌面工具。">
-  <link rel="canonical" href="https://ethanyoq.github.io/">
-  <link rel="stylesheet" href="/styles.css">
+  <title>EthanYoQ | AI 作品与实验</title>
+  <meta name="description" content="Ethan 的个人 AI 作品站：AI 小说写作、小红书内容工作台、发票一键整理与 AI 语音输入法。查看真实界面、演示视频、源码与下载入口。">
+  <meta name="theme-color" content="#050505">
+  <link rel="canonical" href="https://www.orz.md/">
+  <link rel="icon" href="/assets/brand/ethan.png" type="image/png">
+  <link rel="preload" href="/assets/screens/ai-novel-writer.png" as="image">
+  <link rel="stylesheet" href="/home.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"ProfilePage","name":"EthanYoQ AI 作品与实验","url":"https://www.orz.md/","mainEntity":{"@type":"Person","name":"Ethan","url":"https://github.com/EthanYoQ","sameAs":["https://github.com/EthanYoQ"]}}
+  </script>
 </head>
 <body>
-  <header><nav class="shell"><a href="/">EthanYoQ 开源工具</a><a href="https://github.com/EthanYoQ">GitHub</a></nav></header>
-  <main class="shell">
-    <section class="hero">
-      <div class="eyebrow">Open-source desktop tools</div>
-      <h1>把真实工作，变成更短的路径。</h1>
-      <p class="lead">这里集中展示四款可下载、可检查源码的桌面工具。每个页面只说明它解决什么问题、能做什么、有哪些边界，以及去哪里下载。</p>
+  <a class="skip-link" href="#work" data-i18n="skip">跳到作品</a>
+
+  <header class="site-header">
+    <nav class="nav shell" aria-label="主导航" data-i18n-aria="navLabel">
+      <a class="brand" href="#top" aria-label="EthanYoQ 首页">
+        <span class="brand-name">EthanYoQ</span><span class="brand-slash">/</span><span class="brand-lab">AI LAB</span>
+      </a>
+      <div class="nav-links">
+        <a href="#work" data-i18n="navWork">全部作品</a>
+        <a href="https://github.com/EthanYoQ" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="#about" data-i18n="navAbout">关于我</a>
+        <div class="language-switch" aria-label="语言" data-i18n-aria="languageLabel">
+          <button type="button" data-lang="zh" aria-pressed="true">中文</button><span aria-hidden="true">/</span><button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="progress-rail" aria-hidden="true">
+    <span class="progress-label">INDEX</span>
+    <div class="progress-track"><span class="progress-fill"></span></div>
+    <div class="progress-numbers"><span class="is-active">01</span><span>02</span><span>03</span><span>04</span><span>05</span></div>
+  </div>
+
+  <main id="top">
+    <section class="hero shell" data-progress="01">
+      <div class="hero-copy reveal">
+        <p class="kicker">INDEPENDENT MAKER · AI PRODUCTS</p>
+        <h1 data-i18n="heroTitle">Ethan, 这是一个 AI 从业者的试验田。</h1>
+        <p class="hero-lead" data-i18n="heroLead">我把真实工作中的重复步骤，做成可以下载、可以验证、也可以一起改进的 AI 工具。这里记录每一件作品为什么做、现在能做什么，以及它如何真实运行。</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work" data-i18n="viewWork">查看我的作品</a>
+          <a class="button button-ghost" href="https://github.com/EthanYoQ" target="_blank" rel="noreferrer" data-i18n="visitGithub">访问 GitHub</a>
+        </div>
+        <div class="contact-card contact-card-qr" data-contact="zh">
+          <img src="/assets/contact/wechat-qr.jpg" alt="Ethan 的微信公众号二维码" data-i18n-alt="qrAlt" width="112" height="112">
+          <div><strong data-i18n="wechatTitle">新作品发布公众号</strong><span data-i18n="wechatNote">和作者交流 &amp; 提建议</span></div>
+        </div>
+        <div class="contact-card contact-card-email" data-contact="en" hidden>
+          <div class="email-mark" aria-hidden="true">EMAIL</div>
+          <div><strong data-i18n="emailTitle">New releases &amp; feedback</strong><a href="mailto:sdyong.qi@gmail.com">sdyong.qi@gmail.com</a></div>
+        </div>
+      </div>
+
+      <div class="hero-stage reveal" aria-label="AI 小说写作软件真实界面与演示" data-i18n-aria="heroMediaLabel">
+        <figure class="stage-screen stage-screen-main" data-parallax="0.035"><img src="/assets/screens/ai-novel-writer.png" alt="AI Novel Writer 当前中文界面" data-i18n-alt="novelScreenAlt" width="2560" height="1280"></figure>
+        <figure class="stage-video">
+          <figcaption><span data-i18n="realDemo">真实录屏</span><span>00:50</span></figcaption>
+          <video muted loop playsinline controls preload="metadata" poster="/assets/screens/ai-novel-writer.png" data-autoplay><source src="/assets/video/ai-novel-writer.mp4" type="video/mp4"></video>
+        </figure>
+      </div>
     </section>
-    <section class="grid" aria-label="项目列表">
-      <a class="card" href="/ai-novel-writer/"><h2>AI 小说创作</h2><p>把灵感、人物、世界观、大纲、章节、审稿和修稿放进同一条创作流程。</p></a>
-      <a class="card" href="/xiaohongshu-workbench/"><h2>小红书内容工作台</h2><p>从账号定位和热点研究走到原创图文、完整预览与人工确认。</p></a>
-      <a class="card" href="/invoice-downloader/"><h2>发票整理与报销准备</h2><p>从邮箱批量收集电子发票，识别、分类并生成 Excel 汇总。</p></a>
-      <a class="card" href="/whisper-input/"><h2>中文 AI 语音输入</h2><p>按快捷键口述，把原始转写整理成可直接使用的文字并插入当前光标。</p></a>
+
+    <section class="product-index shell reveal" aria-label="四件作品" data-i18n-aria="productIndexLabel">
+      <a class="product-index-item is-active" href="#novel"><img src="/assets/icons/ai-novel-writer.png" alt="" width="42" height="42"><span><strong data-i18n="indexNovel">AI 写小说</strong><small data-i18n="indexNovelNote">人物、世界观、大纲与章节</small></span></a>
+      <a class="product-index-item" href="#xiaohongshu"><img src="/assets/icons/xiaohongshu-workbench.png" alt="" width="42" height="42"><span><strong data-i18n="indexXhs">AI 小红书工作台</strong><small data-i18n="indexXhsNote">选题、文案、配图与预览</small></span></a>
+      <a class="product-index-item" href="#invoice"><img src="/assets/icons/invoiceflowai.png" alt="" width="42" height="42"><span><strong data-i18n="indexInvoice">AI 发票一键整理</strong><small data-i18n="indexInvoiceNote">邮件抓取、识别与汇总</small></span></a>
+      <a class="product-index-item" href="#whisper"><img src="/assets/icons/whisper-input.png" alt="" width="42" height="42"><span><strong data-i18n="indexWhisper">AI 语音输入法</strong><small data-i18n="indexWhisperNote">口述直接变成可用文字</small></span></a>
+    </section>
+
+    <div id="work" class="work-sections">
+      <article class="work shell" id="novel" data-progress="02">
+        <div class="work-copy reveal">
+          <p class="work-number">01 / 04</p>
+          <h2 data-i18n="novelTitle">把人物、世界观和章节，放回同一个写作现场。</h2>
+          <p data-i18n="novelBody">AI Novel Writer 把角色、世界观、大纲、章节、审稿和修订放进同一个桌面工作区。它不是替你按一下按钮生成整本小说，而是让长篇创作的上下文可以被管理、被回看，也能逐步打磨。</p>
+          <div class="product-name"><img src="/assets/icons/ai-novel-writer.png" alt="" width="36" height="36"><strong data-i18n="novelName">AI 小说写作</strong></div>
+          <ul class="feature-list"><li data-i18n="novelFeature1">人物与世界观资料</li><li data-i18n="novelFeature2">章节写作工作流</li><li data-i18n="novelFeature3">审稿与修订闭环</li></ul>
+          <div class="work-actions"><a class="text-button" href="/ai-novel-writer/" data-i18n="learnProject">了解这个作品</a><a class="text-button" href="https://github.com/EthanYoQ/AI-Novel-Writer" target="_blank" rel="noreferrer" data-i18n="viewSource">查看源码</a></div>
+        </div>
+        <div class="work-media reveal">
+          <div class="media-backdrop" data-parallax="0.025"><img src="/assets/screens/ai-novel-writer.png" alt="AI Novel Writer 软件界面" data-i18n-alt="novelScreenAlt"></div>
+          <figure class="demo-player"><figcaption><span data-i18n="realDemo">真实录屏</span><span data-i18n="fiftySeconds">50 秒</span></figcaption><video muted loop playsinline controls preload="metadata" poster="/assets/screens/ai-novel-writer.png" data-autoplay><source src="/assets/video/ai-novel-writer.mp4" type="video/mp4"></video></figure>
+        </div>
+      </article>
+
+      <article class="work work-reverse shell" id="xiaohongshu" data-progress="03">
+        <div class="work-copy reveal">
+          <p class="work-number">02 / 04</p>
+          <h2 data-i18n="xhsTitle">从选题到预览，在一个工作台完成。</h2>
+          <p data-i18n="xhsBody">AI 小红书工作台围绕账号定位和真实热点开展内容工作：先研究，再生成图文；在完整预览里检查标题、正文和图片，最后由人确认。目标不是批量制造内容，而是减少反复切换工具的时间。</p>
+          <div class="product-name"><img src="/assets/icons/xiaohongshu-workbench.png" alt="" width="36" height="36"><strong data-i18n="xhsName">AI 小红书工作台</strong></div>
+          <ul class="feature-list"><li data-i18n="xhsFeature1">热点与选题研究</li><li data-i18n="xhsFeature2">原创图文工作流</li><li data-i18n="xhsFeature3">发布前人工确认</li></ul>
+          <div class="work-actions"><a class="text-button" href="/xiaohongshu-workbench/" data-i18n="learnProject">了解这个作品</a><a class="text-button" href="https://github.com/EthanYoQ/agent-xiaohongshu-workbench" target="_blank" rel="noreferrer" data-i18n="viewSource">查看源码</a></div>
+        </div>
+        <div class="work-media reveal">
+          <div class="media-backdrop" data-parallax="0.025"><img src="/assets/screens/xiaohongshu-workbench.jpg" alt="AI 小红书工作台软件界面" data-i18n-alt="xhsScreenAlt"></div>
+          <figure class="demo-player"><figcaption><span data-i18n="realDemo">真实录屏</span><span data-i18n="sixtySeconds">60 秒</span></figcaption><video muted loop playsinline controls preload="metadata" poster="/assets/screens/xiaohongshu-workbench.jpg" data-autoplay><source src="/assets/video/xiaohongshu-workbench.mp4" type="video/mp4"></video></figure>
+        </div>
+      </article>
+
+      <article class="work shell" id="invoice" data-progress="04">
+        <div class="work-copy reveal">
+          <p class="work-number">03 / 04</p>
+          <h2 data-i18n="invoiceTitle">把邮箱里的发票，一次整理清楚。</h2>
+          <p data-i18n="invoiceBody">InvoiceFlowAI 批量收集电子发票，识别关键信息、去重并分类，最后生成 Excel 汇总。适合发票很多、来源分散，又不想逐张下载和手工录入的人。</p>
+          <div class="product-name"><img src="/assets/icons/invoiceflowai.png" alt="" width="36" height="36"><strong data-i18n="invoiceName">AI 发票一键整理</strong></div>
+          <ul class="feature-list"><li data-i18n="invoiceFeature1">邮箱附件批量收集</li><li data-i18n="invoiceFeature2">发票识别、去重与分类</li><li data-i18n="invoiceFeature3">Excel 报销汇总</li></ul>
+          <div class="work-actions"><a class="text-button" href="/invoice-downloader/" data-i18n="learnProject">了解这个作品</a><a class="text-button" href="https://github.com/EthanYoQ/Invoice-Downloader" target="_blank" rel="noreferrer" data-i18n="viewSource">查看源码</a></div>
+        </div>
+        <div class="work-media reveal">
+          <div class="media-backdrop" data-parallax="0.025"><img src="/assets/screens/invoiceflowai.png" alt="InvoiceFlowAI 软件界面" data-i18n-alt="invoiceScreenAlt"></div>
+          <figure class="demo-player"><figcaption><span data-i18n="realDemo">真实录屏</span><span data-i18n="sixtySeconds">60 秒</span></figcaption><video muted loop playsinline controls preload="metadata" poster="/assets/screens/invoiceflowai.png" data-autoplay><source src="/assets/video/invoiceflowai.mp4" type="video/mp4"></video></figure>
+        </div>
+      </article>
+
+      <article class="work work-reverse shell" id="whisper" data-progress="05">
+        <div class="work-copy reveal">
+          <p class="work-number">04 / 04</p>
+          <h2 data-i18n="whisperTitle">按住说话，松开就得到可以继续使用的文字。</h2>
+          <p data-i18n="whisperBody">Whisper Input 是一个 Windows 桌面语音输入工具。按下快捷键开始口述，松开后完成转写与整理，并把结果插入当前光标位置。适合写作、聊天和任何不想长时间敲键盘的场景。</p>
+          <div class="product-name"><img src="/assets/icons/whisper-input.png" alt="" width="36" height="36"><strong data-i18n="whisperName">AI 语音输入法</strong></div>
+          <ul class="feature-list"><li data-i18n="whisperFeature1">全局快捷键口述</li><li data-i18n="whisperFeature2">中文转写与文本整理</li><li data-i18n="whisperFeature3">结果插入当前光标</li></ul>
+          <div class="work-actions"><a class="text-button" href="/whisper-input/" data-i18n="learnProject">了解这个作品</a><a class="text-button" href="https://github.com/EthanYoQ/whisper-input" target="_blank" rel="noreferrer" data-i18n="viewSource">查看源码</a></div>
+        </div>
+        <div class="work-media work-media-static reveal">
+          <div class="media-backdrop" data-parallax="0.025"><img src="/assets/screens/whisper-input.png" alt="Whisper Input 当前软件界面" data-i18n-alt="whisperScreenAlt"></div>
+          <figure class="static-proof"><figcaption><span data-i18n="currentInterface">当前版本界面</span><span data-i18n="recordingPending">新版录屏补录中</span></figcaption><img src="/assets/screens/whisper-input.png" alt="Whisper Input 当前软件界面" data-i18n-alt="whisperScreenAlt"></figure>
+        </div>
+      </article>
+    </div>
+
+    <section class="principles shell reveal" id="about" aria-labelledby="principles-title">
+      <div class="principles-intro"><p class="kicker">HOW I BUILD</p><h2 id="principles-title" data-i18n="principlesTitle">作品不是概念图，而是可以真实使用的软件。</h2></div>
+      <div class="principles-grid">
+        <div><span>01</span><strong data-i18n="principle1Title">开放源代码</strong><p data-i18n="principle1Body">代码、安装包与使用说明公开可查。</p></div>
+        <div><span>02</span><strong data-i18n="principle2Title">本地优先</strong><p data-i18n="principle2Body">能留在本机的数据，尽量不上云。</p></div>
+        <div><span>03</span><strong data-i18n="principle3Title">由你做决定</strong><p data-i18n="principle3Body">AI 给建议，关键步骤由人确认。</p></div>
+        <div><span>04</span><strong data-i18n="principle4Title">持续打磨</strong><p data-i18n="principle4Body">从真实问题出发，把反馈做进下一版。</p></div>
+      </div>
+    </section>
+
+    <section class="closing shell reveal">
+      <p class="kicker">MORE TO COME</p><h2 data-i18n="closingTitle">看看我正在做的作品。</h2><p data-i18n="closingBody">每个项目都从一个具体问题开始。你可以下载体验、查看源码，也可以把真实反馈留给我。</p><a class="button button-primary" href="https://github.com/EthanYoQ?tab=repositories" target="_blank" rel="noreferrer" data-i18n="viewAll">查看全部作品</a>
     </section>
   </main>
-  <footer><div class="shell">所有能力与平台说明以对应 GitHub 仓库和最新 Release 为准。</div></footer>
+
+  <footer class="site-footer"><div class="shell footer-grid"><div><strong>EthanYoQ / AI LAB</strong><p data-i18n="footerLine">把重复工作，变成更可靠的系统。</p></div><div class="footer-links"><a href="#work" data-i18n="navWork">全部作品</a><a href="https://github.com/EthanYoQ" target="_blank" rel="noreferrer">GitHub</a><a href="#about" data-i18n="navAbout">关于我</a></div><p class="copyright">© <span id="year">2026</span> EthanYoQ.</p></div></footer>
+  <script src="/home.js" defer></script>
 </body>
 </html>

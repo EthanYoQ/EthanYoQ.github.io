@@ -1,18 +1,85 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="project-page">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Windows 中文 AI 语音输入工具 | whisper-input</title>
-  <meta name="description" content="开源 Windows 中文 AI 语音输入工具：按快捷键口述，去除口头语、分段或整理结构，再把文字插入当前光标。">
-  <link rel="canonical" href="https://ethanyoq.github.io/whisper-input/"><link rel="stylesheet" href="/styles.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"whisper-input","softwareVersion":"1.5.0","applicationCategory":"UtilitiesApplication","operatingSystem":"Windows, macOS","url":"https://ethanyoq.github.io/whisper-input/","downloadUrl":"https://github.com/EthanYoQ/whisper-input/releases/latest","codeRepository":"https://github.com/EthanYoQ/whisper-input"}</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 语音输入法：中文口述直接变成可用文字 | Whisper Input</title>
+  <meta name="description" content="Whisper Input 的完整作品介绍：按全局快捷键口述，完成语音识别、去口头语、结构整理或中文转英文，再插入当前光标。">
+  <link rel="canonical" href="https://www.orz.md/whisper-input/">
+  <link rel="stylesheet" href="/home.css">
+  <link rel="stylesheet" href="/project.css?v=20260830-stacked">
+  <script>document.documentElement.classList.add("js")</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Whisper Input","softwareVersion":"1.5.1","applicationCategory":"UtilitiesApplication","operatingSystem":"Windows","url":"https://www.orz.md/whisper-input/","downloadUrl":"https://github.com/EthanYoQ/whisper-input/releases/latest","codeRepository":"https://github.com/EthanYoQ/whisper-input","license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 </head>
-<body>
-  <header><nav class="shell"><a href="/">EthanYoQ 开源工具</a><a href="https://github.com/EthanYoQ/whisper-input">查看源码</a></nav></header>
-  <main class="shell">
-    <section class="hero"><div class="eyebrow">whisper-input · v1.5.0</div><h1>说完以后，得到可以直接使用的文字。</h1><p class="lead">在 Windows 任意应用按下快捷键口述，把原始转写整理成清楚、正式或自定义风格的文字；也能重新润色历史记录和选中文字，确认后再安全替换。</p><div class="actions"><a class="button primary" href="https://github.com/EthanYoQ/whisper-input/releases/latest">下载最新版</a><a class="button" href="https://github.com/EthanYoQ/whisper-input">查看开源项目</a></div></section>
-    <section class="section"><img class="proof" src="https://raw.githubusercontent.com/EthanYoQ/whisper-input/main/docs/images/whisper-input-hero-zh.png" alt="Windows 中文 AI 语音输入工具的快捷键、整理和上屏流程"></section>
-    <section class="section"><h2>价值在原始转写之后</h2><ul class="facts"><li>全局快捷键口述</li><li>去口头语与分段</li><li>用户词典与中文转英文</li><li>当前光标插入与失败兜底</li></ul><p>语音和文字会发送给用户选择的云端 ASR/LLM 服务。当前主宣传只覆盖已经提供合格安装资产的 Windows。</p></section>
-  </main><footer><div class="shell">项目不声称比其他语音输入产品更快或更准确。</div></footer>
+<body data-title-zh="AI 语音输入法：中文口述直接变成可用文字 | Whisper Input" data-title-en="Whisper Input: turn Chinese speech into usable text">
+  <a class="skip-link" href="#project-readme">跳到项目说明</a>
+  <header class="site-header"><nav class="nav shell" aria-label="主导航"><a class="brand" href="/"><span class="brand-name">Ethan</span><span class="brand-slash">/</span><span class="brand-lab">AI LAB</span></a><div class="nav-links"><a href="/" data-copy="zh">全部作品</a><a href="/" data-copy="en" hidden>All work</a><a href="#project-readme" data-copy="zh">项目说明</a><a href="#project-readme" data-copy="en" hidden>Project notes</a><a href="https://github.com/EthanYoQ/whisper-input" target="_blank" rel="noreferrer">GitHub</a><div class="language-switch" aria-label="语言切换"><button type="button" data-lang="zh" aria-pressed="true">中</button><span>/</span><button type="button" data-lang="en" aria-pressed="false">EN</button></div></div></nav></header>
+
+  <main>
+    <section class="project-hero shell reveal">
+      <div class="project-hero-copy">
+        <p class="project-breadcrumb"><a href="/">Ethan AI Lab</a> / Whisper Input</p>
+        <div class="project-identity"><img src="/assets/icons/whisper-input.png" alt="Whisper Input 图标" width="54" height="54"><div><strong>Whisper Input</strong><span>WINDOWS · V1.5.1</span></div></div>
+        <div data-copy="zh"><h1>按住说话，松开就得到可以继续使用的文字。</h1><p class="project-lead">它不是传统输入法，也不是会议记录软件。按下全局快捷键口述，软件完成语音识别、去口头语、结构整理或中文转英文，再把结果插入当前光标。</p><ul class="project-meta"><li>Windows</li><li>Cloud first</li><li>Apache-2.0</li><li>用户词典</li></ul><div class="hero-actions"><a class="button button-primary" href="https://github.com/EthanYoQ/whisper-input/releases/latest">下载 Windows 版</a><a class="button button-ghost" href="https://github.com/EthanYoQ/whisper-input" target="_blank" rel="noreferrer">查看 GitHub 仓库</a></div></div>
+        <div data-copy="en" hidden><h1>Hold to speak. Release to get text you can use immediately.</h1><p class="project-lead">Not a system IME and not a meeting recorder. Press a global shortcut, speak, then let the app transcribe, clean up, structure, or translate your words before inserting them at the current cursor.</p><ul class="project-meta"><li>Windows</li><li>Cloud first</li><li>Apache-2.0</li><li>User dictionary</li></ul><div class="hero-actions"><a class="button button-primary" href="https://github.com/EthanYoQ/whisper-input/releases/latest">Download for Windows</a><a class="button button-ghost" href="https://github.com/EthanYoQ/whisper-input" target="_blank" rel="noreferrer">Open GitHub repository</a></div></div>
+      </div>
+      <figure class="project-proof"><figcaption><span data-copy="zh">轻语输入当前界面总览</span><span data-copy="en" hidden>Current Whisper Input interface</span><span>1240 × 800</span></figcaption><img src="/assets/screens/whisper-input.png" alt="Whisper Input Windows 主界面" width="1240" height="800"></figure>
+    </section>
+
+    <div class="project-body shell" id="project-readme">
+      <aside class="project-toc"><p>README / 04</p><nav data-copy="zh"><a href="#positioning">一句话说明</a><a href="#workflow">它怎么工作</a><a href="#screens">界面预览</a><a href="#capabilities">核心能力</a><a href="#styles">四种输出风格</a><a href="#privacy">数据与隐私</a><a href="#install">安装与使用</a><a href="#boundaries">产品边界</a><a class="readme-source" href="https://github.com/EthanYoQ/whisper-input#readme" target="_blank" rel="noreferrer">阅读原始 README</a></nav><nav data-copy="en" hidden><a href="#positioning">In one sentence</a><a href="#workflow">How it works</a><a href="#screens">Interface</a><a href="#capabilities">Capabilities</a><a href="#styles">Four output styles</a><a href="#privacy">Data and privacy</a><a href="#install">Install and use</a><a href="#boundaries">Product boundaries</a><a class="readme-source" href="https://github.com/EthanYoQ/whisper-input/blob/main/README.en.md" target="_blank" rel="noreferrer">Read original README</a></nav></aside>
+
+      <article class="readme">
+        <section class="readme-section reveal" id="positioning">
+          <div data-copy="zh"><p class="readme-eyebrow">IN ONE SENTENCE</p><h2>重点不是得到原始转写，而是得到能直接发出去的文字。</h2><p>轻语输入适合聊天、写作、工作说明、任务拆解和中文口述后输出英文。它会去掉明显口头语、整理标点和层级，并尽量把结果插入光标位置；插入失败时自动复制到剪贴板。</p><blockquote><p>它不会替你编造没有说过的背景。目标是忠实整理表达，而不是把语音变成新的聊天机器人。</p></blockquote></div>
+          <div data-copy="en" hidden><p class="readme-eyebrow">IN ONE SENTENCE</p><h2>The goal is not raw transcription. It is text ready to send.</h2><p>Whisper Input fits chat, writing, work instructions, task breakdowns, and English output from Chinese speech. It removes obvious filler, improves punctuation and structure, then inserts the result at the cursor or copies it to the clipboard as a fallback.</p><blockquote><p>It does not invent context the user never said. The goal is faithful cleanup, not a new chatbot.</p></blockquote></div>
+        </section>
+
+        <section class="readme-section reveal" id="workflow">
+          <div data-copy="zh"><p class="readme-eyebrow">INPUT FLOW</p><h2>不切换窗口，也不打断正在写的东西。</h2><ol class="workflow-list"><li><strong>按下全局快捷键</strong><span>在聊天框、文档、Issue 或任何当前输入位置开始口述。</span></li><li><strong>发送到已配置的云端 ASR</strong><span>识别中文与工作场景中的英文术语。</span></li><li><strong>按选择的风格整理</strong><span>原文、轻度润色、清晰结构或正式表达。</span></li><li><strong>插入当前光标</strong><span>直接回到正在写的地方，不需要手动复制。</span></li><li><strong>失败时复制到剪贴板</strong><span>即使目标应用不允许自动插入，也能拿到结果。</span></li><li><strong>按设置保存历史</strong><span>在本机回看、复制或删除最近输入。</span></li></ol></div>
+          <div data-copy="en" hidden><p class="readme-eyebrow">INPUT FLOW</p><h2>Stay in the current app and keep writing.</h2><ol class="workflow-list"><li><strong>Press the global shortcut</strong><span>Start speaking in a chat field, document, issue, or any active input.</span></li><li><strong>Send audio to the configured cloud ASR</strong><span>Recognize Chinese speech and mixed English terms.</span></li><li><strong>Apply the selected style</strong><span>Raw, light polish, clear structure, or formal expression.</span></li><li><strong>Insert at the current cursor</strong><span>Return text directly to the place where the user was writing.</span></li><li><strong>Fall back to clipboard copy</strong><span>Keep the result even when the target app blocks insertion.</span></li><li><strong>Save local history if enabled</strong><span>Review, copy, or delete recent inputs on the device.</span></li></ol></div>
+        </section>
+
+        <section class="readme-section reveal" id="screens">
+          <div data-copy="zh"><p class="readme-eyebrow">REAL INTERFACE</p><h2>四张真实界面，分别回答状态、风格、模型和隐私。</h2><p>这些图片来自当前 GitHub README，不是重新绘制的概念稿。</p></div>
+          <div data-copy="en" hidden><p class="readme-eyebrow">REAL INTERFACE</p><h2>Four real screens for status, output styles, models, and privacy.</h2><p>Every image comes from the current GitHub README rather than a recreated concept mockup.</p></div>
+          <div class="readme-gallery">
+            <figure><img src="/assets/readme/whisper/whisper-input-overview-zh.png" alt="Whisper Input 今日概览主界面"><figcaption data-copy="zh">今日概览与最近识别</figcaption><figcaption data-copy="en" hidden>Daily overview and recent recognition</figcaption></figure>
+            <figure><img src="/assets/readme/whisper/whisper-input-output-styles.png" alt="Whisper Input 四种输出风格"><figcaption data-copy="zh">四种输出风格对照</figcaption><figcaption data-copy="en" hidden>Four output styles</figcaption></figure>
+            <figure><img src="/assets/readme/whisper/whisper-input-model-settings.png" alt="Whisper Input 模型设置"><figcaption data-copy="zh">ASR 与 LLM 模型设置</figcaption><figcaption data-copy="en" hidden>ASR and LLM settings</figcaption></figure>
+            <figure><img src="/assets/readme/whisper/whisper-input-privacy-data.png" alt="Whisper Input 隐私与数据设置"><figcaption data-copy="zh">隐私、历史和凭据控制</figcaption><figcaption data-copy="en" hidden>Privacy, history, and credential controls</figcaption></figure>
+          </div>
+        </section>
+
+        <section class="readme-section reveal" id="capabilities">
+          <div data-copy="zh"><p class="readme-eyebrow">CORE CAPABILITIES</p><h2>从说话到上屏，中间每一步都服务于“可用”。</h2><div class="capability-grid"><div class="capability"><span>01</span><strong>中文语音输入</strong><p>适应中文为主、夹杂英文术语的工作口述。</p></div><div class="capability"><span>02</span><strong>低延迟链路</strong><p>停止说话后尽快识别、整理并插入。</p></div><div class="capability"><span>03</span><strong>结构与正式表达</strong><p>把多个口语要点整理成层级或工作文稿。</p></div><div class="capability"><span>04</span><strong>中文转英文</strong><p>用中文说清意思，直接生成英文邮件或 Issue。</p></div><div class="capability"><span>05</span><strong>用户词典</strong><p>保留人名、公司名、产品名与专业术语。</p></div><div class="capability"><span>06</span><strong>剪贴板兜底</strong><p>目标应用拒绝插入时，结果仍然可用。</p></div></div></div>
+          <div data-copy="en" hidden><p class="readme-eyebrow">CORE CAPABILITIES</p><h2>Every step between speech and insertion is designed for usable output.</h2><div class="capability-grid"><div class="capability"><span>01</span><strong>Chinese voice input</strong><p>Handle Chinese-first speech with real work terminology.</p></div><div class="capability"><span>02</span><strong>Low-latency path</strong><p>Transcribe, polish, and insert soon after speech ends.</p></div><div class="capability"><span>03</span><strong>Structured and formal output</strong><p>Turn spoken points into hierarchy or professional prose.</p></div><div class="capability"><span>04</span><strong>Chinese-to-English</strong><p>Speak the meaning in Chinese and output an English email or issue.</p></div><div class="capability"><span>05</span><strong>User dictionary</strong><p>Preserve names, companies, products, and specialist terms.</p></div><div class="capability"><span>06</span><strong>Clipboard fallback</strong><p>Keep the result when the target app blocks direct insertion.</p></div></div></div>
+        </section>
+
+        <section class="readme-section reveal" id="styles">
+          <div data-copy="zh"><p class="readme-eyebrow">FOUR OUTPUT STYLES</p><h2>同一段口述，按用途整理成四种结果。</h2><table class="readme-table"><thead><tr><th>风格</th><th>处理方式</th></tr></thead><tbody><tr><td>原文</td><td>保留原始表达，只补充断句与标点</td></tr><tr><td>轻度润色</td><td>去掉口头语和重复词，保持原有顺序</td></tr><tr><td>清晰结构</td><td>把多个事项整理为 1、1.1、2 的层级文本</td></tr><tr><td>正式表达</td><td>转换为邮件、请示、反馈或交接说明</td></tr></tbody></table><h3>原始口述</h3><pre class="code-block">第一把代码推上去，第二改 README，第三发安装包。</pre><h3>清晰结构</h3><pre class="code-block">1. 推送代码&#10;2. 更新 README&#10;3. 发布安装包</pre></div>
+          <div data-copy="en" hidden><p class="readme-eyebrow">FOUR OUTPUT STYLES</p><h2>One spoken thought, organized for four different uses.</h2><table class="readme-table"><thead><tr><th>Style</th><th>What it changes</th></tr></thead><tbody><tr><td>Raw</td><td>Keep the original wording and add sentence breaks and punctuation</td></tr><tr><td>Light polish</td><td>Remove filler and repetition while preserving order</td></tr><tr><td>Clear structure</td><td>Turn multiple points into a numbered hierarchy</td></tr><tr><td>Formal</td><td>Rewrite as an email, request, report, or handoff note</td></tr></tbody></table><h3>Spoken input</h3><pre class="code-block">First push the code, second update the README, third publish the installer.</pre><h3>Clear structure</h3><pre class="code-block">1. Push the code&#10;2. Update the README&#10;3. Publish the installer</pre></div>
+        </section>
+
+        <section class="readme-section reveal" id="privacy">
+          <div data-copy="zh"><p class="readme-eyebrow">DATA AND PRIVACY</p><h2>这是 cloud-first 产品，设置页会明确告诉你数据去了哪里。</h2><table class="readme-table"><thead><tr><th>数据</th><th>默认位置或去向</th></tr></thead><tbody><tr><td>录音音频</td><td>发送到用户配置的云端 ASR 服务</td></tr><tr><td>ASR 文本</td><td>发送到用户配置的 LLM 服务进行整理</td></tr><tr><td>历史记录</td><td>默认保存在本机，可清空</td></tr><tr><td>用户词典</td><td>默认保存在本机，可编辑或清空</td></tr><tr><td>云端服务凭据</td><td>Windows Credential Manager，可清除</td></tr></tbody></table><p>当前主线不是离线 ASR。使用前需要按界面配置语音识别和文字润色服务，并理解相应服务商的数据政策与费用。</p></div>
+          <div data-copy="en" hidden><p class="readme-eyebrow">DATA AND PRIVACY</p><h2>This is cloud-first, and the settings page makes every data destination explicit.</h2><table class="readme-table"><thead><tr><th>Data</th><th>Default location or destination</th></tr></thead><tbody><tr><td>Recorded audio</td><td>User-configured cloud ASR service</td></tr><tr><td>ASR text</td><td>User-configured LLM for cleanup</td></tr><tr><td>History</td><td>Stored locally by default and removable</td></tr><tr><td>User dictionary</td><td>Stored locally and editable</td></tr><tr><td>Cloud credentials</td><td>Windows Credential Manager and removable</td></tr></tbody></table><p>The current product is not offline-first ASR. Users configure speech and language services and remain responsible for provider policies and cost.</p></div>
+        </section>
+
+        <section class="readme-section reveal" id="install">
+          <div data-copy="zh"><p class="readme-eyebrow">INSTALL AND USE</p><h2>安装后只需要完成模型设置，就可以在任意输入位置开始说话。</h2><ol><li>从 GitHub Releases 下载最新版 Windows 安装包。</li><li>安装并启动轻语输入，进入“设置 - 模型设置”。</li><li>选择千问或豆包等 ASR，并配置一个文字润色模型。</li><li>设置全局快捷键和输出风格。</li><li>回到任意输入框，按快捷键开始口述。</li></ol></div>
+          <div data-copy="en" hidden><p class="readme-eyebrow">INSTALL AND USE</p><h2>After model setup, start speaking from any input field.</h2><ol><li>Download the latest Windows installer from GitHub Releases.</li><li>Install and open Whisper Input, then visit Model Settings.</li><li>Choose an ASR provider and configure a model for text cleanup.</li><li>Set the global shortcut and output style.</li><li>Return to any input field and press the shortcut to speak.</li></ol></div>
+        </section>
+
+        <section class="readme-section reveal" id="boundaries">
+          <div data-copy="zh"><p class="readme-eyebrow">PRODUCT BOUNDARIES</p><h2>保持输入工具的定位，刻意不把它做成一套大平台。</h2><ul><li>不注册 Windows 系统输入法，不接管系统 IME。</li><li>不做会议记录平台，专注短到中长文本输入。</li><li>不主动生成用户没有说过的信息。</li><li>不加入 RAG 或 Agent 工作流，保持输入链路轻量。</li><li>当前主线以真实可用的云端 ASR 为主，不宣传离线优先。</li></ul></div>
+          <div data-copy="en" hidden><p class="readme-eyebrow">PRODUCT BOUNDARIES</p><h2>Stay focused as an input tool instead of becoming a large platform.</h2><ul><li>It does not register as a Windows system IME.</li><li>It is not a meeting-recording platform.</li><li>It does not invent information the user did not say.</li><li>It does not add RAG or agent workflows to the input path.</li><li>The current product uses practical cloud ASR rather than claiming offline-first operation.</li></ul></div>
+          <div class="project-cta"><div data-copy="zh"><p class="readme-eyebrow">OPEN SOURCE</p><h2>下载后，先用自己的真实表达试一次。</h2><p>此页依据当前 README 整理，同步至 2026-08-30。模型支持、配置方式和安装资产以 GitHub 最新 Release 为准。</p><div class="hero-actions"><a class="button button-primary" href="https://github.com/EthanYoQ/whisper-input/releases/latest">下载最新版本</a><a class="button button-ghost" href="https://github.com/EthanYoQ/whisper-input#readme" target="_blank" rel="noreferrer">阅读完整 README</a></div></div><div data-copy="en" hidden><p class="readme-eyebrow">OPEN SOURCE</p><h2>Download it and try one piece of your own real speech.</h2><p>This page is adapted from the current README and synced on August 30, 2026. GitHub remains the source of truth for models, configuration, and release assets.</p><div class="hero-actions"><a class="button button-primary" href="https://github.com/EthanYoQ/whisper-input/releases/latest">Download latest release</a><a class="button button-ghost" href="https://github.com/EthanYoQ/whisper-input/blob/main/README.en.md" target="_blank" rel="noreferrer">Read full README</a></div></div></div>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="footer-grid shell"><div class="project-footer-note"><strong>Ethan / AI Lab</strong><p data-copy="zh">把真实工作中的重复步骤，做成可以下载、验证和共同改进的工具。</p><p data-copy="en" hidden>Turning repeated work into tools people can download, verify, and improve.</p></div><div class="footer-links"><a href="/">Portfolio</a><a href="https://github.com/EthanYoQ" target="_blank" rel="noreferrer">GitHub</a></div><p class="copyright">© <span id="year"></span> EthanYoQ</p></div></footer>
+  <script src="/project.js" defer></script>
 </body>
 </html>
