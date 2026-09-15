@@ -131,6 +131,10 @@
 .project-page.js .reveal { opacity: 0; transition: opacity .7s ease; }
 .project-page.js .reveal.is-visible { opacity: 1; }
 
+.readme .faq-list { margin-top: 28px; }
+.readme .faq-answer p { margin: 10px 0 0; font-size: .91rem; }
+.readme .faq-answer p:first-child { margin-top: 0; }
+
 @media (max-width: 1040px) {
   .project-hero { min-height: auto; grid-template-columns: 1fr; gap: 50px; }
   .project-hero-copy { max-width: none; }

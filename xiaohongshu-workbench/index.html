@@ -5,11 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI 小红书工作台：从热点研究到发布前确认 | Ethan</title>
   <meta name="description" content="Agent 小红书工作台的完整作品介绍：把账号定位、热点研究、选题、原创文稿、品牌配图、预览和人工确认组织成可控流程。">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://www.orz.md/xiaohongshu-workbench/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="EthanYoQ / AI LAB">
+  <meta property="og:url" content="https://www.orz.md/xiaohongshu-workbench/">
+  <meta property="og:title" content="AI 小红书工作台：从热点研究到发布前确认 | Ethan">
+  <meta property="og:description" content="Agent 小红书工作台的完整作品介绍：把账号定位、热点研究、选题、原创文稿、品牌配图、预览和人工确认组织成可控流程。">
+  <meta property="og:image" content="https://www.orz.md/assets/screens/xiaohongshu-workbench.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI 小红书工作台：从热点研究到发布前确认 | Ethan">
+  <meta name="twitter:description" content="Agent 小红书工作台的完整作品介绍：把账号定位、热点研究、选题、原创文稿、品牌配图、预览和人工确认组织成可控流程。">
+  <meta name="twitter:image" content="https://www.orz.md/assets/screens/xiaohongshu-workbench.jpg">
   <link rel="stylesheet" href="/home.css">
   <link rel="stylesheet" href="/project.css?v=20260830-stacked">
   <script>document.documentElement.classList.add("js")</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Agent 小红书工作台","softwareVersion":"0.2.1","applicationCategory":"BusinessApplication","operatingSystem":"Windows, macOS","url":"https://www.orz.md/xiaohongshu-workbench/","downloadUrl":"https://github.com/EthanYoQ/agent-xiaohongshu-workbench/releases/latest","codeRepository":"https://github.com/EthanYoQ/agent-xiaohongshu-workbench","license":"https://opensource.org/license/mit"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Agent 小红书工作台","softwareVersion":"0.2.1","applicationCategory":"BusinessApplication","operatingSystem":"Windows, macOS","url":"https://www.orz.md/xiaohongshu-workbench/","downloadUrl":"https://github.com/EthanYoQ/agent-xiaohongshu-workbench/releases/latest","codeRepository":"https://github.com/EthanYoQ/agent-xiaohongshu-workbench","license":"https://opensource.org/license/mit","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"featureList":"多账号隔离, 图文热点深度拆解, 原创文稿与系列配图生成, 本地全流程预览与人工发布守卫"}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "它是用来批量制造低质营销垃圾笔记的吗？与竞品有何不同？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "恰恰相反。它的设计原则是“原创拆解与发布保护”。工作台只学习高赞笔记的叙事结构与信息节奏，严禁复制原句、图片或版式；且每个账号数据严格物理隔离。系统不设置“一键全自动群发”，每一篇笔记都必须经过人工完整预览与最终确认。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "账号安全如何保障？是否会封号？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "工作台完全遵循本地环境执行原则，不托管密码，不抓取平台 Cookie，通过用户自己在 Chrome 中的正常浏览器会话运行，没有任何外挂或协议逆向风险。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何保持一个账号发布的内容风格和图片一致？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "每个账号均拥有独立的定位配置文件（人设、受众、视觉调性规则）。配图生成时会锁定核心品牌视觉特征与绘制提示词模版，保证同一篇笔记内 1-6 张配图在色调、画风和主体上高度连贯统一。"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body data-title-zh="AI 小红书工作台：从热点研究到发布前确认 | Ethan" data-title-en="Agent Xiaohongshu Workbench: research to human approval">
   <a class="skip-link" href="#project-readme">跳到项目说明</a>
@@ -27,7 +70,7 @@
     </section>
 
     <div class="project-body shell" id="project-readme">
-      <aside class="project-toc"><p>README / 02</p><nav data-copy="zh"><a href="#positioning">它解决什么问题</a><a href="#workflow">工作流</a><a href="#capabilities">核心能力</a><a href="#demo">真实录屏</a><a href="#requirements">运行条件</a><a href="#privacy">隐私与发布边界</a><a href="#install">安装方式</a><a class="readme-source" href="https://github.com/EthanYoQ/agent-xiaohongshu-workbench#readme" target="_blank" rel="noreferrer">阅读原始 README</a></nav><nav data-copy="en" hidden><a href="#positioning">Problem</a><a href="#workflow">Workflow</a><a href="#capabilities">Capabilities</a><a href="#demo">Live recording</a><a href="#requirements">Requirements</a><a href="#privacy">Privacy and publishing</a><a href="#install">Install</a><a class="readme-source" href="https://github.com/EthanYoQ/agent-xiaohongshu-workbench#readme" target="_blank" rel="noreferrer">Read original README</a></nav></aside>
+      <aside class="project-toc"><p>README / 02</p><nav data-copy="zh"><a href="#positioning">它解决什么问题</a><a href="#workflow">工作流</a><a href="#capabilities">核心能力</a><a href="#demo">真实录屏</a><a href="#requirements">运行条件</a><a href="#privacy">隐私与发布边界</a><a href="#install">安装方式</a><a href="#faq">常见问答</a><a class="readme-source" href="https://github.com/EthanYoQ/agent-xiaohongshu-workbench#readme" target="_blank" rel="noreferrer">阅读原始 README</a></nav><nav data-copy="en" hidden><a href="#positioning">Problem</a><a href="#workflow">Workflow</a><a href="#capabilities">Capabilities</a><a href="#demo">Live recording</a><a href="#requirements">Requirements</a><a href="#privacy">Privacy and publishing</a><a href="#install">Install</a><a href="#faq">FAQ</a><a class="readme-source" href="https://github.com/EthanYoQ/agent-xiaohongshu-workbench#readme" target="_blank" rel="noreferrer">Read original README</a></nav></aside>
 
       <article class="readme">
         <section class="readme-section reveal" id="positioning">
@@ -64,6 +107,58 @@
         <section class="readme-section reveal" id="install">
           <div data-copy="zh"><p class="readme-eyebrow">INSTALL</p><h2>先安装桌面工作台，再连接自己的 Codex 与浏览器。</h2><div class="note-grid"><div class="note-card"><strong>Windows x64</strong><p>从 Releases 下载 Agent-XHS-Workbench-Setup 安装程序。</p></div><div class="note-card"><strong>macOS Apple Silicon</strong><p>v0.2.1 提供未签名、未公证的 DMG 与 ZIP，首次启动需要手动确认。</p></div></div><pre class="code-block">codex --version&#10;npm install&#10;npm run setup&#10;npm run dev</pre></div>
           <div data-copy="en" hidden><p class="readme-eyebrow">INSTALL</p><h2>Install the desktop workbench, then connect your own Codex and browser.</h2><div class="note-grid"><div class="note-card"><strong>Windows x64</strong><p>Download the Agent-XHS-Workbench-Setup installer from Releases.</p></div><div class="note-card"><strong>macOS Apple Silicon</strong><p>Version 0.2.1 provides unsigned, unnotarized DMG and ZIP packages.</p></div></div><pre class="code-block">codex --version&#10;npm install&#10;npm run setup&#10;npm run dev</pre></div>
+        </section>
+
+        <section class="readme-section reveal" id="faq">
+          <div data-copy="zh">
+            <p class="readme-eyebrow">FREQUENTLY ASKED QUESTIONS</p>
+            <h2>常见问题与核心特性答疑</h2>
+            <div class="faq-list">
+              <details class="faq-item" open>
+                <summary>它是用来批量制造低质营销垃圾笔记的吗？与竞品有何不同？</summary>
+                <div class="faq-answer">
+                  <p>恰恰相反。它的设计原则是“原创拆解与发布保护”。工作台只学习高赞笔记的叙事结构与信息节奏，严禁复制原句、图片或版式；且每个账号数据严格物理隔离。系统不设置“一键全自动群发”，每一篇笔记都必须经过人工完整预览与最终确认。</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>账号安全如何保障？是否会封号？</summary>
+                <div class="faq-answer">
+                  <p>工作台完全遵循本地环境执行原则，不托管密码，不抓取平台 Cookie，通过用户自己在 Chrome 中的正常浏览器会话运行，没有任何外挂或协议逆向风险。</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>如何保持一个账号发布的内容风格和图片一致？</summary>
+                <div class="faq-answer">
+                  <p>每个账号均拥有独立的定位配置文件（人设、受众、视觉调性规则）。配图生成时会锁定核心品牌视觉特征与绘制提示词模版，保证同一篇笔记内 1-6 张配图在色调、画风和主体上高度连贯统一。</p>
+                </div>
+              </details>
+            </div>
+          </div>
+          <div data-copy="en" hidden>
+            <p class="readme-eyebrow">FREQUENTLY ASKED QUESTIONS</p>
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+              <details class="faq-item" open>
+                <summary>Is this tool meant for mass-producing low-quality spam posts?</summary>
+                <div class="faq-answer">
+                  <p>No. Its core philosophy is structural learning and human approval. It analyzes narrative pacing and hooks without copying text, stories, or images. There is no automated spamming; every post requires human verification.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>How is account security handled? Is there a risk of bans?</summary>
+                <div class="faq-answer">
+                  <p>The workbench operates entirely in your local desktop and browser environment. It never collects or persists passwords or cookies, interacting via your standard browser session with no unofficial API exploits.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>How does it ensure visual and tone consistency?</summary>
+                <div class="faq-answer">
+                  <p>Each account maintains isolated brand profiles with locked visual guidelines and character attributes, ensuring all generated images and copy maintain consistent branding across posts.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+
           <div class="project-cta"><div data-copy="zh"><p class="readme-eyebrow">OPEN SOURCE</p><h2>先看完整流程，再决定它是否适合你的内容运营。</h2><p>此页依据当前 README 整理，同步至 2026-08-30。平台规则、事实、版权与最终发布决定仍由用户负责。</p><div class="hero-actions"><a class="button button-primary" href="https://github.com/EthanYoQ/agent-xiaohongshu-workbench/releases/latest">下载最新版本</a><a class="button button-ghost" href="https://github.com/EthanYoQ/agent-xiaohongshu-workbench#readme" target="_blank" rel="noreferrer">阅读完整 README</a></div></div><div data-copy="en" hidden><p class="readme-eyebrow">OPEN SOURCE</p><h2>Inspect the complete workflow before deciding whether it fits your operation.</h2><p>This page is adapted from the current README and synced on August 30, 2026. Platform rules, facts, copyright, and the final publishing decision remain with the user.</p><div class="hero-actions"><a class="button button-primary" href="https://github.com/EthanYoQ/agent-xiaohongshu-workbench/releases/latest">Download latest release</a><a class="button button-ghost" href="https://github.com/EthanYoQ/agent-xiaohongshu-workbench#readme" target="_blank" rel="noreferrer">Read full README</a></div></div></div>
         </section>
       </article>

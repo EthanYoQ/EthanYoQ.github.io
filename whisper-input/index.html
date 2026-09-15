@@ -5,11 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI 语音输入法：中文口述直接变成可用文字 | Whisper Input</title>
   <meta name="description" content="Whisper Input 的完整作品介绍：按全局快捷键口述，完成语音识别、去口头语、结构整理或中文转英文，再插入当前光标。">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://www.orz.md/whisper-input/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="EthanYoQ / AI LAB">
+  <meta property="og:url" content="https://www.orz.md/whisper-input/">
+  <meta property="og:title" content="AI 语音输入法：中文口述直接变成可用文字 | Whisper Input">
+  <meta property="og:description" content="Whisper Input 的完整作品介绍：按全局快捷键口述，完成语音识别、去口头语、结构整理或中文转英文，再插入当前光标。">
+  <meta property="og:image" content="https://www.orz.md/assets/screens/whisper-input.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI 语音输入法：中文口述直接变成可用文字 | Whisper Input">
+  <meta name="twitter:description" content="Whisper Input 的完整作品介绍：按全局快捷键口述，完成语音识别、去口头语、结构整理或中文转英文，再插入当前光标。">
+  <meta name="twitter:image" content="https://www.orz.md/assets/screens/whisper-input.png">
   <link rel="stylesheet" href="/home.css">
   <link rel="stylesheet" href="/project.css?v=20260830-stacked">
   <script>document.documentElement.classList.add("js")</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Whisper Input","softwareVersion":"1.5.1","applicationCategory":"UtilitiesApplication","operatingSystem":"Windows","url":"https://www.orz.md/whisper-input/","downloadUrl":"https://github.com/EthanYoQ/whisper-input/releases/latest","codeRepository":"https://github.com/EthanYoQ/whisper-input","license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Whisper Input","softwareVersion":"1.5.1","applicationCategory":"UtilitiesApplication","operatingSystem":"Windows","url":"https://www.orz.md/whisper-input/","downloadUrl":"https://github.com/EthanYoQ/whisper-input/releases/latest","codeRepository":"https://github.com/EthanYoQ/whisper-input","license":"https://www.apache.org/licenses/LICENSE-2.0","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"featureList":"全局快捷键口述, 语音识别与智能去口头语, 多种输出风格整理, 直接插入当前激活光标, 本地词典支持"}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Whisper Input 与讯飞等商业语音输入法相比有什么优势？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "1. 零捆绑与无后台常驻：纯净无广告，专注语音输入；2. AI 智能重写与口语整理：不仅仅是听写，还能自动去除语气词（“嗯、啊、那个”）、整理语序；3. 模型自由切换：支持配置高精度 ASR 与多种 LLM 润色模型，不按年收取高昂会员费。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "它能在哪些软件里输入？如何使用？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "支持 Windows 全局任意激活窗口（微信、Word、VS Code、浏览器、Obsidian 等）。按下设定快捷键即可说话，松开后自动模拟按键输入到当前光标处；若目标窗口拦截注入，自动复制到剪贴板兜底。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "口述隐私如何保障？录音和文字会泄露吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "轻语输入不设私有云端服务器，音频与文字仅发送给用户自己配置的 ASR/LLM 服务商（如阿里云千问、火山引擎豆包等）。历史记录与个人词典默认仅保留在本机，且提供一键清空与凭据管理。"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body data-title-zh="AI 语音输入法：中文口述直接变成可用文字 | Whisper Input" data-title-en="Whisper Input: turn Chinese speech into usable text">
   <a class="skip-link" href="#project-readme">跳到项目说明</a>
@@ -27,7 +70,7 @@
     </section>
 
     <div class="project-body shell" id="project-readme">
-      <aside class="project-toc"><p>README / 04</p><nav data-copy="zh"><a href="#positioning">一句话说明</a><a href="#workflow">它怎么工作</a><a href="#screens">界面预览</a><a href="#capabilities">核心能力</a><a href="#styles">四种输出风格</a><a href="#privacy">数据与隐私</a><a href="#install">安装与使用</a><a href="#boundaries">产品边界</a><a class="readme-source" href="https://github.com/EthanYoQ/whisper-input#readme" target="_blank" rel="noreferrer">阅读原始 README</a></nav><nav data-copy="en" hidden><a href="#positioning">In one sentence</a><a href="#workflow">How it works</a><a href="#screens">Interface</a><a href="#capabilities">Capabilities</a><a href="#styles">Four output styles</a><a href="#privacy">Data and privacy</a><a href="#install">Install and use</a><a href="#boundaries">Product boundaries</a><a class="readme-source" href="https://github.com/EthanYoQ/whisper-input/blob/main/README.en.md" target="_blank" rel="noreferrer">Read original README</a></nav></aside>
+      <aside class="project-toc"><p>README / 04</p><nav data-copy="zh"><a href="#positioning">一句话说明</a><a href="#workflow">它怎么工作</a><a href="#screens">界面预览</a><a href="#capabilities">核心能力</a><a href="#styles">四种输出风格</a><a href="#privacy">数据与隐私</a><a href="#install">安装与使用</a><a href="#boundaries">产品边界</a><a href="#faq">常见问答</a><a class="readme-source" href="https://github.com/EthanYoQ/whisper-input#readme" target="_blank" rel="noreferrer">阅读原始 README</a></nav><nav data-copy="en" hidden><a href="#positioning">In one sentence</a><a href="#workflow">How it works</a><a href="#screens">Interface</a><a href="#capabilities">Capabilities</a><a href="#styles">Four output styles</a><a href="#privacy">Data and privacy</a><a href="#install">Install and use</a><a href="#boundaries">Product boundaries</a><a href="#faq">FAQ</a><a class="readme-source" href="https://github.com/EthanYoQ/whisper-input/blob/main/README.en.md" target="_blank" rel="noreferrer">Read original README</a></nav></aside>
 
       <article class="readme">
         <section class="readme-section reveal" id="positioning">
@@ -74,6 +117,58 @@
         <section class="readme-section reveal" id="boundaries">
           <div data-copy="zh"><p class="readme-eyebrow">PRODUCT BOUNDARIES</p><h2>保持输入工具的定位，刻意不把它做成一套大平台。</h2><ul><li>不注册 Windows 系统输入法，不接管系统 IME。</li><li>不做会议记录平台，专注短到中长文本输入。</li><li>不主动生成用户没有说过的信息。</li><li>不加入 RAG 或 Agent 工作流，保持输入链路轻量。</li><li>当前主线以真实可用的云端 ASR 为主，不宣传离线优先。</li></ul></div>
           <div data-copy="en" hidden><p class="readme-eyebrow">PRODUCT BOUNDARIES</p><h2>Stay focused as an input tool instead of becoming a large platform.</h2><ul><li>It does not register as a Windows system IME.</li><li>It is not a meeting-recording platform.</li><li>It does not invent information the user did not say.</li><li>It does not add RAG or agent workflows to the input path.</li><li>The current product uses practical cloud ASR rather than claiming offline-first operation.</li></ul></div>
+        </section>
+
+        <section class="readme-section reveal" id="faq">
+          <div data-copy="zh">
+            <p class="readme-eyebrow">FREQUENTLY ASKED QUESTIONS</p>
+            <h2>常见问题与核心特性答疑</h2>
+            <div class="faq-list">
+              <details class="faq-item" open>
+                <summary>Whisper Input 与讯飞等商业语音输入法相比有什么优势？</summary>
+                <div class="faq-answer">
+                  <p>零捆绑与无后台常驻，纯净无广告；AI 智能重写与口语整理，自动去除语气词（“嗯、啊、那个”）、整理语序；模型自由切换，支持配置千问、豆包等高精度 ASR 与多种 LLM 润色模型，不按年收取高昂会员费。</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>它能在哪些软件里输入？如何使用？</summary>
+                <div class="faq-answer">
+                  <p>支持 Windows 全局任意激活窗口（微信、Word、VS Code、浏览器、Obsidian 等）。按下设定快捷键即可说话，松开后自动模拟按键输入到当前光标处；若目标窗口拦截输入，自动复制到剪贴板兜底。</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>口述隐私如何保障？录音和文字会泄露吗？</summary>
+                <div class="faq-answer">
+                  <p>轻语输入不设私有云端中转服务器，音频与文字仅直接发送给用户自己配置的 ASR/LLM 服务商（如阿里云千问、火山引擎豆包等）。历史记录与个人词典默认仅保留在本机，且提供一键清空与凭据管理。</p>
+                </div>
+              </details>
+            </div>
+          </div>
+          <div data-copy="en" hidden>
+            <p class="readme-eyebrow">FREQUENTLY ASKED QUESTIONS</p>
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+              <details class="faq-item" open>
+                <summary>What makes Whisper Input different from commercial voice typing tools?</summary>
+                <div class="faq-answer">
+                  <p>Zero bloatware and background processes, strictly ad-free; smart AI text cleanup that removes verbal fillers ("um", "uh") and organizes spoken thoughts; flexible model choice supporting Qwen, Doubao ASR, and custom LLMs without recurring subscription fees.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>Which applications are supported and how does it work?</summary>
+                <div class="faq-answer">
+                  <p>It works across all active Windows windows (WeChat, Word, VS Code, browsers, Obsidian, etc.). Hold the shortcut to speak, and on release it types directly into the cursor location. If insertion is blocked, it automatically falls back to copying to the clipboard.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>How is voice and text privacy protected?</summary>
+                <div class="faq-answer">
+                  <p>Whisper Input has no proprietary cloud server. Audio and text are sent directly to your configured ASR/LLM providers (e.g. Alibaba Qwen, ByteDance Doubao). Local speech history and dictionaries remain on your device with one-click cleanup and credential management.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+
           <div class="project-cta"><div data-copy="zh"><p class="readme-eyebrow">OPEN SOURCE</p><h2>下载后，先用自己的真实表达试一次。</h2><p>此页依据当前 README 整理，同步至 2026-08-30。模型支持、配置方式和安装资产以 GitHub 最新 Release 为准。</p><div class="hero-actions"><a class="button button-primary" href="https://github.com/EthanYoQ/whisper-input/releases/latest">下载最新版本</a><a class="button button-ghost" href="https://github.com/EthanYoQ/whisper-input#readme" target="_blank" rel="noreferrer">阅读完整 README</a></div></div><div data-copy="en" hidden><p class="readme-eyebrow">OPEN SOURCE</p><h2>Download it and try one piece of your own real speech.</h2><p>This page is adapted from the current README and synced on August 30, 2026. GitHub remains the source of truth for models, configuration, and release assets.</p><div class="hero-actions"><a class="button button-primary" href="https://github.com/EthanYoQ/whisper-input/releases/latest">Download latest release</a><a class="button button-ghost" href="https://github.com/EthanYoQ/whisper-input/blob/main/README.en.md" target="_blank" rel="noreferrer">Read full README</a></div></div></div>
         </section>
       </article>

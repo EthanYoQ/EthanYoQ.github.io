@@ -5,11 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI 发票一键整理：邮箱收集、识别、归档与 Excel 汇总 | Ethan</title>
   <meta name="description" content="InvoiceFlowAI 的完整作品介绍：批量收集邮箱中的 PDF、OFD、XML 发票，识别、去重、分类归档并生成 Excel 报销汇总。">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://www.orz.md/invoice-downloader/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="EthanYoQ / AI LAB">
+  <meta property="og:url" content="https://www.orz.md/invoice-downloader/">
+  <meta property="og:title" content="AI 发票一键整理：邮箱收集、识别、归档与 Excel 汇总 | Ethan">
+  <meta property="og:description" content="InvoiceFlowAI 的完整作品介绍：批量收集邮箱中的 PDF、OFD、XML 发票，识别、去重、分类归档并生成 Excel 报销汇总。">
+  <meta property="og:image" content="https://www.orz.md/assets/screens/invoiceflowai.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI 发票一键整理：邮箱收集、识别、归档与 Excel 汇总 | Ethan">
+  <meta name="twitter:description" content="InvoiceFlowAI 的完整作品介绍：批量收集邮箱中的 PDF、OFD、XML 发票，识别、去重、分类归档并生成 Excel 报销汇总。">
+  <meta name="twitter:image" content="https://www.orz.md/assets/screens/invoiceflowai.png">
   <link rel="stylesheet" href="/home.css">
   <link rel="stylesheet" href="/project.css?v=20260830-stacked">
   <script>document.documentElement.classList.add("js")</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"InvoiceFlowAI","softwareVersion":"2026.07.29.1","applicationCategory":"BusinessApplication","operatingSystem":"Windows, macOS","url":"https://www.orz.md/invoice-downloader/","downloadUrl":"https://github.com/EthanYoQ/Invoice-Downloader/releases/latest","codeRepository":"https://github.com/EthanYoQ/Invoice-Downloader","license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"InvoiceFlowAI","softwareVersion":"2026.07.29.1","applicationCategory":"BusinessApplication","operatingSystem":"Windows, macOS","url":"https://www.orz.md/invoice-downloader/","downloadUrl":"https://github.com/EthanYoQ/Invoice-Downloader/releases/latest","codeRepository":"https://github.com/EthanYoQ/Invoice-Downloader","license":"https://www.apache.org/licenses/LICENSE-2.0","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"featureList":"批量邮箱发票收集, PDF/OFD/XML识别, 智能去重与分类归档, Excel报销明细汇总, 纯本地隐私安全"}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "为什么选择 InvoiceFlowAI 而不是网页版发票管理系统？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "隐私与安全性是首要考量。发票包含纳税人识别号、购买明细、银行账号等高度敏感财务隐私。InvoiceFlowAI 是一款纯本地运行的桌面工具，直接在本地解析 PDF 与邮件附件，绝不把用户发票数据上传到任何第三方商业服务器。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "支持哪些类型的发票和邮箱协议？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "支持国内常见的增值税电子普通发票、专用发票、全电发票（PDF 及 OFD 格式）。支持标准 IMAP 协议（QQ 邮箱、网易 163 邮箱、企业微信邮箱、Gmail、Outlook 等）。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "它是如何防止重复发票报销的？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "系统会读取每张发票的核心唯一字段（如发票代码与发票号码），并在本地数据库中进行全局比对去重。即使同一张发票在多封邮件中被重复发送，也只会入库和汇总一次，并在报表中进行标注提示。"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body data-title-zh="AI 发票一键整理：邮箱收集、识别、归档与 Excel 汇总 | Ethan" data-title-en="InvoiceFlowAI: collect, classify, and summarize email invoices">
   <a class="skip-link" href="#project-readme">跳到项目说明</a>
@@ -27,7 +70,7 @@
     </section>
 
     <div class="project-body shell" id="project-readme">
-      <aside class="project-toc"><p>README / 03</p><nav data-copy="zh"><a href="#positioning">它解决什么问题</a><a href="#workflow">处理流程</a><a href="#capabilities">核心能力</a><a href="#demo">真实录屏</a><a href="#architecture">识别架构</a><a href="#privacy">隐私与安全</a><a href="#install">安装与使用</a><a href="#boundaries">使用边界</a><a class="readme-source" href="https://github.com/EthanYoQ/Invoice-Downloader#readme" target="_blank" rel="noreferrer">阅读原始 README</a></nav><nav data-copy="en" hidden><a href="#positioning">Problem</a><a href="#workflow">Processing flow</a><a href="#capabilities">Capabilities</a><a href="#demo">Live recording</a><a href="#architecture">Extraction architecture</a><a href="#privacy">Privacy and security</a><a href="#install">Install and use</a><a href="#boundaries">Boundaries</a><a class="readme-source" href="https://github.com/EthanYoQ/Invoice-Downloader/blob/main/README.en.md" target="_blank" rel="noreferrer">Read original README</a></nav></aside>
+      <aside class="project-toc"><p>README / 03</p><nav data-copy="zh"><a href="#positioning">它解决什么问题</a><a href="#workflow">处理流程</a><a href="#capabilities">核心能力</a><a href="#demo">真实录屏</a><a href="#architecture">识别架构</a><a href="#privacy">隐私与安全</a><a href="#install">安装与使用</a><a href="#boundaries">使用边界</a><a href="#faq">常见问答</a><a class="readme-source" href="https://github.com/EthanYoQ/Invoice-Downloader#readme" target="_blank" rel="noreferrer">阅读原始 README</a></nav><nav data-copy="en" hidden><a href="#positioning">Problem</a><a href="#workflow">Processing flow</a><a href="#capabilities">Capabilities</a><a href="#demo">Live recording</a><a href="#architecture">Extraction architecture</a><a href="#privacy">Privacy and security</a><a href="#install">Install and use</a><a href="#boundaries">Boundaries</a><a href="#faq">FAQ</a><a class="readme-source" href="https://github.com/EthanYoQ/Invoice-Downloader/blob/main/README.en.md" target="_blank" rel="noreferrer">Read original README</a></nav></aside>
 
       <article class="readme">
         <section class="readme-section reveal" id="positioning">
@@ -69,6 +112,58 @@
         <section class="readme-section reveal" id="boundaries">
           <div data-copy="zh"><p class="readme-eyebrow">CURRENT BOUNDARIES</p><h2>自动整理减少搬运，不取消最后的人工核验。</h2><ul><li>图片模糊、非标准票据或加密 PDF 可能进入待人工复核。</li><li>发票字段与金额可能识别错误，Excel 汇总不是会计结论。</li><li>用户需要合法拥有所连接邮箱的访问权。</li><li>第三方邮箱、OCR 和视觉模型服务的可用性与政策不由本项目控制。</li></ul></div>
           <div data-copy="en" hidden><p class="readme-eyebrow">CURRENT BOUNDARIES</p><h2>Automation reduces handling; it does not remove final verification.</h2><ul><li>Blurred, unusual, or encrypted documents may require manual review.</li><li>Extracted fields and amounts can be wrong; the Excel file is not an accounting conclusion.</li><li>The user must have lawful access to the connected mailbox.</li><li>Availability and policies of email, OCR, and vision providers are outside the project's control.</li></ul></div>
+        </section>
+
+        <section class="readme-section reveal" id="faq">
+          <div data-copy="zh">
+            <p class="readme-eyebrow">FREQUENTLY ASKED QUESTIONS</p>
+            <h2>常见问题与核心特性答疑</h2>
+            <div class="faq-list">
+              <details class="faq-item" open>
+                <summary>为什么选择 InvoiceFlowAI 而不是网页版发票管理系统？</summary>
+                <div class="faq-answer">
+                  <p>隐私与安全性是首要考量。发票包含纳税人识别号、购买明细、银行账号等高度敏感财务隐私。InvoiceFlowAI 是一款纯本地运行的桌面工具，直接在本地解析 PDF 与邮件附件，绝不把用户发票数据上传到任何第三方商业服务器。</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>支持哪些类型的发票和邮箱协议？</summary>
+                <div class="faq-answer">
+                  <p>支持国内常见的增值税电子普通发票、专用发票、全电发票（PDF 及 OFD 格式）。支持标准 IMAP 协议（QQ 邮箱、网易 163 邮箱、企业微信邮箱、Gmail、Outlook 等）。</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>它是如何防止重复发票报销的？</summary>
+                <div class="faq-answer">
+                  <p>系统会读取每张发票的核心唯一字段（如发票代码与发票号码），并在本地数据库中进行全局比对去重。即使同一张发票在多封邮件中被重复发送，也只会入库和汇总一次，并在报表中进行标注提示。</p>
+                </div>
+              </details>
+            </div>
+          </div>
+          <div data-copy="en" hidden>
+            <p class="readme-eyebrow">FREQUENTLY ASKED QUESTIONS</p>
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+              <details class="faq-item" open>
+                <summary>Why choose InvoiceFlowAI over hosted online invoice tools?</summary>
+                <div class="faq-answer">
+                  <p>Privacy is the top concern. Invoices carry sensitive financial details like tax IDs, purchased items, and bank details. InvoiceFlowAI runs completely on your local machine, parsing PDFs and attachments without transmitting private receipts to third-party clouds.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>Which invoice formats and email protocols are supported?</summary>
+                <div class="faq-answer">
+                  <p>It supports standard VAT electronic normal, special, and fully digitalized invoices (in PDF and OFD). It works with standard IMAP mailboxes including QQ Mail, NetEase 163, Enterprise WeChat, Gmail, and Outlook.</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>How does deduplication work to prevent duplicate claims?</summary>
+                <div class="faq-answer">
+                  <p>The extractor indexes unique invoice codes and numbers in a local database. Duplicate attachments from forwarded or repeated emails are deduplicated automatically, with clear audit flags in the final Excel report.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+
           <div class="project-cta"><div data-copy="zh"><p class="readme-eyebrow">OPEN SOURCE</p><h2>先用演示流程理解边界，再处理自己的发票。</h2><p>此页依据当前 README 整理，同步至 2026-08-30。安装、邮箱配置、隐私说明和免责声明以 GitHub 原文为准。</p><div class="hero-actions"><a class="button button-primary" href="https://github.com/EthanYoQ/Invoice-Downloader/releases/latest">下载最新版本</a><a class="button button-ghost" href="https://github.com/EthanYoQ/Invoice-Downloader#readme" target="_blank" rel="noreferrer">阅读完整 README</a></div></div><div data-copy="en" hidden><p class="readme-eyebrow">OPEN SOURCE</p><h2>Understand the demonstrated flow and its boundaries before using personal invoices.</h2><p>This page is adapted from the current README and synced on August 30, 2026. GitHub remains the source of truth for installation, privacy, and disclaimers.</p><div class="hero-actions"><a class="button button-primary" href="https://github.com/EthanYoQ/Invoice-Downloader/releases/latest">Download latest release</a><a class="button button-ghost" href="https://github.com/EthanYoQ/Invoice-Downloader/blob/main/README.en.md" target="_blank" rel="noreferrer">Read full README</a></div></div></div>
         </section>
       </article>

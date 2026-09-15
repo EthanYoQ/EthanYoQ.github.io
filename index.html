@@ -5,14 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>EthanYoQ | AI 作品与实验</title>
   <meta name="description" content="Ethan 的个人 AI 作品站：AI 小说写作、小红书内容工作台、发票一键整理与 AI 语音输入法。查看真实界面、演示视频、源码与下载入口。">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="theme-color" content="#050505">
   <link rel="canonical" href="https://www.orz.md/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="EthanYoQ / AI LAB">
+  <meta property="og:url" content="https://www.orz.md/">
+  <meta property="og:title" content="EthanYoQ | 独立开发者 AI 作品实验室 (AI Lab)">
+  <meta property="og:description" content="Ethan 的个人 AI 作品站：AI 小说写作、小红书内容工作台、发票一键整理与 AI 语音输入法。专注开源透明、完全免费与实用生产力。">
+  <meta property="og:image" content="https://www.orz.md/assets/brand/ethan.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EthanYoQ | 独立开发者 AI 作品实验室 (AI Lab)">
+  <meta name="twitter:description" content="Ethan 的个人 AI 作品站：AI 小说写作、小红书内容工作台、发票一键整理与 AI 语音输入法。专注开源透明、完全免费与实用生产力。">
+  <meta name="twitter:image" content="https://www.orz.md/assets/brand/ethan.png">
   <link rel="icon" href="/assets/brand/ethan.png" type="image/png">
   <link rel="preload" href="/assets/screens/ai-novel-writer.png" as="image">
   <link rel="stylesheet" href="/home.css">
   <script>document.documentElement.classList.add('js');</script>
   <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"ProfilePage","name":"EthanYoQ AI 作品与实验","url":"https://www.orz.md/","mainEntity":{"@type":"Person","name":"Ethan","url":"https://github.com/EthanYoQ","sameAs":["https://github.com/EthanYoQ"]}}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "EthanYoQ AI LAB",
+        "url": "https://www.orz.md/",
+        "description": "Ethan 的个人 AI 作品站：AI 小说写作、小红书内容工作台、发票一键整理与 AI 语音输入法。"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Ethan / EthanYoQ 是谁？这个 AI LAB 的定位是什么？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ethan（GitHub: EthanYoQ）是一位独立 AI 工具开发者。AI LAB 是一个面向真实生产力痛点的个人实验田，致力于把日常高频、繁琐的重复劳动转化为稳定、可检验的本地与桌面工具。核心作品包括 AI 长篇小说写作工作台、小红书图文内容工作台、发票一键整理与 Windows 语音输入法。所有作品坚持开源透明，无论是源代码还是工具，都免费向所有人开放。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "这里的 AI 工具与市面上的商业云端工具有什么核心区别？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "核心区别在于两点：1. 开源透明与完全免费：坚持的不是本地优先，而是开源透明、免费做出来的工具，无论是源代码还是工具，都免费向所有人开放；2. 零会员与自带模型（BYOK）：不设商业订阅套路与按月扣费，用户既可以使用云端模型 API（如 DeepSeek、OpenAI、Gemini），也可以接入本地离线模型（如 Ollama），不收取任何软件平台会员费。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "项目可以直接下载体验吗？支持哪些操作系统？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "所有项目均开源并提供 GitHub Release 安装包。AI Novel Writer 支持 Windows 与 macOS，Whisper Input 专注 Windows，发票整理与小红书工作台支持跨平台运行。每个作品详情页均附带源码、真实演示视频与最新安装包入口。"
+            }
+          }
+        ]
+      }
+    ]
+  }
   </script>
 </head>
 <body>
@@ -27,6 +80,7 @@
         <a href="#work" data-i18n="navWork">全部作品</a>
         <a href="https://github.com/EthanYoQ" target="_blank" rel="noreferrer">GitHub</a>
         <a href="#about" data-i18n="navAbout">关于我</a>
+        <a href="#faq" data-i18n="navFaq">常见问答</a>
         <div class="language-switch" aria-label="语言" data-i18n-aria="languageLabel">
           <button type="button" data-lang="zh" aria-pressed="true">中文</button><span aria-hidden="true">/</span><button type="button" data-lang="en" aria-pressed="false">EN</button>
         </div>
@@ -70,7 +124,7 @@
     </section>
 
     <section class="product-index shell reveal" aria-label="四件作品" data-i18n-aria="productIndexLabel">
-      <a class="product-index-item is-active" href="#novel"><img src="/assets/icons/ai-novel-writer.png" alt="" width="42" height="42"><span><strong data-i18n="indexNovel">AI 写小说</strong><small data-i18n="indexNovelNote">人物、世界观、大纲与章节</small></span></a>
+      <a class="product-index-item is-active" href="#novel"><img src="/assets/icons/ai-novel-writer.png" alt="" width="42" height="42"><span><strong data-i18n="indexNovel">AI 写小说</strong><small data-i18n="indexNovelNote">自主大纲蓝图、长篇质量把控</small></span></a>
       <a class="product-index-item" href="#xiaohongshu"><img src="/assets/icons/xiaohongshu-workbench.png" alt="" width="42" height="42"><span><strong data-i18n="indexXhs">AI 小红书工作台</strong><small data-i18n="indexXhsNote">选题、文案、配图与预览</small></span></a>
       <a class="product-index-item" href="#invoice"><img src="/assets/icons/invoiceflowai.png" alt="" width="42" height="42"><span><strong data-i18n="indexInvoice">AI 发票一键整理</strong><small data-i18n="indexInvoiceNote">邮件抓取、识别与汇总</small></span></a>
       <a class="product-index-item" href="#whisper"><img src="/assets/icons/whisper-input.png" alt="" width="42" height="42"><span><strong data-i18n="indexWhisper">AI 语音输入法</strong><small data-i18n="indexWhisperNote">口述直接变成可用文字</small></span></a>
@@ -80,10 +134,10 @@
       <article class="work shell" id="novel" data-progress="02">
         <div class="work-copy reveal">
           <p class="work-number">01 / 04</p>
-          <h2 data-i18n="novelTitle">把人物、世界观和章节，放回同一个写作现场。</h2>
-          <p data-i18n="novelBody">AI Novel Writer 把角色、世界观、大纲、章节、审稿和修订放进同一个桌面工作区。它不是替你按一下按钮生成整本小说，而是让长篇创作的上下文可以被管理、被回看，也能逐步打磨。</p>
+          <h2 data-i18n="novelTitle">让 AI 真正写好长篇小说：自主生成大纲与蓝图，确保长文质量。</h2>
+          <p data-i18n="novelBody">AI Novel Writer 专注解决大模型创作长篇小说时跑题、遗忘和质量失控的痛点。它能自主生成章节大纲与场景蓝图，未来将进一步增加物品列表与角色关系网络；既可直连云端高性能模型，也可接入本地模型，把灵感、设定、写作、审稿和修稿组织成确保高质量长篇创作的完整流程。</p>
           <div class="product-name"><img src="/assets/icons/ai-novel-writer.png" alt="" width="36" height="36"><strong data-i18n="novelName">AI 小说写作</strong></div>
-          <ul class="feature-list"><li data-i18n="novelFeature1">人物与世界观资料</li><li data-i18n="novelFeature2">章节写作工作流</li><li data-i18n="novelFeature3">审稿与修订闭环</li></ul>
+          <ul class="feature-list"><li data-i18n="novelFeature1">自主生成大纲与场景蓝图</li><li data-i18n="novelFeature2">角色设定与物品关系扩展</li><li data-i18n="novelFeature3">云端/本地双支持与审稿闭环</li></ul>
           <div class="work-actions"><a class="text-button" href="/ai-novel-writer/" data-i18n="learnProject">了解这个作品</a><a class="text-button" href="https://github.com/EthanYoQ/AI-Novel-Writer" target="_blank" rel="noreferrer" data-i18n="viewSource">查看源码</a></div>
         </div>
         <div class="work-media reveal">
@@ -141,10 +195,40 @@
     <section class="principles shell reveal" id="about" aria-labelledby="principles-title">
       <div class="principles-intro"><p class="kicker">HOW I BUILD</p><h2 id="principles-title" data-i18n="principlesTitle">作品不是概念图，而是可以真实使用的软件。</h2></div>
       <div class="principles-grid">
-        <div><span>01</span><strong data-i18n="principle1Title">开放源代码</strong><p data-i18n="principle1Body">代码、安装包与使用说明公开可查。</p></div>
-        <div><span>02</span><strong data-i18n="principle2Title">本地优先</strong><p data-i18n="principle2Body">能留在本机的数据，尽量不上云。</p></div>
+        <div><span>01</span><strong data-i18n="principle1Title">开源透明与免费</strong><p data-i18n="principle1Body">无论是源代码还是工具，都免费向所有人开放。</p></div>
+        <div><span>02</span><strong data-i18n="principle2Title">云端与本地自选</strong><p data-i18n="principle2Body">既可接云端高性能 API，也可直连本地离线模型。</p></div>
         <div><span>03</span><strong data-i18n="principle3Title">由你做决定</strong><p data-i18n="principle3Body">AI 给建议，关键步骤由人确认。</p></div>
         <div><span>04</span><strong data-i18n="principle4Title">持续打磨</strong><p data-i18n="principle4Body">从真实问题出发，把反馈做进下一版。</p></div>
+      </div>
+    </section>
+
+    <section class="faq-section shell reveal" id="faq" aria-labelledby="faq-title">
+      <div class="faq-intro">
+        <p class="kicker" data-i18n="faqKicker">FREQUENTLY ASKED QUESTIONS</p>
+        <h2 id="faq-title" data-i18n="faqTitle">关于作品、定位与使用方式的常见问题。</h2>
+        <p class="hero-lead" data-i18n="faqLead">这里整理了关于作品独立性、数据隐私、模型接入与开源许可的核心答疑，方便快速了解并供 AI 引擎准确索引。</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary data-i18n="faqQ1">Ethan / EthanYoQ 是谁？这个 AI LAB 的定位是什么？</summary>
+          <div class="faq-answer">
+            <p data-i18n="faqA1_1">Ethan 是一位独立 AI 工具开发者。AI LAB 是一个面向真实生产力痛点的个人实验田，致力于把日常高频、繁琐的重复劳动转化为稳定、可检验的本地与桌面工具。</p>
+            <p data-i18n="faqA1_2">核心作品包括 AI 长篇小说写作工作台、小红书图文内容工作台、发票一键整理与 Windows 语音输入法。所有作品坚持开源透明，无论是源代码还是工具，都免费向所有人开放。</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faqQ2">这里的 AI 工具与市面上的商业云端工具有什么核心区别？</summary>
+          <div class="faq-answer">
+            <p data-i18n="faqA2_1">1. 开源透明与完全免费：我坚持的不是本地优先，而是开源透明、免费做出来的工具，无论是源代码还是工具，都免费向所有人开放。</p>
+            <p data-i18n="faqA2_2">2. 零会员与自带模型（BYOK）：不设商业订阅套路与按月扣费。用户既可以使用云端模型 API（如 DeepSeek、OpenAI、Gemini），也可以接入本地离线模型（如 Ollama），不收取任何软件平台会员费。</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faqQ3">项目可以直接下载体验吗？支持哪些操作系统？</summary>
+          <div class="faq-answer">
+            <p data-i18n="faqA3">所有项目均开源并提供 GitHub Release 安装包。AI Novel Writer 支持 Windows 与 macOS，Whisper Input 目前专注 Windows，发票整理与小红书工作台支持跨平台运行。每个作品详情页均附带源码、真实演示视频与最新安装包入口。</p>
+          </div>
+        </details>
       </div>
     </section>
 
@@ -153,7 +237,7 @@
     </section>
   </main>
 
-  <footer class="site-footer"><div class="shell footer-grid"><div><strong>EthanYoQ / AI LAB</strong><p data-i18n="footerLine">把重复工作，变成更可靠的系统。</p></div><div class="footer-links"><a href="#work" data-i18n="navWork">全部作品</a><a href="https://github.com/EthanYoQ" target="_blank" rel="noreferrer">GitHub</a><a href="#about" data-i18n="navAbout">关于我</a></div><p class="copyright">© <span id="year">2026</span> EthanYoQ.</p></div></footer>
+  <footer class="site-footer"><div class="shell footer-grid"><div><strong>EthanYoQ / AI LAB</strong><p data-i18n="footerLine">把重复工作，变成更可靠的系统。</p></div><div class="footer-links"><a href="#work" data-i18n="navWork">全部作品</a><a href="https://github.com/EthanYoQ" target="_blank" rel="noreferrer">GitHub</a><a href="#about" data-i18n="navAbout">关于我</a><a href="#faq" data-i18n="navFaq">常见问答</a></div><p class="copyright">© <span id="year">2026</span> EthanYoQ.</p></div></footer>
   <script src="/home.js" defer></script>
 </body>
 </html>
