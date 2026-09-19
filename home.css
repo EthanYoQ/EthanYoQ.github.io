@@ -176,7 +176,7 @@ button { font: inherit; }
   font-weight: 680;
   letter-spacing: .04em;
 }
-.stage-video video { width: 100%; aspect-ratio: 1440 / 870; object-fit: cover; }
+.stage-video .video-poster-link img { width: 100%; aspect-ratio: 1440 / 870; object-fit: cover; }
 
 .product-index { position: relative; z-index: 5; display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); border-radius: 14px; background: #08090b; }
 .product-index-item { position: relative; min-height: 92px; padding: 18px 20px; display: flex; align-items: center; gap: 14px; border-right: 1px solid var(--line); text-decoration: none; transition: background-color .2s ease, border-color .2s ease; }
@@ -226,7 +226,10 @@ button { font: inherit; }
   background: #07080a;
   box-shadow: 0 28px 76px rgba(0, 0, 0, .78), 0 18px 70px rgba(23, 107, 255, .13);
 }
-.demo-player video { width: 100%; aspect-ratio: 16 / 10; background: #060708; object-fit: cover; }
+.video-poster-link { position: relative; display: block; color: #fff; text-decoration: none; background: #060708; }
+.demo-player .video-poster-link img { width: 100%; aspect-ratio: 16 / 10; background: #060708; object-fit: cover; }
+.video-poster-link span { position: absolute; right: 14px; bottom: 14px; padding: 9px 13px; border: 1px solid rgba(255,255,255,.28); border-radius: 999px; color: #fff; background: rgba(5, 7, 11, .82); font-size: .75rem; font-weight: 720; letter-spacing: .02em; backdrop-filter: blur(8px); }
+.video-poster-link:hover span, .video-poster-link:focus-visible span { border-color: var(--blue-bright); background: rgba(14, 57, 126, .92); }
 .work-media::after { position: absolute; right: 3%; bottom: -1px; z-index: -1; width: 82%; height: 5px; content: ""; background: var(--blue); border-radius: 50%; box-shadow: 0 0 28px 9px rgba(23, 107, 255, .55), 0 0 84px 22px rgba(23, 107, 255, .2); }
 .work-reverse .media-backdrop { right: auto; left: 0; }
 .work-reverse .demo-player, .work-reverse .static-proof { right: auto; left: 9%; }
@@ -346,4 +349,3 @@ button { font: inherit; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
-
