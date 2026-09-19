@@ -1,8 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.orz.md/</loc><lastmod>2026-09-15</lastmod></url>
-  <url><loc>https://www.orz.md/ai-novel-writer/</loc><lastmod>2026-09-15</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url><loc>https://www.orz.md/</loc><lastmod>2026-09-19</lastmod></url>
+  <url><loc>https://www.orz.md/ai-novel-writer/</loc><lastmod>2026-09-19</lastmod></url>
+  <url>
+    <loc>https://www.orz.md/ai-novel-writer/demo/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://www.orz.md/assets/screens/ai-novel-writer.png</video:thumbnail_loc>
+      <video:title>AI Novel Writer 真实界面与长篇写作流程演示</video:title>
+      <video:description>50 秒展示 AI Novel Writer 的项目资料、章节蓝图、写作与审稿工作区。</video:description>
+      <video:content_loc>https://www.orz.md/assets/video/ai-novel-writer.mp4</video:content_loc>
+      <video:duration>50</video:duration>
+      <video:publication_date>2026-08-29T20:27:37Z</video:publication_date>
+    </video:video>
+  </url>
   <url><loc>https://www.orz.md/xiaohongshu-workbench/</loc><lastmod>2026-09-15</lastmod></url>
-  <url><loc>https://www.orz.md/invoice-downloader/</loc><lastmod>2026-09-15</lastmod></url>
+  <url><loc>https://www.orz.md/invoice-downloader/</loc><lastmod>2026-09-19</lastmod></url>
+  <url>
+    <loc>https://www.orz.md/invoice-downloader/demo/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://www.orz.md/assets/screens/invoiceflowai.png</video:thumbnail_loc>
+      <video:title>InvoiceFlowAI 邮箱发票整理与 Excel 汇总演示</video:title>
+      <video:description>60 秒展示 InvoiceFlowAI 从邮箱收集电子发票、识别分类到生成 Excel 汇总的真实界面。</video:description>
+      <video:content_loc>https://www.orz.md/assets/video/invoiceflowai.mp4</video:content_loc>
+      <video:duration>60</video:duration>
+      <video:publication_date>2026-08-29T20:27:37Z</video:publication_date>
+    </video:video>
+  </url>
   <url><loc>https://www.orz.md/whisper-input/</loc><lastmod>2026-09-15</lastmod></url>
 </urlset>
