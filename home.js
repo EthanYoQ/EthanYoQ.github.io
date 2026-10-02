@@ -118,24 +118,36 @@
       s.x += (s.tx - s.x) * 0.08; s.y += (s.ty - s.y) * 0.08;
       for (const { w, k, rz } of s.layers) w.style.transform = `translate3d(${(s.x * -30 * k).toFixed(1)}px,${(s.y * -22 * k).toFixed(1)}px,0) rotateY(${(s.x * 8).toFixed(2)}deg) rotateX(${(s.y * -6).toFixed(2)}deg) rotate(${rz})`;
     }
+    stackProgress();
     requestAnimationFrame(frame);
   }
   if (!reduce) requestAnimationFrame(frame);
   else stages.forEach((s) => s.layers.forEach(({ w, rz }) => { w.style.transform = `rotate(${rz})`; }));
 
-  /* ---------- 色域粘性堆叠：内容装不进一屏时自动降级为普通流式，避免底部按钮被截断 ---------- */
-  const fieldsWrap = $(".fields");
-  function fitFields() {
-    if (!fieldsWrap) return;
-    fieldsWrap.classList.remove("is-flow");
-    const stuck = $$(".field", fieldsWrap).some((f) => getComputedStyle(f).position === "sticky");
-    if (stuck && $$(".field", fieldsWrap).some((f) => f.scrollHeight > f.clientHeight + 1)) fieldsWrap.classList.add("is-flow");
+  /* ---------- 卡片堆叠：后一张覆盖前一张（桌面与手机一致） ----------
+     --stick：卡片比视口高时取负值，让卡片底部先贴住视口底部、再被下一张覆盖，所以内容不会被截断。
+     --p：下一张卡片已经爬上来的比例，驱动被覆盖卡片的缩小与变暗。 */
+  const cards = $$(".fields > .field, .fields > .pale");
+  function setSticks() {
+    cards.forEach((c) => c.style.setProperty("--stick", Math.min(0, innerHeight - c.offsetHeight).toFixed(1) + "px"));
   }
-  fitFields();
-  addEventListener("resize", fitFields);
-  addEventListener("load", fitFields);
-  if (document.fonts?.ready) document.fonts.ready.then(fitFields);
-  buttons.forEach((b) => b.addEventListener("click", () => requestAnimationFrame(fitFields)));
+  let lastProbe = -1;
+  function stackProgress() {
+    if (reduce) return;
+    const probe = scrollY + innerHeight * 3;
+    if (probe === lastProbe) return;
+    lastProbe = probe;
+    cards.forEach((c) => {
+      const next = c.nextElementSibling;
+      const top = next ? next.getBoundingClientRect().top : innerHeight;
+      c.style.setProperty("--p", Math.min(1, Math.max(0, 1 - top / innerHeight)).toFixed(3));
+    });
+  }
+  setSticks();
+  addEventListener("resize", () => { setSticks(); lastProbe = -1; });
+  addEventListener("load", setSticks);
+  if (document.fonts?.ready) document.fonts.ready.then(setSticks);
+  buttons.forEach((b) => b.addEventListener("click", () => requestAnimationFrame(setSticks)));
 
   /* ---------- 视频：进入视口播放，离开暂停 ---------- */
   const videos = $$("video[data-autoplay]");
