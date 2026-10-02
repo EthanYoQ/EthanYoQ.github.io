@@ -140,14 +140,19 @@ a:focus-visible, button:focus-visible, video:focus-visible, summary:focus-visibl
 .badge::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #3ddc84; }
 .badge.pending::before { background: #f4b740; }
 
-/* 仅在足够宽且足够高的屏幕上做粘性堆叠，避免内容被截断 */
-@media (min-width: 1000px) and (min-height: 760px) {
-  .field { position: sticky; top: 0; height: 100vh; padding-block: 8vh 0; }
-  .fields.is-flow .field { position: relative; height: auto; min-height: 100vh; padding-block: 11vh 10vh; }
+/* 卡片堆叠：所有作品色域 + 后续内容共用一个容器，后一张覆盖前一张。
+   --stick 由 home.js 写入：卡片比视口矮时为 0，比视口高时为负值（让卡片底部先贴住视口底部再被覆盖），
+   所以手机和英文长文案下同样有覆盖效果；--p 是被覆盖的进度（0 到 1），驱动缩小与变暗。 */
+.fields > * + * { margin-top: -44px; }
+.js .fields > .field, .js .fields > .pale { position: sticky; top: var(--stick, 0px); transform-origin: 50% 100%; transform: scale(calc(1 - var(--p, 0) * .06)); will-change: transform; }
+.fields > .field::after, .fields > .pale::after { content: ""; position: absolute; inset: 0; z-index: 8; background: #06143a; opacity: calc(var(--p, 0) * .42); pointer-events: none; }
+@media (min-width: 1000px) and (min-height: 700px) {
+  .field { min-height: 100vh; padding-block: 12vh 8vh; }
+  .pale { min-height: 100vh; }
 }
 
 /* ========== 次要：Whisper ========== */
-.pale { position: relative; z-index: 5; margin-top: -44px; padding: 10vh 6vw 9vh; display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 4vw; align-items: center; border-radius: 44px 44px 0 0; background: var(--pale); }
+.pale { position: relative; overflow: hidden; padding: 10vh 6vw 9vh; display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 4vw; align-items: center; border-radius: 44px 44px 0 0; background: var(--pale); }
 .pale .poster { font-size: clamp(3.6rem, min(7.4vw, 12vh), 9rem); }
 .pale h2 { max-width: 26rem; margin: 2vh 0 0; font-size: clamp(1.15rem, 1.5vw, 1.4rem); line-height: 1.4; font-weight: 760; text-wrap: balance; }
 .pale .copy > p { max-width: 26rem; margin: 1.4vh 0 0; }
@@ -156,8 +161,9 @@ a:focus-visible, button:focus-visible, video:focus-visible, summary:focus-visibl
 .pale figure { position: relative; margin: 0; overflow: hidden; border-radius: 20px; background: #fff; box-shadow: 0 0 0 2px var(--navy), 0 30px 50px -22px rgba(0, 0, 60, .45); transform: rotate(2deg); }
 .pale figure img { width: 100%; height: auto; }
 
-/* ========== 最弱：小红书，仅一行 ========== */
-.also { position: relative; z-index: 6; padding-block: 0 4vh; background: var(--snow); }
+/* ========== 最弱：小红书，仅一行（属于最后一张雪白卡片 .rest） ========== */
+.rest { position: relative; padding-top: 7vh; border-radius: 44px 44px 0 0; background: var(--snow); box-shadow: 0 -24px 50px -24px rgba(0, 10, 60, .35); }
+.also { position: relative; padding-block: 0 4vh; }
 .also-row { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr) auto; align-items: center; gap: 20px 32px; padding: 30px 0; border-block: 1.5px solid var(--navy); }
 .also-name { display: flex; align-items: center; gap: 12px; font-size: .8rem; font-weight: 700; letter-spacing: .08em; color: var(--muted); }
 .also-name img { width: 26px; height: 26px; border-radius: 8px; }
@@ -260,6 +266,8 @@ details.faq-item .faq-answer { margin: 0; padding: 0 46px 24px 0; }
   .about-avatar { width: 84px; height: 84px; }
   .contact-card { width: 100%; }
   .field, .field.invoice, .pale { padding-inline: 20px; border-radius: 30px 30px 0 0; }
+  .rest { border-radius: 30px 30px 0 0; }
+  .fields > * + * { margin-top: -30px; }
   .win.main, .invoice .win.main { width: 96%; }
   .closing { padding-block: 10vh 6vh; }
   .footer-grid { grid-template-columns: 1fr; }
@@ -269,6 +277,8 @@ details.faq-item .faq-answer { margin: 0; padding: 0 46px 24px 0; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
   .js .reveal { opacity: 1; transform: none; }
   .husky::after, .orb { animation: none; }
+  .js .fields > .field, .js .fields > .pale { transform: none; }
+  .fields > .field::after, .fields > .pale::after { display: none; }
   #snow { display: none; }
 }
 
