@@ -69,6 +69,7 @@
   ]
 }
   </script>
+<style>html:lang(en) [data-media-language="zh"],html:lang(zh) [data-media-language="en"]{display:none!important}</style>
 </head>
 <body>
   <a class="skip-link" href="#work" data-i18n="skip">跳到作品</a>
@@ -126,7 +127,7 @@
           <span class="tag"><b data-font="smiley">01</b><span data-i18n="tagFlagship">主力作品</span></span>
           <div class="poster" data-font="smiley" data-i18n-html="posterNovel" aria-hidden="true">AI 写<br>长篇</div>
           <h2 data-i18n="novelTitle">书童 Pagekin，把设定、章节和修稿放在同一个项目。</h2>
-          <p data-i18n="novelBody">书童 Pagekin（原 AI Novel Writer）是免费开源的 AI 小说写作桌面软件。整理人物和设定，生成一章草稿，再选择审稿建议并逐段确认修改。模型需要自行配置，云端费用另计。下方演示为早期版本，当前界面以仓库 README 为准。</p>
+          <p data-i18n="novelBody">书童 Pagekin（原 AI Novel Writer）是免费开源的 AI 小说写作桌面软件。整理人物和设定，生成一章草稿，再选择审稿建议并逐段确认修改。模型需要自行配置，云端费用另计。下方为 1.3.0 中文实录，展示选段续写与改成对话；模型等待段已剪短。</p>
           <ul class="chips"><li data-i18n="novelFeature1">自主生成大纲与场景蓝图</li><li data-i18n="novelFeature2">人物与世界观资料</li><li data-i18n="novelFeature3">云端/本地双支持与审稿闭环</li></ul>
           <div class="actions">
             <a class="btn fill" href="/ai-novel-writer/"><span data-i18n="learnProject">了解这个作品</span><span class="icon i-arrow-right" aria-hidden="true"></span></a>
@@ -136,8 +137,9 @@
         </div>
         <div class="stage" data-depth>
           <div class="bignum" aria-hidden="true" data-font="smiley">01</div>
-          <figure class="win main" data-layer="1"><video muted loop playsinline preload="none" poster="/assets/shots/novel-config.webp?v=20261002-img2" width="1440" height="870" aria-label="AI Novel Writer 早期版本录屏，非当前界面" data-i18n-aria="novelScreenAlt" data-autoplay><source src="/assets/video/ai-novel-writer.mp4" type="video/mp4"></video><span class="badge"><span data-i18n="novelDemoVersion">早期版本录屏</span>&nbsp;·&nbsp;<span data-i18n="fiftySeconds">50 秒</span></span></figure>
-          <figure class="win sub" data-layer="2"><img src="/assets/shots/novel-review.webp?v=20261002-img2" alt="AI Novel Writer 早期版本审稿界面" data-i18n-alt="novelReviewAlt" width="1440" height="870" loading="lazy"></figure>
+          <figure class="win main" data-layer="1" data-media-language="zh" style="aspect-ratio:16/9"><video muted loop playsinline preload="none" poster="/assets/shots/pagekin-selection-1.3.0.jpg" width="1920" height="1080" aria-label="书童 1.3.0 中文实录：选段续写与改成对话" data-i18n-aria="novelScreenAlt" data-autoplay><source src="/assets/video/pagekin-selection-1.3.0-zh.mp4" type="video/mp4"></video><span class="badge"><span data-i18n="novelDemoVersion">1.3.0 实录</span>&nbsp;·&nbsp;<span data-i18n="novelDemoDuration">32 秒</span></span></figure>
+          <figure class="win sub" data-layer="2" data-media-language="zh"><img src="/assets/shots/pagekin-dialogue-1.3.0.jpg" alt="书童 1.3.0 改成对话预览" data-i18n-alt="novelReviewAlt" width="1920" height="1080" loading="lazy"></figure>
+          <figure class="win main" data-media-language="en" style="aspect-ratio:auto;overflow:visible"><div style="padding:24px"><h3>Try Pagekin in English</h3><p>Configure a model, open a chapter, and choose which revisions to keep.</p><a href="https://github.com/EthanYoQ/AI-Novel-Writer/blob/master/README_en.md">Read the English guide</a><p>The recorded demo currently uses Chinese UI and narration.</p></div></figure>
         </div>
       </article>
 
@@ -263,7 +265,7 @@
   </main>
 
   <footer class="site-footer"><div class="shell footer-grid"><div><strong>EthanYoQ / AI LAB</strong><p data-i18n="footerLine">把重复工作，变成更可靠的系统。</p></div><div class="footer-links"><a href="#work" data-i18n="navWork">全部作品</a><a href="https://github.com/EthanYoQ" target="_blank" rel="noreferrer">GitHub</a><a href="#about" data-i18n="navAbout">关于我</a><a href="#faq" data-i18n="navFaq">常见问答</a></div><p class="copyright">© <span id="year">2026</span> EthanYoQ · orz.md</p></div></footer>
-  <script src="/i18n.js?v=20261025-pagekin" defer></script>
+  <script src="/i18n.js?v=20261025-media" defer></script>
   <script src="/home.js?v=20261002-stack" defer></script>
 </body>
 </html>
