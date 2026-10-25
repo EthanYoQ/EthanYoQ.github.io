@@ -114,6 +114,9 @@
 .watch-page .project-breadcrumb { color: var(--muted); }
 .watch-player { margin: 0; padding: 14px; border-radius: 32px; background: var(--field); }
 .watch-player video { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: contain; background: #0f1115; border-radius: 18px; }
+.watch-tutorial { margin: 24px 0; }
+.watch-tutorial img { display: block; width: 100%; height: auto; border-radius: 16px; background: var(--field); }
+.watch-tutorial figcaption { margin-top: 10px; color: var(--muted); line-height: 1.6; }
 .watch-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
 
 @media (max-width: 1040px) {
