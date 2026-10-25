@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-  <url><loc>https://www.orz.md/</loc><lastmod>2026-10-02</lastmod></url>
-  <url><loc>https://www.orz.md/ai-novel-writer/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://www.orz.md/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://www.orz.md/ai-novel-writer/</loc><lastmod>2026-10-25</lastmod></url>
   <url>
     <loc>https://www.orz.md/ai-novel-writer/demo/</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-25</lastmod>
     <video:video>
-      <video:thumbnail_loc>https://www.orz.md/assets/shots/novel-config.jpg</video:thumbnail_loc>
-      <video:title>AI Novel Writer 真实界面与长篇写作流程演示</video:title>
-      <video:description>50 秒展示 AI Novel Writer 的项目资料、章节蓝图、写作与审稿工作区。</video:description>
-      <video:content_loc>https://www.orz.md/assets/video/ai-novel-writer.mp4</video:content_loc>
-      <video:duration>50</video:duration>
-      <video:publication_date>2026-08-29T20:27:37Z</video:publication_date>
+      <video:thumbnail_loc>https://www.orz.md/assets/shots/pagekin-selection-1.3.0.jpg</video:thumbnail_loc>
+      <video:title>书童 Pagekin 选段续写与改成对话实录</video:title>
+      <video:description>32 秒展示选段续写、预览和改成对话。1.3.0 中文实录，模型等待段已剪短。</video:description>
+      <video:content_loc>https://www.orz.md/assets/video/pagekin-selection-1.3.0-zh.mp4</video:content_loc>
+      <video:duration>32</video:duration>
+      <video:publication_date>2026-10-25T14:21:01Z</video:publication_date>
     </video:video>
   </url>
   <url><loc>https://www.orz.md/xiaohongshu-workbench/</loc><lastmod>2026-10-02</lastmod></url>
