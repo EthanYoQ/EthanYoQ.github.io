@@ -23,7 +23,7 @@
     $$("[data-i18n-alt]").forEach((el) => { if (dict[el.dataset.i18nAlt] != null) el.setAttribute("alt", dict[el.dataset.i18nAlt]); });
     const pagekinProduct = language === "en" ? "/en/ai-novel-writer/" : "/ai-novel-writer/";
     $$("[data-pagekin-product]").forEach((el) => el.setAttribute("href", pagekinProduct));
-    $$("[data-pagekin-guide]").forEach((el) => el.setAttribute("href", language === "en" ? pagekinProduct + "#demo" : "/ai-novel-writer/demo/"));
+    $$("[data-pagekin-guide]").forEach((el) => el.setAttribute("href", language === "en" ? pagekinProduct + "#demo" : "/ai-novel-writer/#demo"));
     buttons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === language)));
     $$("[data-contact]").forEach((el) => { el.hidden = el.dataset.contact !== language; });
     words = dict.bubbleWords || [];

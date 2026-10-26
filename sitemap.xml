@@ -5,11 +5,11 @@
   <url><loc>https://www.orz.md/en/ai-novel-writer/</loc><lastmod>2026-10-26</lastmod></url>
   <url>
     <loc>https://www.orz.md/ai-novel-writer/demo/</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <video:video>
       <video:thumbnail_loc>https://www.orz.md/assets/shots/pagekin-selection-1.3.0.jpg</video:thumbnail_loc>
-      <video:title>书童 Pagekin 选段续写与改成对话实录</video:title>
-      <video:description>32 秒展示选段续写、预览和改成对话。1.3.0 中文实录，模型等待段已剪短。</video:description>
+      <video:title>书童 Pagekin 1.3.0 历史演示：选段续写与改成对话</video:title>
+      <video:description>1.3.0 历史演示。32 秒展示选段续写、预览和改成对话；中文实录，模型等待段已剪短，不代表 1.3.2 当前界面。</video:description>
       <video:content_loc>https://www.orz.md/assets/video/pagekin-selection-1.3.0-zh.mp4</video:content_loc>
       <video:duration>32</video:duration>
       <video:publication_date>2026-10-25T14:21:01Z</video:publication_date>

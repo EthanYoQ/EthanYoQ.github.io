@@ -61,7 +61,7 @@
           "name": "项目可以直接下载体验吗？支持哪些操作系统？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "所有项目均开源并提供 GitHub Release 安装包。书童 Pagekin 支持 Windows 与 macOS，Whisper Input 目前专注 Windows，发票整理与小红书工作台支持跨平台运行。每个作品详情页均附带源码、真实演示视频与最新安装包入口。"
+            "text": "所有项目均开源并提供 GitHub Release 安装包。书童 Pagekin 支持 Windows 与 macOS，Whisper Input 目前专注 Windows，发票整理与小红书工作台支持跨平台运行。作品详情页提供源码、操作截图或演示，以及下载入口。Pagekin 的当前 1.3.2 图文与 1.3.0 历史视频分别标注。"
           }
         }
       ]
@@ -103,13 +103,13 @@
         <ul class="hero-facts">
           <li data-i18n="heroFact1">开源透明，免费使用</li>
           <li data-i18n="heroFact2">云端与本地模型自选</li>
-          <li data-i18n="heroFact3">真实界面与真实录屏</li>
+          <li data-i18n="heroFact3">真实界面与操作记录</li>
         </ul>
       </div>
       <div class="husky-wrap" id="hw">
         <div class="bubble" id="bubble" data-font="kai" aria-hidden="true">orz</div>
         <div class="husky" id="husky"><img src="/assets/brand/ethan.png" alt="Ethan 的头像：戴墨镜的哈士奇" data-i18n-alt="avatarAlt" width="460" height="460" fetchpriority="high"></div>
-        <a class="orb o1" href="#novel" aria-label="书童 Pagekin"><img src="/assets/icons/ai-novel-writer.png" alt="" width="80" height="80"></a>
+        <a class="orb o1" href="#novel" aria-label="书童 Pagekin"><img src="/assets/icons/pagekin-icon-256.png" alt="" width="80" height="80"></a>
         <a class="orb o2" href="#invoice" aria-label="InvoiceFlowAI"><img src="/assets/icons/invoiceflowai.png" alt="" width="80" height="80"></a>
         <a class="orb o3" href="#whisper" aria-label="Whisper Input"><img src="/assets/icons/whisper-input.png" alt="" width="64" height="64"></a>
       </div>
@@ -127,19 +127,18 @@
           <span class="tag"><b data-font="smiley">01</b><span data-i18n="tagFlagship">主力作品</span></span>
           <div class="poster" data-font="smiley" data-i18n-html="posterNovel" aria-hidden="true">AI 写<br>长篇</div>
           <h2 data-i18n="novelTitle">书童 Pagekin，把设定、章节和修稿放在同一个项目。</h2>
-          <p data-i18n="novelBody">书童 Pagekin（原 AI Novel Writer）是免费开源的 AI 小说写作桌面软件。整理人物和设定，生成一章草稿，再选择审稿建议并逐段确认修改。模型需要自行配置，云端费用另计。下方为 1.3.0 中文实录，展示选段续写与改成对话；模型等待段已剪短。</p>
+          <p data-i18n="novelBody">书童 Pagekin（原 AI Novel Writer）是免费开源的 AI 小说写作桌面软件。整理人物和设定，生成一章草稿，再选择审稿建议并逐段确认修改。模型需要自行配置，云端费用另计。下方为 1.3.2 中文实际截图，展示虚构样例《雾港来信》的 8 位角色。角色由 AI 生成，作者在角色提议中确认采用。</p>
           <ul class="chips"><li data-i18n="novelFeature1">自主生成大纲与场景蓝图</li><li data-i18n="novelFeature2">人物与世界观资料</li><li data-i18n="novelFeature3">云端/本地双支持与审稿闭环</li></ul>
           <div class="actions">
             <a class="btn fill" href="/ai-novel-writer/" data-pagekin-product><span data-i18n="learnProject">了解这个作品</span><span class="icon i-arrow-right" aria-hidden="true"></span></a>
-            <a class="btn line" href="/ai-novel-writer/demo/" data-pagekin-guide><span class="icon i-play" aria-hidden="true"></span><span data-i18n="pagekinGuideLabel">观看演示</span></a>
+            <a class="btn line" href="/ai-novel-writer/#demo" data-pagekin-guide><span class="icon i-arrow-right" aria-hidden="true"></span><span data-i18n="pagekinGuideLabel">查看 1.3.2 图文</span></a>
             <a class="btn line" href="https://github.com/EthanYoQ/AI-Novel-Writer" target="_blank" rel="noreferrer"><span data-i18n="viewSource">查看源码</span><span class="icon i-arrow-up-right" aria-hidden="true"></span></a>
           </div>
         </div>
         <div class="stage" data-depth>
           <div class="bignum" aria-hidden="true" data-font="smiley">01</div>
-          <figure class="win main" data-layer="1" data-media-language="zh" style="aspect-ratio:16/9"><video muted loop playsinline preload="none" poster="/assets/shots/pagekin-selection-1.3.0.jpg" width="1920" height="1080" aria-label="书童 1.3.0 中文实录：选段续写与改成对话" data-i18n-aria="novelScreenAlt" data-autoplay><source src="/assets/video/pagekin-selection-1.3.0-zh.mp4" type="video/mp4"></video><span class="badge"><span data-i18n="novelDemoVersion">1.3.0 实录</span>&nbsp;·&nbsp;<span data-i18n="novelDemoDuration">32 秒</span></span></figure>
-          <figure class="win sub" data-layer="2" data-media-language="zh"><img src="/assets/shots/pagekin-dialogue-1.3.0.jpg" alt="书童 1.3.0 改成对话预览" data-i18n-alt="novelReviewAlt" width="1920" height="1080" loading="lazy"></figure>
-          <figure class="win main" data-media-language="en" style="aspect-ratio:auto;overflow:visible"><div style="padding:24px"><h3>Start your first book in English</h3><p>Follow four real screenshots of manual setup in Windows 1.3.0. Choose the interface and writing language for the fictional sample The Last Lantern.</p><a href="/en/ai-novel-writer/#demo">Follow the English setup guide</a><p>This guide demonstrates setup. It contains no AI writing, review or revision result.</p></div></figure>
+          <figure class="win main" data-layer="1" data-media-language="zh" style="aspect-ratio:1442/901"><img src="/assets/shots/pagekin-ai-sample-1.3.2/02-cast-zh.jpg" alt="书童 1.3.2 中文界面中《雾港来信》确认采用的 8 位 AI 角色及林昭档案" data-i18n-alt="novelScreenAlt" width="1442" height="901" loading="lazy"><span class="badge" data-i18n="pagekinProofLabel">1.3.2 实际截图</span></figure>
+          <figure class="win main" data-media-language="en" style="aspect-ratio:auto;overflow:visible"><div style="padding:24px"><h3>Start your first book in English</h3><p>Follow four real screenshots of manual setup in Windows 1.3.2. Choose the interface and writing language for the fictional sample The Last Lantern.</p><a href="/en/ai-novel-writer/#demo">Follow the English setup guide</a><p>This guide demonstrates setup. It contains no AI writing, review or revision result.</p></div></figure>
         </div>
       </article>
 
@@ -249,7 +248,7 @@
         <div class="faq-item">
           <h3 data-i18n="faqQ3">项目可以直接下载体验吗？支持哪些操作系统？</h3>
           <div class="faq-answer">
-            <p data-i18n="faqA3">所有项目均开源并提供 GitHub Release 安装包。书童 Pagekin 支持 Windows 与 macOS，Whisper Input 目前专注 Windows，发票整理与小红书工作台支持跨平台运行。每个作品详情页均附带源码、真实演示视频与最新安装包入口。</p>
+            <p data-i18n="faqA3">所有项目均开源并提供 GitHub Release 安装包。书童 Pagekin 支持 Windows 与 macOS，Whisper Input 目前专注 Windows，发票整理与小红书工作台支持跨平台运行。作品详情页提供源码、操作截图或演示，以及下载入口。Pagekin 的当前 1.3.2 图文与 1.3.0 历史视频分别标注。</p>
           </div>
         </div>
       </div>
@@ -265,7 +264,7 @@
   </main>
 
   <footer class="site-footer"><div class="shell footer-grid"><div><strong>EthanYoQ / AI LAB</strong><p data-i18n="footerLine">把重复工作，变成更可靠的系统。</p></div><div class="footer-links"><a href="#work" data-i18n="navWork">全部作品</a><a href="https://github.com/EthanYoQ" target="_blank" rel="noreferrer">GitHub</a><a href="#about" data-i18n="navAbout">关于我</a><a href="#faq" data-i18n="navFaq">常见问答</a></div><p class="copyright">© <span id="year">2026</span> EthanYoQ · orz.md</p></div></footer>
-  <script src="/i18n.js?v=20261026-locale" defer></script>
-  <script src="/home.js?v=20261026-locale" defer></script>
+  <script src="/i18n.js?v=20261026-ai132" defer></script>
+  <script src="/home.js?v=20261026-ai132" defer></script>
 </body>
 </html>
