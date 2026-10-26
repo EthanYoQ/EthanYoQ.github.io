@@ -1,24 +1,26 @@
-const languageButtons = [...document.querySelectorAll("[data-lang]")];
-const copyBlocks = [...document.querySelectorAll("[data-copy]")];
+if (!["zh", "en"].includes(document.documentElement.dataset.projectLocale)) {
+  const languageButtons = [...document.querySelectorAll("[data-lang]")];
+  const copyBlocks = [...document.querySelectorAll("[data-copy]")];
 
-function setProjectLanguage(language) {
-  const activeLanguage = language === "en" ? "en" : "zh";
-  document.documentElement.lang = activeLanguage === "zh" ? "zh-CN" : "en";
-  copyBlocks.forEach((block) => {
-    block.hidden = block.dataset.copy !== activeLanguage;
-  });
+  function setProjectLanguage(language) {
+    const activeLanguage = language === "en" ? "en" : "zh";
+    document.documentElement.lang = activeLanguage === "zh" ? "zh-CN" : "en";
+    copyBlocks.forEach((block) => {
+      block.hidden = block.dataset.copy !== activeLanguage;
+    });
+    languageButtons.forEach((button) => {
+      button.setAttribute("aria-pressed", String(button.dataset.lang === activeLanguage));
+    });
+    const title = document.body.dataset[`title${activeLanguage === "zh" ? "Zh" : "En"}`];
+    if (title) document.title = title;
+    localStorage.setItem("ethan-site-language", activeLanguage);
+  }
+
   languageButtons.forEach((button) => {
-    button.setAttribute("aria-pressed", String(button.dataset.lang === activeLanguage));
+    button.addEventListener("click", () => setProjectLanguage(button.dataset.lang));
   });
-  const title = document.body.dataset[`title${activeLanguage === "zh" ? "Zh" : "En"}`];
-  if (title) document.title = title;
-  localStorage.setItem("ethan-site-language", activeLanguage);
+  setProjectLanguage(localStorage.getItem("ethan-site-language") === "en" ? "en" : "zh");
 }
-
-languageButtons.forEach((button) => {
-  button.addEventListener("click", () => setProjectLanguage(button.dataset.lang));
-});
-setProjectLanguage(localStorage.getItem("ethan-site-language") === "en" ? "en" : "zh");
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const reveals = [...document.querySelectorAll(".reveal")];
