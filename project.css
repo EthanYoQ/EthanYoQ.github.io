@@ -6,6 +6,9 @@
 .theme-whisper { --field: var(--pale); --on: var(--navy); --btn-bg: var(--navy); --btn-fg: #fff; --accent: #1f5fe0; --soft: #dcebff; }
 
 .project-page main { overflow: clip; padding-top: 88px; }
+.project-page[data-project-locale] .language-switch a { display: inline-flex; align-items: center; justify-content: center; min-width: 36px; min-height: 36px; padding: 0 6px; color: var(--muted); border-radius: 999px; text-decoration: none; font-size: .86rem; }
+.project-page[data-project-locale] .language-switch a[aria-current="page"] { color: var(--navy); font-weight: 760; }
+.project-page[data-project-locale] .language-switch a:hover { background: rgba(10, 42, 94, .08); }
 
 /* 首屏：整块主题色 */
 .project-hero { padding: clamp(28px, 4.6vw, 64px); display: grid; grid-template-columns: 1fr; gap: 44px; border-radius: 44px; color: var(--on); background: var(--field); }

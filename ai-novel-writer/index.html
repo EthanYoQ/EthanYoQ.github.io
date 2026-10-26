@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN" class="project-page theme-novel">
+<html lang="zh-CN" class="project-page theme-novel" data-project-locale="zh">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,6 +7,8 @@
   <meta name="description" content="书童 Pagekin 是免费开源的 AI 小说写作桌面软件，把设定、章节蓝图、草稿、审稿和修稿放在同一个项目中。支持 Windows、macOS、自配云端模型与本地 Ollama；模型费用另计，生成内容由作者检查。">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://www.orz.md/ai-novel-writer/">
+  <link rel="alternate" hreflang="zh-CN" href="https://www.orz.md/ai-novel-writer/">
+  <link rel="alternate" hreflang="en" href="https://www.orz.md/en/ai-novel-writer/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="EthanYoQ / AI LAB">
   <meta property="og:url" content="https://www.orz.md/ai-novel-writer/">
@@ -19,7 +21,7 @@
   <meta name="twitter:image" content="https://www.orz.md/assets/shots/pagekin-selection-1.3.0.jpg">
   <link rel="preload" href="/assets/fonts/smiley-display.woff2?v=20261025-pagekin" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/home.css?v=20261025-pagekin">
-  <link rel="stylesheet" href="/project.css?v=20261002-img2">
+  <link rel="stylesheet" href="/project.css?v=20261026-locale">
   <script>document.documentElement.classList.add("js")</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"书童 Pagekin","alternateName":["AI Novel Writer","AI 小说作家"],"softwareVersion":"1.3.2","applicationCategory":"MultimediaApplication","operatingSystem":"Windows, macOS","url":"https://www.orz.md/ai-novel-writer/","downloadUrl":"https://github.com/EthanYoQ/AI-Novel-Writer/releases/latest","codeRepository":"https://github.com/EthanYoQ/AI-Novel-Writer","license":"https://www.gnu.org/licenses/gpl-3.0.html","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"featureList":"设定与章节蓝图, 人物与世界观资料, 草稿与审稿, 逐段比较修订, 自配云端模型或Ollama"}</script>
   <script type="application/ld+json">
@@ -55,16 +57,16 @@
   }
   </script>
 </head>
-<body data-title-zh="书童 Pagekin（原 AI Novel Writer）| 开源 AI 小说写作软件" data-title-en="Pagekin, formerly AI Novel Writer: open-source AI novel-writing software">
+<body>
   <a class="skip-link" href="#project-readme">跳到项目说明</a>
   <header class="site-header">
     <nav class="nav shell" aria-label="主导航">
       <a class="brand" href="/"><span class="brand-name">Ethan</span><span class="brand-slash">/</span><span class="brand-lab">AI LAB</span></a>
       <div class="nav-links">
-        <a href="/" data-copy="zh">全部作品</a><a href="/" data-copy="en" hidden>All work</a>
-        <a href="#project-readme" data-copy="zh">项目说明</a><a href="#project-readme" data-copy="en" hidden>Project notes</a>
+        <a href="/">全部作品</a>
+        <a href="#project-readme">项目说明</a>
         <a href="https://github.com/EthanYoQ/AI-Novel-Writer" target="_blank" rel="noreferrer">GitHub</a>
-        <div class="language-switch" aria-label="语言切换"><button type="button" data-lang="zh" aria-pressed="true">中</button><span>/</span><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
+        <div class="language-switch" aria-label="语言切换"><a href="/ai-novel-writer/" lang="zh-CN" hreflang="zh-CN" aria-current="page">中文</a><a href="/en/ai-novel-writer/" lang="en" hreflang="en">EN</a></div>
       </div>
     </nav>
   </header>
@@ -74,69 +76,64 @@
       <div class="project-hero-copy">
         <p class="project-breadcrumb"><a href="/">Ethan AI Lab</a> / Pagekin</p>
         <div class="project-identity"><img src="/assets/icons/ai-novel-writer.png" alt="Pagekin 图标" width="54" height="54"><div><strong>书童 Pagekin（原 AI Novel Writer）</strong><span>DESKTOP · V1.3.2</span></div></div>
-        <div data-copy="zh">
+        <div>
           <h1 data-font="smiley">AI 小说写作软件，设定、章节与审稿修稿。</h1>
           <p class="project-lead">书童 Pagekin 是面向小说创作者的免费开源桌面软件。新建一本书，整理人物与世界观，生成章节蓝图和草稿，再选择审稿建议、逐段确认修订。模型需要自行配置，作品保存在本机，云端调用费用另计。</p>
           <ul class="project-meta"><li>Windows / macOS</li><li>云端 / 本地模型</li><li>GPL-3.0 免费开源</li><li>大纲与蓝图自主生成</li></ul>
           <div class="hero-actions"><a class="button button-primary" href="https://github.com/EthanYoQ/AI-Novel-Writer/releases/latest">下载桌面版</a><a class="button button-ghost" href="https://github.com/EthanYoQ/AI-Novel-Writer" target="_blank" rel="noreferrer">查看 GitHub 仓库</a></div>
         </div>
-        <div data-copy="en" hidden>
-          <h1 data-font="smiley">An open-source AI novel writing app, from story planning to revision.</h1>
-          <p class="project-lead">Pagekin, formerly AI Novel Writer, is a free, open-source desktop app for fiction writers. Plan a story, draft a chapter, select review notes and compare revisions before accepting them. Configure your own cloud service or local Ollama model. Cloud usage can cost extra.</p>
-          <ul class="project-meta"><li>Windows / macOS</li><li>Cloud & local models</li><li>GPL-3.0 Open Source</li><li>Autonomous outlines & blueprints</li></ul>
-          <div class="hero-actions"><a class="button button-primary" href="https://github.com/EthanYoQ/AI-Novel-Writer/releases/latest">Download desktop app</a><a class="button button-ghost" href="https://github.com/EthanYoQ/AI-Novel-Writer" target="_blank" rel="noreferrer">Open GitHub repository</a></div>
-        </div>
+
       </div>
-      <figure class="project-proof" data-copy="zh"><figcaption><span data-copy="zh">书童 1.3.0 实录截图：选段续写预览</span><span data-copy="en" hidden>Recorded in v1.3.0</span><span>1920 × 1080</span></figcaption><img src="/assets/shots/pagekin-selection-1.3.0.jpg" alt="书童 1.3.0 中选中正文后查看续写预览" width="1920" height="1080"></figure>
+      <figure class="project-proof"><figcaption><span>书童 1.3.0 实录截图：选段续写预览</span><span>1920 × 1080</span></figcaption><img src="/assets/shots/pagekin-selection-1.3.0.jpg" alt="书童 1.3.0 中选中正文后查看续写预览" width="1920" height="1080"></figure>
     </section>
 
     <div class="project-body shell" id="project-readme">
       <aside class="project-toc" aria-label="页面目录">
         <p>README / 01</p>
-        <nav data-copy="zh"><a href="#positioning">产品定位</a><a href="#workflow">创作流程</a><a href="#capabilities">核心能力</a><a href="#demo">真实录屏</a><a href="#data">模型与数据</a><a href="#install">安装方式</a><a href="#boundaries">当前边界</a><a href="#faq">常见问答</a><a class="readme-source" href="https://github.com/EthanYoQ/AI-Novel-Writer#readme" target="_blank" rel="noreferrer">阅读原始 README</a></nav>
-        <nav data-copy="en" hidden><a href="#positioning">Positioning</a><a href="#workflow">Writing flow</a><a href="#capabilities">Capabilities</a><a href="#demo">Live recording</a><a href="#data">Models and data</a><a href="#install">Install</a><a href="#boundaries">Boundaries</a><a href="#faq">FAQ</a><a class="readme-source" href="https://github.com/EthanYoQ/AI-Novel-Writer/blob/master/README_en.md" target="_blank" rel="noreferrer">Read original README</a></nav>
+        <nav><a href="#positioning">产品定位</a><a href="#workflow">创作流程</a><a href="#capabilities">核心能力</a><a href="#demo">真实录屏</a><a href="#data">模型与数据</a><a href="#install">安装方式</a><a href="#boundaries">当前边界</a><a href="#faq">常见问答</a><a class="readme-source" href="https://github.com/EthanYoQ/AI-Novel-Writer#readme" target="_blank" rel="noreferrer">阅读原始 README</a></nav>
+
       </aside>
 
       <article class="readme">
         <section class="readme-section reveal" id="positioning">
-          <div data-copy="zh"><p class="readme-eyebrow">PRODUCT POSITION</p><h2>先整理设定，再写一章，由作者决定怎样修改。</h2><p>书童把人物、世界观、章节蓝图与正文放在同一项目中。先检查当前章节要发生什么，再让模型生成草稿。审稿建议可以选择，修改结果可以逐段比较。</p><p>既可直连 DeepSeek、OpenAI、Gemini 等商用云端模型，也可接入本地 Ollama 开源模型。系统围绕当前章节蓝图、相关角色资料、世界观设定与历史摘要组织上下文，配合自动化审稿报告与修稿闭环，帮助作者发现设定和人物前后不一致的问题。</p><blockquote><p>模型提供草稿和建议，作者决定故事方向以及采用哪些内容。</p></blockquote></div>
-          <div data-copy="en" hidden><p class="readme-eyebrow">PRODUCT POSITION</p><h2>Plan the story, draft a chapter, then choose what to change.</h2><p>Pagekin keeps character notes, worldbuilding, chapter blueprints and prose in one project. Check the chapter plan, generate a draft, then choose review suggestions and compare revisions.</p><p>Compatible with both cloud models (DeepSeek, OpenAI, Gemini) and local offline LLMs (Ollama). The active blueprint and relevant story material provide context for generation. Review notes help the author decide what to revise.</p><blockquote><p>AI provides generative power while the author steers vision and decisions. Outlines, blueprints, and review findings help the author check story continuity.</p></blockquote></div>
+          <div><p class="readme-eyebrow">PRODUCT POSITION</p><h2>先整理设定，再写一章，由作者决定怎样修改。</h2><p>书童把人物、世界观、章节蓝图与正文放在同一项目中。先检查当前章节要发生什么，再让模型生成草稿。审稿建议可以选择，修改结果可以逐段比较。</p><p>既可直连 DeepSeek、OpenAI、Gemini 等商用云端模型，也可接入本地 Ollama 开源模型。系统围绕当前章节蓝图、相关角色资料、世界观设定与历史摘要组织上下文，配合自动化审稿报告与修稿闭环，帮助作者发现设定和人物前后不一致的问题。</p><blockquote><p>模型提供草稿和建议，作者决定故事方向以及采用哪些内容。</p></blockquote></div>
+
         </section>
 
         <section class="readme-section reveal" id="workflow">
-          <div data-copy="zh"><p class="readme-eyebrow">TRACEABLE FLOW</p><h2>从故事前提，一直走到下一章的上下文。</h2><ol class="workflow-list"><li><strong>建立创作前提</strong><span>保存作品方向、关键矛盾和作者已经确认的原稿。</span></li><li><strong>组织角色与世界观</strong><span>把人物、关系、规则和知识资料放回项目内部。</span></li><li><strong>拆成大纲与章节蓝图</strong><span>让每一章有明确目标，而不是仅依赖一段临时提示词。</span></li><li><strong>生成或导入章节草稿</strong><span>围绕当前章节资料调用本地或云端模型。</span></li><li><strong>审稿、修稿、人工确认</strong><span>审稿意见可编辑和取舍，修订稿由作者决定是否合并。</span></li><li><strong>形成定稿并继续</strong><span>定稿进入后续章节的连续性上下文。</span></li></ol></div>
-          <div data-copy="en" hidden><p class="readme-eyebrow">TRACEABLE FLOW</p><h2>From premise to the context that carries the next chapter.</h2><ol class="workflow-list"><li><strong>Define the premise</strong><span>Keep direction, conflict, and approved manuscript material together.</span></li><li><strong>Build characters and world facts</strong><span>Store relationships, rules, and source material inside the project.</span></li><li><strong>Create outline and chapter blueprints</strong><span>Give every chapter a deliberate target beyond a temporary prompt.</span></li><li><strong>Generate or import a draft</strong><span>Call a local or cloud model with chapter-specific context.</span></li><li><strong>Review, revise, approve</strong><span>Edit and select review notes before accepting a revision.</span></li><li><strong>Finalize and continue</strong><span>Approved copy becomes continuity context for future chapters.</span></li></ol></div>
+          <div><p class="readme-eyebrow">TRACEABLE FLOW</p><h2>从故事前提，一直走到下一章的上下文。</h2><ol class="workflow-list"><li><strong>建立创作前提</strong><span>保存作品方向、关键矛盾和作者已经确认的原稿。</span></li><li><strong>组织角色与世界观</strong><span>把人物、关系、规则和知识资料放回项目内部。</span></li><li><strong>拆成大纲与章节蓝图</strong><span>让每一章有明确目标，而不是仅依赖一段临时提示词。</span></li><li><strong>生成或导入章节草稿</strong><span>围绕当前章节资料调用本地或云端模型。</span></li><li><strong>审稿、修稿、人工确认</strong><span>审稿意见可编辑和取舍，修订稿由作者决定是否合并。</span></li><li><strong>形成定稿并继续</strong><span>定稿进入后续章节的连续性上下文。</span></li></ol></div>
+
         </section>
 
         <section class="readme-section reveal" id="capabilities">
-          <div data-copy="zh"><p class="readme-eyebrow">CORE CAPABILITIES</p><h2>围绕一章小说，整理资料、写作和修改。</h2><div class="capability-grid"><div class="capability"><span>01</span><strong>大纲与蓝图自主生成</strong><p>AI 自动规划全书主支线大纲与每一章细分场景蓝图。</p></div><div class="capability"><span>02</span><strong>角色与世界观资料</strong><p>维护角色档案与世界观资料，随写作项目保存。</p></div><div class="capability"><span>03</span><strong>审稿与修稿闭环</strong><p>逐条选择审稿意见，比较原稿与修稿，再确认合并。<a href="/ai-novel-writer/demo/#review-workflow">查看 1.3.0 审稿修稿实录</a>。</p></div><div class="capability"><span>04</span><strong>云端与本地双支持</strong><p>自行配置 DeepSeek、OpenAI、Gemini 或本地 Ollama。</p></div><div class="capability"><span>05</span><strong>参考文本与知识库</strong><p>导入现有小说仿写，支持全文检索与风格提取。</p></div><div class="capability"><span>06</span><strong>批量章节自动化</strong><p>支持批量章节创作与恢复，由作者检查并确认定稿。</p></div></div></div>
-          <div data-copy="en" hidden><p class="readme-eyebrow">CORE CAPABILITIES</p><h2>Tools for planning, drafting and reviewing a chapter.</h2><div class="capability-grid"><div class="capability"><span>01</span><strong>Autonomous outlines & blueprints</strong><p>Autonomously plan overarching narrative arcs and chapter blueprints.</p></div><div class="capability"><span>02</span><strong>Characters & worldbuilding</strong><p>Keep character cards and worldbuilding notes with the project.</p></div><div class="capability"><span>03</span><strong>Critique & revision loop</strong><p>Generate review notes, then decide which suggestions to use.</p></div><div class="capability"><span>04</span><strong>Cloud & local versatility</strong><p>Direct support for DeepSeek, OpenAI, Gemini, and local Ollama.</p></div><div class="capability"><span>05</span><strong>Reference lore & style</strong><p>Import manuscripts for style extraction and full-text search.</p></div><div class="capability"><span>06</span><strong>Batch chapter automation</strong><p>Draft chapters in batches and resume work. Authors review and confirm final text.</p></div></div></div>
+          <div><p class="readme-eyebrow">CORE CAPABILITIES</p><h2>围绕一章小说，整理资料、写作和修改。</h2><div class="capability-grid"><div class="capability"><span>01</span><strong>大纲与蓝图自主生成</strong><p>AI 自动规划全书主支线大纲与每一章细分场景蓝图。</p></div><div class="capability"><span>02</span><strong>角色与世界观资料</strong><p>维护角色档案与世界观资料，随写作项目保存。</p></div><div class="capability"><span>03</span><strong>审稿与修稿闭环</strong><p>逐条选择审稿意见，比较原稿与修稿，再确认合并。<a href="/ai-novel-writer/demo/#review-workflow">查看 1.3.0 审稿修稿实录</a>。</p></div><div class="capability"><span>04</span><strong>云端与本地双支持</strong><p>自行配置 DeepSeek、OpenAI、Gemini 或本地 Ollama。</p></div><div class="capability"><span>05</span><strong>参考文本与知识库</strong><p>导入现有小说仿写，支持全文检索与风格提取。</p></div><div class="capability"><span>06</span><strong>批量章节自动化</strong><p>支持批量章节创作与恢复，由作者检查并确认定稿。</p></div></div></div>
+
         </section>
 
         <section class="readme-section reveal" id="demo">
-          <div data-copy="zh"><p class="readme-eyebrow">REAL PRODUCT PROOF</p><h2>选中一段，先看续写或对话预览，再决定是否应用。</h2><p>32 秒展示书童 1.3.0 的中文实际操作。样例为虚构作品《雾港第七夜》，模型等待段已剪短。配音使用作者授权的 Ethan AI 音色。</p></div>
-          <div data-copy="en" hidden><p class="readme-eyebrow">REAL PRODUCT PROOF</p><h2>Choose a passage, preview a change, then decide whether to apply it.</h2><p>An English-interface recording is not yet available. The linked demo uses Chinese UI and narration, recorded in v1.3.0; model waiting time is shortened.</p></div>
-          <figure class="readme-demo" data-copy="zh"><figcaption><span data-copy="zh">1.3.0 中文实录 · 等待段已剪短</span><span data-copy="en" hidden>v1.3.0 Chinese recording</span><span>32 SEC</span></figcaption><video playsinline controls preload="metadata" poster="/assets/shots/pagekin-selection-1.3.0.jpg"><source src="/assets/video/pagekin-selection-1.3.0-zh.mp4" type="video/mp4"></video></figure>
-          <p data-copy="zh"><a href="/ai-novel-writer/demo/">观看演示与操作步骤</a></p><p data-copy="en" hidden><a href="/ai-novel-writer/demo/">Watch the demo with Chinese UI and narration</a></p>
+          <div><p class="readme-eyebrow">REAL PRODUCT PROOF</p><h2>选中一段，先看续写或对话预览，再决定是否应用。</h2><p>32 秒展示书童 1.3.0 的中文实际操作。样例为虚构作品《雾港第七夜》，模型等待段已剪短。配音使用作者授权的 Ethan AI 音色。</p></div>
+
+          <figure class="readme-demo"><figcaption><span>1.3.0 中文实录 · 等待段已剪短</span><span>32 SEC</span></figcaption><video playsinline controls preload="metadata" poster="/assets/shots/pagekin-selection-1.3.0.jpg"><source src="/assets/video/pagekin-selection-1.3.0-zh.mp4" type="video/mp4"></video></figure>
+          <p><a href="/ai-novel-writer/demo/">观看演示与操作步骤</a></p>
         </section>
 
         <section class="readme-section reveal" id="data">
-          <div data-copy="zh"><p class="readme-eyebrow">MODELS AND DATA</p><h2>模型由你配置，项目资料默认留在本机。</h2><table class="readme-table"><thead><tr><th>项目</th><th>实际位置或去向</th></tr></thead><tbody><tr><td>小说项目、角色、蓝图、草稿与定稿</td><td>项目目录与本地 SQLite 数据库</td></tr><tr><td>参考资料</td><td>保留在本地项目；选择云端模型时，相关上下文会发送给该服务</td></tr><tr><td>模型协议</td><td>OpenAI-compatible 与 Gemini 原生协议</td></tr><tr><td>API Key</td><td>当前保存在本机用户目录的模型配置文件中</td></tr></tbody></table><p>可接入 OpenAI、DeepSeek、Gemini、Ollama 以及兼容端点。自定义地址并不等于支持任意 HTTP 协议；不同原生协议需要单独适配。</p></div>
-          <div data-copy="en" hidden><p class="readme-eyebrow">MODELS AND DATA</p><h2>You configure the model; project data stays local by default.</h2><table class="readme-table"><thead><tr><th>Item</th><th>Location or destination</th></tr></thead><tbody><tr><td>Projects, characters, blueprints, drafts, finals</td><td>Project directory and local SQLite database</td></tr><tr><td>Reference material</td><td>Local project storage; relevant context is sent when a cloud model is selected</td></tr><tr><td>Protocols</td><td>OpenAI-compatible and native Gemini</td></tr><tr><td>API keys</td><td>Stored in the local user model configuration</td></tr></tbody></table><p>OpenAI, DeepSeek, Gemini, Ollama, and compatible endpoints can be configured. A custom URL does not imply support for every native API protocol.</p></div>
+          <div><p class="readme-eyebrow">MODELS AND DATA</p><h2>模型由你配置，项目资料默认留在本机。</h2><table class="readme-table"><thead><tr><th>项目</th><th>实际位置或去向</th></tr></thead><tbody><tr><td>小说项目、角色、蓝图、草稿与定稿</td><td>项目目录与本地 SQLite 数据库</td></tr><tr><td>参考资料</td><td>保留在本地项目；选择云端模型时，相关上下文会发送给该服务</td></tr><tr><td>模型协议</td><td>OpenAI-compatible 与 Gemini 原生协议</td></tr><tr><td>API Key</td><td>当前保存在本机用户目录的模型配置文件中</td></tr></tbody></table><p>可接入 OpenAI、DeepSeek、Gemini、Ollama 以及兼容端点。自定义地址并不等于支持任意 HTTP 协议；不同原生协议需要单独适配。</p></div>
+
         </section>
 
         <section class="readme-section reveal" id="install">
-          <div data-copy="zh"><p class="readme-eyebrow">INSTALL</p><h2>Windows 与两种 Mac 架构，都从同一个 Release 下载。</h2><div class="note-grid"><div class="note-card"><strong>Windows x64</strong><p>下载 NSIS 安装程序。当前未代码签名，安装前请确认来源为官方 GitHub Release。</p></div><div class="note-card"><strong>macOS Apple Silicon / Intel</strong><p>分别下载 arm64 或 x64 DMG。当前未使用 Developer ID 签名且未公证。</p></div></div><pre class="code-block">ai-novel-writer-setup-&lt;version&gt;.exe&#10;ai-novel-writer-mac-arm64-&lt;version&gt;-installer.dmg&#10;ai-novel-writer-mac-x64-&lt;version&gt;-installer.dmg</pre></div>
-          <div data-copy="en" hidden><p class="readme-eyebrow">INSTALL</p><h2>Windows and both Mac architectures ship through one release.</h2><div class="note-grid"><div class="note-card"><strong>Windows x64</strong><p>Download the NSIS installer. It is currently unsigned, so verify the official GitHub Release before continuing.</p></div><div class="note-card"><strong>macOS Apple Silicon / Intel</strong><p>Choose the arm64 or x64 DMG. Current packages are not Developer ID signed or notarized.</p></div></div><pre class="code-block">ai-novel-writer-setup-&lt;version&gt;.exe&#10;ai-novel-writer-mac-arm64-&lt;version&gt;-installer.dmg&#10;ai-novel-writer-mac-x64-&lt;version&gt;-installer.dmg</pre></div>
+          <div><p class="readme-eyebrow">INSTALL</p><h2>Windows 与两种 Mac 架构，都从同一个 Release 下载。</h2><div class="note-grid"><div class="note-card"><strong>Windows x64</strong><p>下载 NSIS 安装程序。当前未代码签名，安装前请确认来源为官方 GitHub Release。</p></div><div class="note-card"><strong>macOS Apple Silicon / Intel</strong><p>分别下载 arm64 或 x64 DMG。当前未使用 Developer ID 签名且未公证。</p></div></div><pre class="code-block">ai-novel-writer-setup-&lt;version&gt;.exe&#10;ai-novel-writer-mac-arm64-&lt;version&gt;-installer.dmg&#10;ai-novel-writer-mac-x64-&lt;version&gt;-installer.dmg</pre></div>
+
         </section>
 
         <section class="readme-section reveal" id="boundaries">
-          <div data-copy="zh"><p class="readme-eyebrow">CURRENT BOUNDARIES</p><h2>它帮助你管理创作，但不会替代作者的判断。</h2><ul><li>不承诺任意第三方 API 只换 URL 和 Key 就能接入。</li><li>不替代作者的创意、事实核查、版权判断与最终审校。</li><li>不提供在线发布、阅读社区或云端模型账号。</li><li>DeepSeek Harness 插件是单独发布且已冻结的开发预览，不替代桌面软件；安装与限制见插件 README。</li></ul></div>
-          <div data-copy="en" hidden><p class="readme-eyebrow">CURRENT BOUNDARIES</p><h2>It manages the process; it does not replace the author.</h2><ul><li>Not every third-party API works by changing only a URL and key.</li><li>Creative decisions, fact checking, copyright judgment, and final review remain with the author.</li><li>It does not provide publishing, a reader community, or hosted model accounts.</li><li>The separately published DeepSeek Harness developer preview is frozen and does not replace the desktop app. See its own README for limitations.</li></ul></div>
+          <div><p class="readme-eyebrow">CURRENT BOUNDARIES</p><h2>它帮助你管理创作，但不会替代作者的判断。</h2><ul><li>不承诺任意第三方 API 只换 URL 和 Key 就能接入。</li><li>不替代作者的创意、事实核查、版权判断与最终审校。</li><li>不提供在线发布、阅读社区或云端模型账号。</li><li>DeepSeek Harness 插件是单独发布且已冻结的开发预览，不替代桌面软件；安装与限制见插件 README。</li></ul></div>
+
         </section>
 
         <section class="readme-section reveal" id="faq">
-          <div data-copy="zh">
+          <div>
             <p class="readme-eyebrow">FREQUENTLY ASKED QUESTIONS</p>
             <h2>常见问题与核心特性答疑</h2>
             <div class="faq-list">
@@ -160,38 +157,15 @@
               </details>
             </div>
           </div>
-          <div data-copy="en" hidden>
-            <p class="readme-eyebrow">FREQUENTLY ASKED QUESTIONS</p>
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-list">
-              <details class="faq-item" open>
-                <summary>How is Pagekin different from writing with a standard AI chat? What is its core focus?</summary>
-                <div class="faq-answer">
-                  <p>Pagekin stores characters, worldbuilding, chapter plans, drafts and revisions in one project. Generate a chapter, choose review notes and compare changes before accepting them. Models can still produce inconsistencies, so the author reviews the result.</p>
-                </div>
-              </details>
-              <details class="faq-item">
-                <summary>Is it limited to local models? Which cloud and local models are supported?</summary>
-                <div class="faq-answer">
-                  <p>Configure an OpenAI-compatible service, native Google Gemini, or local Ollama. No model or quota is bundled. Cloud providers can charge for usage and receive the prompts and context you send.</p>
-                </div>
-              </details>
-              <details class="faq-item">
-                <summary>Can I import existing manuscripts to continue writing?</summary>
-                <div class="faq-answer">
-                  <p>Yes. Import your manuscript to continue working, or select a passage to continue, expand or rewrite it. Check the current README for supported formats and review all generated text.</p>
-                </div>
-              </details>
-            </div>
-          </div>
+
         </section>
 
-        <div class="project-cta"><div data-copy="zh"><p class="readme-eyebrow">OPEN SOURCE</p><h2>下载软件，或者直接查看它如何工作。</h2><p>本页依据 v1.3.2 的公开 README 于 2026-10-25 核对；本页视频与截图来自 1.3.0 实录，未将其标作 1.3.2 实测。完整安装说明、限制和更新记录以 GitHub 为准。</p><div class="hero-actions"><a class="button button-primary" href="https://github.com/EthanYoQ/AI-Novel-Writer/releases/latest">下载最新版本</a><a class="button button-ghost" href="https://github.com/EthanYoQ/AI-Novel-Writer#readme" target="_blank" rel="noreferrer">阅读完整 README</a></div><p>如果书童对你有用，欢迎到 <a href="https://github.com/EthanYoQ/AI-Novel-Writer" target="_blank" rel="noreferrer">GitHub 点 Star</a>，支持后续维护。无需 Star 也可直接下载。</p></div><div data-copy="en" hidden><p class="readme-eyebrow">OPEN SOURCE</p><h2>Download the app or inspect exactly how it works.</h2><p>Checked against the public v1.3.2 README on October 25, 2026. Media was recorded in v1.3.0 and is not presented as a v1.3.2 test. GitHub provides the full installation guide and release notes.</p><div class="hero-actions"><a class="button button-primary" href="https://github.com/EthanYoQ/AI-Novel-Writer/releases/latest">Download latest release</a><a class="button button-ghost" href="https://github.com/EthanYoQ/AI-Novel-Writer/blob/master/README_en.md" target="_blank" rel="noreferrer">Read full README</a></div><p>If Pagekin helps your writing, you can <a href="https://github.com/EthanYoQ/AI-Novel-Writer" target="_blank" rel="noreferrer">star the repository</a> to support its maintenance. Downloads do not require a star.</p></div></div>
+        <div class="project-cta"><div><p class="readme-eyebrow">OPEN SOURCE</p><h2>下载软件，或者直接查看它如何工作。</h2><p>本页依据 v1.3.2 的公开 README 于 2026-10-25 核对；本页视频与截图来自 1.3.0 实录，未将其标作 1.3.2 实测。完整安装说明、限制和更新记录以 GitHub 为准。</p><div class="hero-actions"><a class="button button-primary" href="https://github.com/EthanYoQ/AI-Novel-Writer/releases/latest">下载最新版本</a><a class="button button-ghost" href="https://github.com/EthanYoQ/AI-Novel-Writer#readme" target="_blank" rel="noreferrer">阅读完整 README</a></div><p>如果书童对你有用，欢迎到 <a href="https://github.com/EthanYoQ/AI-Novel-Writer" target="_blank" rel="noreferrer">GitHub 点 Star</a>，支持后续维护。无需 Star 也可直接下载。</p></div></div>
       </article>
     </div>
   </main>
 
-  <footer class="site-footer"><div class="footer-grid shell"><div class="project-footer-note"><strong>Ethan / AI Lab</strong><p data-copy="zh">把真实工作中的重复步骤，做成可以下载、验证和共同改进的工具。</p><p data-copy="en" hidden>Turning repeated work into tools people can download, verify, and improve.</p></div><div class="footer-links"><a href="/">Portfolio</a><a href="https://github.com/EthanYoQ" target="_blank" rel="noreferrer">GitHub</a></div><p class="copyright">© <span id="year"></span> EthanYoQ</p></div></footer>
-  <script src="/project.js?v=20261002-img2" defer></script>
+  <footer class="site-footer"><div class="footer-grid shell"><div class="project-footer-note"><strong>Ethan / AI Lab</strong><p>把真实工作中的重复步骤，做成可以下载、验证和共同改进的工具。</p></div><div class="footer-links"><a href="/">Portfolio</a><a href="https://github.com/EthanYoQ" target="_blank" rel="noreferrer">GitHub</a></div><p class="copyright">© <span id="year">2026</span> EthanYoQ</p></div></footer>
+  <script src="/project.js?v=20261026-locale" defer></script>
 </body>
 </html>
