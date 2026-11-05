@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url><loc>https://www.orz.md/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://www.orz.md/ai-novel-writer/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://www.orz.md/en/ai-novel-writer/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://www.orz.md/ai-novel-writer/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://www.orz.md/en/ai-novel-writer/</loc><lastmod>2026-11-06</lastmod></url>
   <url>
     <loc>https://www.orz.md/ai-novel-writer/demo/</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <video:video>
       <video:thumbnail_loc>https://www.orz.md/assets/shots/pagekin-selection-1.3.0.jpg</video:thumbnail_loc>
       <video:title>书童 Pagekin 1.3.0 历史演示：选段续写与改成对话</video:title>
@@ -19,7 +19,7 @@
   <url><loc>https://www.orz.md/invoice-downloader/</loc><lastmod>2026-10-02</lastmod></url>
   <url>
     <loc>https://www.orz.md/invoice-downloader/demo/</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <video:video>
       <video:thumbnail_loc>https://www.orz.md/assets/screens/invoiceflowai.png</video:thumbnail_loc>
       <video:title>InvoiceFlowAI 邮箱发票整理与 Excel 汇总演示</video:title>

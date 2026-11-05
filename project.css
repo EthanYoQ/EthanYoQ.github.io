@@ -121,6 +121,12 @@
 .watch-tutorial img { display: block; width: 100%; height: auto; border-radius: 16px; background: var(--field); }
 .watch-tutorial figcaption { margin-top: 10px; color: var(--muted); line-height: 1.6; }
 .watch-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+.video-watch-page main { padding-top: 88px; }
+.video-watch-page .watch-player video { aspect-ratio: 16 / 9; max-height: 60vh; }
+.video-watch-page .watch-copy { scroll-margin-top: 96px; }
+.video-watch-page .watch-copy h1 { margin: 8px 0; font-size: clamp(1.75rem, 3.6vw, 2.6rem); }
+.video-watch-page .project-breadcrumb { margin-bottom: 12px; font-size: .86rem; }
+.video-watch-page .watch-player + .watch-copy { margin-top: 24px; }
 
 @media (max-width: 1040px) {
   .project-hero { gap: 36px; }
@@ -144,6 +150,7 @@
   .readme-table { display: block; overflow-x: auto; }
   .project-cta { margin-top: 48px; padding: 28px 22px; border-radius: 30px; }
   .watch-page main { padding-top: 84px; }
+  .video-watch-page main { padding-top: 76px; }
   .watch-shell { width: min(100% - 32px, 620px); }
   .watch-player { padding: 8px; border-radius: 24px; }
   details.faq-item .faq-answer { padding-right: 0; }
