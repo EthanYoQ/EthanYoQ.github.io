@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>书童 Pagekin（原 AI Novel Writer）| 开源 AI 小说写作软件</title>
-  <meta name="description" content="书童 Pagekin 是免费开源的 AI 小说写作桌面软件，把设定、章节蓝图、草稿、审稿和修稿放在同一个项目中。支持 Windows、macOS、自配云端模型与本地 Ollama；模型费用另计，生成内容由作者检查。">
+  <title>Pagekin，免费 AI 小说写作软件</title>
+  <meta name="description" content="Pagekin，免费 AI 小说写作软件。支持 Windows 和 macOS，把设定、章节蓝图、草稿、审稿和修稿放在同一项目中。模型需自行配置，云端费用另计，生成内容由作者检查。">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://www.orz.md/ai-novel-writer/">
   <link rel="alternate" hreflang="zh-CN" href="https://www.orz.md/ai-novel-writer/">
@@ -12,18 +12,18 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="EthanYoQ / AI LAB">
   <meta property="og:url" content="https://www.orz.md/ai-novel-writer/">
-  <meta property="og:title" content="书童 Pagekin（原 AI Novel Writer）| 开源 AI 小说写作软件">
-  <meta property="og:description" content="书童 Pagekin 是免费开源的 AI 小说写作桌面软件，把设定、章节蓝图、草稿、审稿和修稿放在同一个项目中。支持 Windows、macOS、自配云端模型与本地 Ollama；模型费用另计，生成内容由作者检查。">
+  <meta property="og:title" content="Pagekin，免费 AI 小说写作软件">
+  <meta property="og:description" content="Pagekin，免费 AI 小说写作软件。支持 Windows 和 macOS，把设定、章节蓝图、草稿、审稿和修稿放在同一项目中。模型需自行配置，云端费用另计，生成内容由作者检查。">
   <meta property="og:image" content="https://www.orz.md/assets/shots/pagekin-ai-sample-1.3.2/02-cast-zh.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="书童 Pagekin（原 AI Novel Writer）| 开源 AI 小说写作软件">
-  <meta name="twitter:description" content="书童 Pagekin 是免费开源的 AI 小说写作桌面软件，把设定、章节蓝图、草稿、审稿和修稿放在同一个项目中。支持 Windows、macOS、自配云端模型与本地 Ollama；模型费用另计，生成内容由作者检查。">
+  <meta name="twitter:title" content="Pagekin，免费 AI 小说写作软件">
+  <meta name="twitter:description" content="Pagekin，免费 AI 小说写作软件。支持 Windows 和 macOS，把设定、章节蓝图、草稿、审稿和修稿放在同一项目中。模型需自行配置，云端费用另计，生成内容由作者检查。">
   <meta name="twitter:image" content="https://www.orz.md/assets/shots/pagekin-ai-sample-1.3.2/02-cast-zh.jpg">
-  <link rel="preload" href="/assets/fonts/smiley-display.woff2?v=20261025-pagekin" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/home.css?v=20261025-pagekin">
+  <link rel="preload" href="/assets/fonts/smiley-display.woff2?v=20261106-pagekin" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/home.css?v=20261106-pagekin">
   <link rel="stylesheet" href="/project.css?v=20261026-locale">
   <script>document.documentElement.classList.add("js")</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"书童 Pagekin","alternateName":["AI Novel Writer","AI 小说作家"],"softwareVersion":"1.3.2","applicationCategory":"MultimediaApplication","operatingSystem":"Windows, macOS","url":"https://www.orz.md/ai-novel-writer/","downloadUrl":"https://github.com/EthanYoQ/AI-Novel-Writer/releases/latest","codeRepository":"https://github.com/EthanYoQ/AI-Novel-Writer","license":"https://www.gnu.org/licenses/gpl-3.0.html","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"featureList":"设定与章节蓝图, 人物与世界观资料, 草稿与审稿, 逐段比较修订, 自配云端模型或Ollama"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","@id":"https://www.orz.md/ai-novel-writer/#software","name":"Pagekin","alternateName":["AI Novel Writer","AI 小说作家","书童 Pagekin","书童"],"author":{"@type":"Person","name":"EthanYoQ","url":"https://github.com/EthanYoQ"},"softwareVersion":"1.4.0","applicationCategory":"MultimediaApplication","operatingSystem":"Windows, macOS","url":"https://www.orz.md/ai-novel-writer/","downloadUrl":"https://github.com/EthanYoQ/Pagekin/releases/latest","codeRepository":"https://github.com/EthanYoQ/Pagekin","sameAs":"https://github.com/EthanYoQ/Pagekin","image":"https://www.orz.md/assets/icons/pagekin-icon-256.png","license":"https://www.gnu.org/licenses/gpl-3.0.html","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"featureList":"设定与章节蓝图, 人物与世界观资料, 草稿与审稿, 逐段比较修订, 自配云端模型或Ollama"}</script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -52,6 +52,30 @@
           "@type": "Answer",
           "text": "可以导入自己的稿件继续创作，也可以选中一段正文续写、扩写或改写。生成结果需要作者检查；导入说明和支持格式以当前版本 README 为准。"
         }
+      },
+      {
+        "@type": "Question",
+        "name": "书童 Pagekin 免费吗？AI 生成也免费吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "书童 Pagekin 软件本身免费，按 GPL-3.0 开源。AI 生成需要自行配置云端模型服务或本地 Ollama，软件不附带模型调用额度。云端服务商可能按模型和用量收费。本地模型需要合适的硬件，也有电力等运行成本。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "第一次使用书童，应该从哪里开始？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "先新建一本小说，确定故事方向和写作语言。需要 AI 生成时，先配置可用模型，再生成设定并检查结果。本页的 1.3.2 核心大纲到第一章蓝图图文展示了核心大纲生成、角色采用、四节故事架构确认和第一章蓝图。样例正文仍待写。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pagekin 的官方主页、GitHub 和下载地址在哪里？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pagekin（书童）是由 EthanYoQ 维护的 Windows 和 macOS 桌面小说写作软件。<a href=\"https://www.orz.md/ai-novel-writer/\">官方主页</a>提供产品介绍，<a href=\"https://github.com/EthanYoQ/Pagekin\">GitHub 仓库</a>提供源码，安装包见<a href=\"https://github.com/EthanYoQ/Pagekin/releases/latest\">官方最新版本下载</a>。首次使用可查看<a href=\"#install\">安装与模型配置</a>。"
+        }
       }
     ]
   }
@@ -65,7 +89,7 @@
       <div class="nav-links">
         <a href="/">全部作品</a>
         <a href="#project-readme">项目说明</a>
-        <a href="https://github.com/EthanYoQ/AI-Novel-Writer" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://github.com/EthanYoQ/Pagekin" target="_blank" rel="noreferrer">GitHub</a>
         <div class="language-switch" aria-label="语言切换"><a href="/ai-novel-writer/" lang="zh-CN" hreflang="zh-CN" aria-current="page">中文</a><a href="/en/ai-novel-writer/" lang="en" hreflang="en">EN</a></div>
       </div>
     </nav>
@@ -75,12 +99,13 @@
     <section class="project-hero shell reveal">
       <div class="project-hero-copy">
         <p class="project-breadcrumb"><a href="/">Ethan AI Lab</a> / Pagekin</p>
-        <div class="project-identity"><img src="/assets/icons/pagekin-icon-256.png" alt="Pagekin 图标" width="54" height="54"><div><strong>书童 Pagekin（原 AI Novel Writer）</strong><span>DESKTOP · V1.3.2</span></div></div>
+        <div class="project-identity"><img src="/assets/icons/pagekin-icon-256.png" alt="Pagekin 图标" width="54" height="54"><div><strong>书童 Pagekin（原 AI Novel Writer）</strong><span>截图 · V1.3.2</span></div></div>
         <div>
-          <h1 data-font="smiley">AI 小说写作软件，设定、章节与审稿修稿。</h1>
-          <p class="project-lead">书童 Pagekin 是面向小说创作者的免费开源桌面软件。新建一本书，整理人物与世界观，生成章节蓝图和草稿，再选择审稿建议、逐段确认修订。模型需要自行配置，作品保存在本机，云端调用费用另计。</p>
+          <h1 data-font="smiley">Pagekin，免费 AI 小说写作软件</h1>
+          <p class="project-lead">Pagekin，免费 AI 小说写作软件。新建一本书，整理人物与世界观，生成章节蓝图和草稿，再选择审稿建议、逐段确认修订。模型需要自行配置，作品保存在本机，云端调用费用另计。</p>
+          <p>书童 Pagekin 由 EthanYoQ 维护。本页为<a href="https://www.orz.md/ai-novel-writer/">官方主页</a>，源码见 <a href="https://github.com/EthanYoQ/Pagekin">Pagekin GitHub 源码</a>。</p>
           <ul class="project-meta"><li>Windows / macOS</li><li>云端 / 本地模型</li><li>GPL-3.0 免费开源</li><li>大纲与蓝图自主生成</li></ul>
-          <div class="hero-actions"><a class="button button-primary" href="https://github.com/EthanYoQ/AI-Novel-Writer/releases/latest">下载桌面版</a><a class="button button-ghost" href="https://github.com/EthanYoQ/AI-Novel-Writer" target="_blank" rel="noreferrer">查看 GitHub 仓库</a></div>
+          <div class="hero-actions"><a class="button button-primary" href="https://github.com/EthanYoQ/Pagekin/releases/latest">下载桌面版</a><a class="button button-ghost" href="https://github.com/EthanYoQ/Pagekin" target="_blank" rel="noreferrer">Pagekin GitHub 源码</a></div>
         </div>
 
       </div>
@@ -90,14 +115,19 @@
     <div class="project-body shell" id="project-readme">
       <aside class="project-toc" aria-label="页面目录">
         <p>README / 01</p>
-        <nav><a href="#positioning">产品定位</a><a href="#workflow">创作流程</a><a href="#capabilities">核心能力</a><a href="#demo">1.3.2 生成图文</a><a href="#data">模型与数据</a><a href="#install">安装方式</a><a href="#boundaries">当前边界</a><a href="#faq">常见问答</a><a class="readme-source" href="https://github.com/EthanYoQ/AI-Novel-Writer#readme" target="_blank" rel="noreferrer">阅读原始 README</a></nav>
+        <nav><a href="#positioning">产品定位</a><a href="#workflow">创作流程</a><a href="#capabilities">核心能力</a><a href="#demo">1.3.2 生成图文</a><a href="#data">模型与数据</a><a href="#install">安装方式</a><a href="#boundaries">当前边界</a><a href="#faq">常见问答</a><a class="readme-source" href="https://github.com/EthanYoQ/Pagekin#readme" target="_blank" rel="noreferrer">阅读原始 README</a></nav>
 
       </aside>
 
       <article class="readme">
         <section class="readme-section reveal" id="positioning">
-          <div><p class="readme-eyebrow">PRODUCT POSITION</p><h2>先整理设定，再写一章，由作者决定怎样修改。</h2><p>书童把人物、世界观、章节蓝图与正文放在同一项目中。先检查当前章节要发生什么，再让模型生成草稿。审稿建议可以选择，修改结果可以逐段比较。</p><p>既可直连 DeepSeek、OpenAI、Gemini 等商用云端模型，也可接入本地 Ollama 开源模型。系统围绕当前章节蓝图、相关角色资料、世界观设定与历史摘要组织上下文，配合自动化审稿报告与修稿闭环，帮助作者发现设定和人物前后不一致的问题。</p><blockquote><p>模型提供草稿和建议，作者决定故事方向以及采用哪些内容。</p></blockquote></div>
-
+          <div><p class="readme-eyebrow">PRODUCT POSITION</p>
+          <h2>适合逐章组织长篇的 AI 小说写作软件</h2>
+          <p>Pagekin（书童）面向希望在 Windows 或 macOS 上组织长篇小说、并愿意自行配置模型的作者。人物、世界观、章节蓝图与正文保存在同一个写作项目中。先检查本章目标，再生成草稿，随后选择审稿建议并比较修改。</p>
+          <p>如果你正在选择免费或本地 AI 写小说工具，可以先看这三点：</p>
+          <ul><li><strong>免费的是软件。</strong> Pagekin 按 GPL-3.0 开源，模型需要自行配置，云端调用可能收费。<a href="#faq">查看软件与模型费用</a>。</li><li><strong>本地保存与本地生成是两件事。</strong> 项目资料保存在本机；使用云端模型时，相关提示词和故事上下文会发送给服务商。使用本地 Ollama 需要另行准备模型和服务。<a href="#data">查看模型与数据说明</a>。</li><li><strong>先看一章，再决定是否适合。</strong> <a href="/ai-novel-writer/chapter-blueprint/">章节大纲模板与真实蓝图检查示例</a>展示 1.3.2 的首章规划，正文尚未生成。<a href="#install">安装与配置说明</a>列出开始使用的步骤。</li></ul>
+          <blockquote><p>模型提供草稿和建议，作者决定故事方向以及采用哪些内容。</p></blockquote>
+          </div>
         </section>
 
         <section class="readme-section reveal" id="workflow">
@@ -129,7 +159,7 @@
           <figure class="watch-tutorial"><a href="/assets/shots/pagekin-ai-sample-1.3.2/04-blueprint-zh.jpg"><img src="/assets/shots/pagekin-ai-sample-1.3.2/04-blueprint-zh.jpg" alt="《雾港来信》第 1 章落款明天的 AI 蓝图已保存，侧栏显示 1/8 章，正文待写" width="1442" height="901" loading="lazy"></a><figcaption>第四步。第 1 章蓝图已生成，正文仍待写，点击可查看原图。</figcaption></figure>
           <p>这四图展示核心大纲生成、8 位角色采用、四节故事架构确认和第 1 章蓝图，未展示正文、审稿或修稿结果，也不是小说质量或生成速度测评。模型可能生成矛盾或错误，内容仍需作者确认。</p>
           <p>软件开源免费。云端模型调用可能收费；使用云端模型时，相关提示词和故事上下文会发送给所配置的服务商。</p>
-          <p><a href="/ai-novel-writer/demo/">查看 1.3.0 历史视频：选段续写与改成对话</a>；<a href="/ai-novel-writer/demo/#review-workflow">查看 1.3.0 历史审稿修稿图文</a>。历史素材不代表 1.3.2 当前界面。</p>
+          <p><a href="/ai-novel-writer/demo/">查看 1.3.0 历史视频：选段续写与改成对话</a>；<a href="/ai-novel-writer/demo/#review-workflow">查看 1.3.0 历史审稿修稿图文</a>。历史素材不代表当前版本界面。</p>
         </section>
 
         <section class="readme-section reveal" id="data">
@@ -138,7 +168,9 @@
         </section>
 
         <section class="readme-section reveal" id="install">
-          <div><p class="readme-eyebrow">INSTALL</p><h2>Windows 与两种 Mac 架构，都从同一个 Release 下载。</h2><div class="note-grid"><div class="note-card"><strong>Windows x64</strong><p>下载 NSIS 安装程序。当前未代码签名，安装前请确认来源为官方 GitHub Release。</p></div><div class="note-card"><strong>macOS Apple Silicon / Intel</strong><p>分别下载 arm64 或 x64 DMG。当前未使用 Developer ID 签名且未公证。</p></div></div><pre class="code-block">ai-novel-writer-setup-&lt;version&gt;.exe&#10;ai-novel-writer-mac-arm64-&lt;version&gt;-installer.dmg&#10;ai-novel-writer-mac-x64-&lt;version&gt;-installer.dmg</pre></div>
+          <div><p class="readme-eyebrow">INSTALL</p><h2>安装并配置模型，开始第一本书。</h2><p>当前下载版本为 v1.4.0。本页截图来自 1.3.2，界面可能与新版不同。</p><div class="note-grid"><div class="note-card"><strong>Windows x64</strong><p>下载 NSIS 安装程序。当前未代码签名，安装前请确认来源为官方 GitHub Release。</p></div><div class="note-card"><strong>macOS Apple Silicon / Intel</strong><p>分别下载 arm64 或 x64 DMG。当前未使用 Developer ID 签名且未公证。</p></div></div><pre class="code-block">ai-novel-writer-setup-&lt;version&gt;.exe&#10;ai-novel-writer-mac-arm64-&lt;version&gt;-installer.dmg&#10;ai-novel-writer-mac-x64-&lt;version&gt;-installer.dmg</pre>
+          <ol><li>从<a href="https://github.com/EthanYoQ/Pagekin/releases/latest">官方 Release</a>下载与你的系统和 Mac 芯片匹配的安装包。</li><li>安装并打开 Pagekin，在“设置”的模型配置中添加模型。云端服务按提供商要求填写 API Key、base_url 和模型名称。本地 Ollama 需先启动服务并准备模型，再填写本地地址和模型名称。</li><li>保存配置并选择可用模型。新建小说，填写故事方向并选择写作语言，再保存设定。</li></ol>
+          <p>接着对照<a href="#demo">1.3.2 核心大纲到第一章蓝图图文</a>操作，也可以先用<a href="/ai-novel-writer/chapter-blueprint/">章节蓝图模板与实例</a>整理本章目的和事件。</p></div>
 
         </section>
 
@@ -170,12 +202,30 @@
                   <p>可以导入自己的稿件继续创作，也可以选中一段正文续写、扩写或改写。生成结果需要作者检查；导入说明和支持格式以当前版本 README 为准。</p>
                 </div>
               </details>
+              <details class="faq-item">
+                <summary>书童 Pagekin 免费吗？AI 生成也免费吗？</summary>
+                <div class="faq-answer">
+                  <p>书童 Pagekin 软件本身免费，按 GPL-3.0 开源。AI 生成需要自行配置云端模型服务或本地 Ollama，软件不附带模型调用额度。云端服务商可能按模型和用量收费。本地模型需要合适的硬件，也有电力等运行成本。</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>第一次使用书童，应该从哪里开始？</summary>
+                <div class="faq-answer">
+                  <p>先新建一本小说，确定故事方向和写作语言。需要 AI 生成时，先配置可用模型，再生成设定并检查结果。本页的 <a href="#demo">1.3.2 核心大纲到第一章蓝图图文</a>展示了核心大纲生成、角色采用、四节故事架构确认和第一章蓝图。样例正文仍待写。</p>
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>Pagekin 的官方主页、GitHub 和下载地址在哪里？</summary>
+                <div class="faq-answer">
+                  <p>Pagekin（书童）是由 EthanYoQ 维护的 Windows 和 macOS 桌面小说写作软件。<a href="https://www.orz.md/ai-novel-writer/">官方主页</a>提供产品介绍，<a href="https://github.com/EthanYoQ/Pagekin">GitHub 仓库</a>提供源码，安装包见<a href="https://github.com/EthanYoQ/Pagekin/releases/latest">官方最新版本下载</a>。首次使用可查看<a href="#install">安装与模型配置</a>。</p>
+                </div>
+              </details>
             </div>
           </div>
 
         </section>
 
-        <div class="project-cta"><div><p class="readme-eyebrow">OPEN SOURCE</p><h2>下载软件，或者直接查看它如何工作。</h2><p>产品能力依据 v1.3.2 的公开 README 于 2026-10-25 核对。本页当前截图记录 Windows 1.3.2 的核心大纲生成、角色采用、四节故事架构确认和第 1 章蓝图；旧视频与审稿图文单列为 1.3.0 历史演示。完整安装说明、限制和更新记录以 GitHub 为准。</p><div class="hero-actions"><a class="button button-primary" href="https://github.com/EthanYoQ/AI-Novel-Writer/releases/latest">下载最新版本</a><a class="button button-ghost" href="https://github.com/EthanYoQ/AI-Novel-Writer#readme" target="_blank" rel="noreferrer">阅读完整 README</a></div><p>如果书童对你有用，欢迎到 <a href="https://github.com/EthanYoQ/AI-Novel-Writer" target="_blank" rel="noreferrer">GitHub 点 Star</a>，支持后续维护。无需 Star 也可直接下载。</p></div></div>
+        <div class="project-cta"><div><p class="readme-eyebrow">OPEN SOURCE</p><h2>下载软件，或者直接查看它如何工作。</h2><p>产品能力依据 v1.3.2 的公开 README 于 2026-10-25 核对。本页截图记录 Windows 1.3.2 的核心大纲生成、角色采用、四节故事架构确认和第 1 章蓝图；旧视频与审稿图文单列为 1.3.0 历史演示。完整安装说明、限制和更新记录以 GitHub 为准。</p><div class="hero-actions"><a class="button button-primary" href="https://github.com/EthanYoQ/Pagekin/releases/latest">下载最新版本</a><a class="button button-ghost" href="https://github.com/EthanYoQ/Pagekin#readme" target="_blank" rel="noreferrer">阅读完整 README</a></div><p>如果书童对你有用，欢迎到 <a href="https://github.com/EthanYoQ/Pagekin" target="_blank" rel="noreferrer">GitHub 点 Star</a>，支持后续维护。无需 Star 也可直接下载。</p></div></div>
       </article>
     </div>
   </main>
