@@ -20,6 +20,7 @@
     .watch-copy details { margin: .8rem 0; padding: .9rem 1rem; border: 1px solid var(--line); border-radius: 14px; }
     .watch-copy summary { cursor: pointer; }
     .sample-check { padding-left: 1.1rem; border-left: 3px solid var(--line); }
+    .continuity-checklist { box-sizing: border-box; display: block; width: 100%; padding: 1rem; border: 1px solid var(--line); border-radius: 16px; background: var(--snow); color: var(--navy); font: inherit; line-height: 1.6; resize: vertical; }
   </style>
 </head>
 <body>
@@ -35,8 +36,25 @@
       <div class="watch-copy">
         <p class="project-breadcrumb"><a href="/">Ethan AI Lab</a> / <a href="/en/ai-novel-writer/">Pagekin</a> / Chapter continuity</p>
         <h1>How to check novel chapter continuity in Pagekin</h1>
-        <p>At the end of Chapter 1, Mara has the brass key and Ivo does not know about it. Chapter 2 opens at the right time and place, but its draft says Ivo had the key all along. Walk through that contradiction from the finalized chapter to the draft review and revision.</p>
-        <p>Tested in <a href="https://github.com/EthanYoQ/Pagekin/releases/tag/v1.4.0">Pagekin 1.4.0</a> on Windows with the English interface. Grayglass is an original two-chapter sample created for this guide. To follow along, <a href="/en/ai-novel-writer/#install">install Pagekin and configure a model</a>, then choose English in <strong>Settings → Appearance → Interface language</strong>. Model output can vary.</p>
+        <p>Before you revise a new chapter, compare its draft with a fact established in the previous one. This original <em>Grayglass</em> sample was tested in <a href="https://github.com/EthanYoQ/Pagekin/releases/tag/v1.4.0">Pagekin 1.4.0</a> on Windows with the English interface.</p>
+        <h2 id="comparison">Compare the key handoff across two chapters</h2>
+        <p class="sample-check"><strong>Chapter 1 · finalized</strong><br>“Mara put the key in her coat pocket and left the receipt on the counter.” Later she shows Ivo her empty hands.</p>
+        <p class="sample-check"><strong>Chapter 2 · draft before review</strong><br>“Ivo handed her the brass key. He had kept it since the ferry ride.” No handoff in Chapter 1 supports this.</p>
+        <p class="sample-check"><strong>Chapter 2 · saved revision</strong><br>“Mara took the brass key out of her coat pocket.” Chapter 2 is still awaiting finalization.</p>
+        <p>Both versions of Chapter 2 open at the archive at dawn on Wednesday. The revision restores who has the key and keeps the opening intact.</p>
+        <p>Read the complete texts: <a href="chapter-1.txt" download>Chapter 1, finalized</a> · <a href="chapter-2-draft.txt" download>Chapter 2, before review</a> · <a href="chapter-2-revised.txt" download>Chapter 2, after the merge</a>.</p>
+        <h2 id="checklist"><label for="continuity-checklist">Copy a chapter continuity checklist</label></h2>
+        <p>Select the text below and copy it into your notes. Fill it in for each story fact that matters to the next scene.</p>
+        <textarea id="continuity-checklist" class="continuity-checklist" rows="8" readonly>Chapter __ → Chapter __
+
+Established fact and source passage: __________
+Who has the item or knows the fact? __________
+When and where does the next scene begin? __________
+Which line in the new draft conflicts with the source? __________
+What should I change, and what should I keep? __________
+What does the saved revision say? __________</textarea>
+        <h2 id="walkthrough">Follow the Pagekin walkthrough</h2>
+        <p>To follow along, <a href="/en/ai-novel-writer/#install">install Pagekin and configure a model</a>, then choose English in <strong>Settings → Appearance → Interface language</strong>. Model output can vary.</p>
         <nav aria-label="Tutorial steps">
           <ol>
             <li><a href="#finalize">Confirm what happened in Chapter 1</a></li>
@@ -64,7 +82,6 @@
         <figure class="watch-tutorial"><a href="/assets/shots/pagekin-continuity-1.4.0/03-context.webp"><img src="/assets/shots/pagekin-continuity-1.4.0/03-context.webp" alt="The generated Chapter 2 begins at dawn on Wednesday and describes the notched brass key against Mara’s palm" width="1442" height="901" loading="lazy"></a><figcaption>The generated draft carries over the opening time, key holder, and notch without those details in the Chapter 2 blueprint.</figcaption></figure>
         <h2 id="review">3. Check the draft for contradictions</h2>
         <p>For the review test, replace the generated text with <a href="chapter-2-draft.txt" download>the original Chapter 2 draft</a>. Paste the story text below the heading into the editor. Save with <kbd>Ctrl</kbd>+<kbd>S</kbd> on Windows, then select <strong>AI review</strong>.</p>
-        <p class="sample-check"><strong>Draft passage:</strong> “Ivo handed her the brass key. He had kept it since the ferry ride.”</p>
         <p>The scene still opens at the right time. The contradiction is the claimed handoff: Chapter 1 showed Mara taking the key and hiding it from Ivo. Check custody, character knowledge and timing separately so a valid scene detail does not get rewritten along with the error.</p>
         <p>In our run, the review marked the key handoff as a <strong>Critical issue · plot continuity</strong>. It pointed back to Mara pocketing the key, showing Ivo empty hands, and still holding the key during the climb. The report also said goal acceptance was not performed: the test blueprint had no chapter key events configured. Treat that as an unverified check, not a story error to rewrite.</p>
         <figure class="watch-tutorial"><a href="/assets/shots/pagekin-continuity-1.4.0/04-review.webp"><img src="/assets/shots/pagekin-continuity-1.4.0/04-review.webp" alt="The review flags Ivo handing over the key and cites three actions Mara took in the finalized Chapter 1" width="1442" height="901" loading="lazy"></a><figcaption>Read the flagged line and compare the report’s explanation with Chapter 1. The report did not give the draft an overall pass.</figcaption></figure>
@@ -80,7 +97,6 @@
         <figure class="watch-tutorial"><a href="/assets/shots/pagekin-continuity-1.4.0/07-edit.webp"><img src="/assets/shots/pagekin-continuity-1.4.0/07-edit.webp" alt="The merge shows four changes, with one paragraph selected from the revision and one edited by hand" width="1442" height="901" loading="lazy"></a><figcaption>The merge lets you use the original, use the revision, or edit the paragraph yourself.</figcaption></figure>
         <p>Select <strong>Finish merge</strong>. In the saved <strong>Revised v1</strong>, Mara has the key. The repeated “shook” and the last line (“The envelope was lighter than the trouble it had brought.”) are still there. Chapter 1 stays finalized. Chapter 2 is ready to finalize after the author’s last read.</p>
         <figure class="watch-tutorial"><a href="/assets/shots/pagekin-continuity-1.4.0/08-saved.webp"><img src="/assets/shots/pagekin-continuity-1.4.0/08-saved.webp" alt="The saved Revised v1 shows Ivo going toward the desk and Mara taking the key from her coat" width="1442" height="901" loading="lazy"></a><figcaption>The saved draft shows the selected merge. Chapter 2 is still at the author’s finalization step.</figcaption></figure>
-        <p>Compare all three versions: <a href="chapter-1.txt" download>Chapter 1, finalized</a> · <a href="chapter-2-draft.txt" download>Chapter 2, before review</a> · <a href="chapter-2-revised.txt" download>Chapter 2, after the merge</a>.</p>
         <div class="watch-actions"><a class="button button-primary" href="/en/ai-novel-writer/">Explore Pagekin</a><a class="button button-ghost" href="https://github.com/EthanYoQ/Pagekin/releases/latest">Download the app</a></div>
         <p><small>Published by EthanYoQ. Prepared with AI assistance using an isolated sample project and screenshots from the actual app.</small></p>
       </div>
