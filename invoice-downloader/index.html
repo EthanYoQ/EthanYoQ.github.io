@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="/home.css?v=20261002-img2">
   <link rel="stylesheet" href="/project.css?v=20261002-img2">
   <script>document.documentElement.classList.add("js")</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"InvoiceFlowAI","softwareVersion":"2026.07.29.1","applicationCategory":"BusinessApplication","operatingSystem":"Windows, macOS","url":"https://www.orz.md/invoice-downloader/","downloadUrl":"https://github.com/EthanYoQ/Invoice-Downloader/releases/latest","codeRepository":"https://github.com/EthanYoQ/Invoice-Downloader","license":"https://www.apache.org/licenses/LICENSE-2.0","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"featureList":"批量邮箱发票收集, PDF/OFD/XML识别, 智能去重与分类归档, Excel报销明细汇总, 纯本地隐私安全"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"InvoiceFlowAI","softwareVersion":"2026.07.29.1","applicationCategory":"BusinessApplication","operatingSystem":"Windows, macOS","url":"https://www.orz.md/invoice-downloader/","downloadUrl":"https://github.com/EthanYoQ/Invoice-Downloader/releases/latest","codeRepository":"https://github.com/EthanYoQ/Invoice-Downloader","license":"https://www.apache.org/licenses/LICENSE-2.0","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"featureList":"批量邮箱发票收集, PDF/OFD/XML识别, 智能去重与分类归档, Excel报销明细汇总, 本地归档（识别可调用智谱 GLM）"}</script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -32,7 +32,7 @@
         "name": "为什么选择 InvoiceFlowAI 而不是网页版发票管理系统？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "隐私与安全性是首要考量。发票包含纳税人识别号、购买明细、银行账号等高度敏感财务隐私。InvoiceFlowAI 是一款纯本地运行的桌面工具，直接在本地解析 PDF 与邮件附件，绝不把用户发票数据上传到任何第三方商业服务器。"
+          "text": "桌面版在本机处理邮件和保存发票归档。常规邮箱扫描需要智谱 GLM API Key。根据识别路径，应用可能将发票图片（含 PDF 渲染页）、发票文字（含 OCR 结果或 PDF 内嵌文本），或两者都发送给智谱 GLM，用于识别和字段提取。"
         }
       },
       {
@@ -40,7 +40,7 @@
         "name": "支持哪些类型的发票和邮箱协议？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "支持国内常见的增值税电子普通发票、专用发票、全电发票（PDF 及 OFD 格式）。支持标准 IMAP 协议（QQ 邮箱、网易 163 邮箱、企业微信邮箱、Gmail、Outlook 等）。"
+          "text": "支持国内常见的增值税电子普通发票、专用发票、全电发票（PDF 及 OFD 格式）。当前桌面版仅支持通过 IMAP 连接 QQ 邮箱（@qq.com）和网易 163 邮箱（@163.com），需使用邮箱授权码。"
         }
       },
       {
@@ -102,8 +102,8 @@
         </section>
 
         <section class="readme-section reveal" id="privacy">
-          <div data-copy="zh"><p class="readme-eyebrow">PRIVACY AND SECURITY</p><h2>邮件与归档留在本机；模型只接收识别所需的发票内容。</h2><table class="readme-table"><thead><tr><th>数据</th><th>处理方式</th></tr></thead><tbody><tr><td>邮件与发票文件</td><td>本地读取、下载、分类与归档</td></tr><tr><td>邮箱授权码</td><td>Windows 使用 DPAPI；macOS 使用 Keychain</td></tr><tr><td>GLM 请求</td><td>仅发送用于识别的发票图片，不发送邮件原文</td></tr><tr><td>邮箱权限</td><td>通过 IMAP 只读访问，不修改邮箱内容</td></tr></tbody></table><p>启用 GLM OCR 或视觉识别时，发票图片会发送至用户配置的智谱 AI 服务并受其隐私政策约束。</p></div>
-          <div data-copy="en" hidden><p class="readme-eyebrow">PRIVACY AND SECURITY</p><h2>Email and archives stay local; the model receives only invoice content needed for extraction.</h2><table class="readme-table"><thead><tr><th>Data</th><th>Handling</th></tr></thead><tbody><tr><td>Email and invoice files</td><td>Read, download, classify, and archive locally</td></tr><tr><td>Mailbox authorization code</td><td>Windows DPAPI or macOS Keychain</td></tr><tr><td>GLM request</td><td>Invoice images only; email body text is not sent</td></tr><tr><td>Mailbox access</td><td>Read-only IMAP with no mailbox modification</td></tr></tbody></table><p>When GLM OCR or vision is enabled, invoice images are sent to the user-configured Zhipu AI service under that provider's privacy policy.</p></div>
+          <div data-copy="zh"><p class="readme-eyebrow">PRIVACY AND SECURITY</p><h2>邮件处理与归档在本机；识别可能调用智谱 GLM。</h2><table class="readme-table"><thead><tr><th>数据</th><th>处理方式</th></tr></thead><tbody><tr><td>邮件与发票文件</td><td>本地读取、下载、分类与归档</td></tr><tr><td>邮箱授权码</td><td>Windows 使用 DPAPI；macOS 使用 Keychain</td></tr><tr><td>GLM 请求</td><td>按识别路径可能发送发票图片、发票文字或两者</td></tr><tr><td>邮箱权限</td><td>通过 IMAP 只读访问，不修改邮箱内容</td></tr></tbody></table><p>桌面版在本机处理邮件和保存发票归档。常规邮箱扫描需要智谱 GLM API Key。根据识别路径，应用可能将发票图片（含 PDF 渲染页）、发票文字（含 OCR 结果或 PDF 内嵌文本），或两者都发送给智谱 GLM，用于识别和字段提取。发送给智谱的内容受其隐私政策约束。</p></div>
+          <div data-copy="en" hidden><p class="readme-eyebrow">PRIVACY AND SECURITY</p><h2>Mail processing and archiving are local. Extraction may use Zhipu GLM.</h2><table class="readme-table"><thead><tr><th>Data</th><th>Handling</th></tr></thead><tbody><tr><td>Email and invoice files</td><td>Read, download, classify, and archive locally</td></tr><tr><td>Mailbox authorization code</td><td>Windows DPAPI or macOS Keychain</td></tr><tr><td>GLM request</td><td>May contain invoice images, invoice text, or both</td></tr><tr><td>Mailbox access</td><td>Read-only IMAP with no mailbox modification</td></tr></tbody></table><p>The desktop app processes mail and stores invoice archives locally. A Zhipu GLM API key is required for regular mailbox scans. Depending on the extraction path, the app may send invoice images (including rendered PDF pages), invoice text (including OCR results or embedded PDF text), or both to Zhipu GLM for recognition and field extraction. Data sent to Zhipu is subject to its privacy policy.</p></div>
         </section>
 
         <section class="readme-section reveal" id="install">
@@ -124,13 +124,13 @@
               <details class="faq-item" open>
                 <summary>为什么选择 InvoiceFlowAI 而不是网页版发票管理系统？</summary>
                 <div class="faq-answer">
-                  <p>隐私与安全性是首要考量。发票包含纳税人识别号、购买明细、银行账号等高度敏感财务隐私。InvoiceFlowAI 是一款纯本地运行的桌面工具，直接在本地解析 PDF 与邮件附件，绝不把用户发票数据上传到任何第三方商业服务器。</p>
+                  <p>桌面版在本机处理邮件和保存发票归档。常规邮箱扫描需要智谱 GLM API Key。根据识别路径，应用可能将发票图片（含 PDF 渲染页）、发票文字（含 OCR 结果或 PDF 内嵌文本），或两者都发送给智谱 GLM，用于识别和字段提取。</p>
                 </div>
               </details>
               <details class="faq-item">
                 <summary>支持哪些类型的发票和邮箱协议？</summary>
                 <div class="faq-answer">
-                  <p>支持国内常见的增值税电子普通发票、专用发票、全电发票（PDF 及 OFD 格式）。支持标准 IMAP 协议（QQ 邮箱、网易 163 邮箱、企业微信邮箱、Gmail、Outlook 等）。</p>
+                  <p>支持国内常见的增值税电子普通发票、专用发票、全电发票（PDF 及 OFD 格式）。当前桌面版仅支持通过 IMAP 连接 QQ 邮箱（@qq.com）和网易 163 邮箱（@163.com），需使用邮箱授权码。</p>
                 </div>
               </details>
               <details class="faq-item">
@@ -148,13 +148,13 @@
               <details class="faq-item" open>
                 <summary>Why choose InvoiceFlowAI over hosted online invoice tools?</summary>
                 <div class="faq-answer">
-                  <p>Privacy is the top concern. Invoices carry sensitive financial details like tax IDs, purchased items, and bank details. InvoiceFlowAI runs completely on your local machine, parsing PDFs and attachments without transmitting private receipts to third-party clouds.</p>
+                  <p>The desktop app processes mail and stores invoice archives locally. A Zhipu GLM API key is required for regular mailbox scans. Depending on the extraction path, the app may send invoice images (including rendered PDF pages), invoice text (including OCR results or embedded PDF text), or both to Zhipu GLM for recognition and field extraction.</p>
                 </div>
               </details>
               <details class="faq-item">
                 <summary>Which invoice formats and email protocols are supported?</summary>
                 <div class="faq-answer">
-                  <p>It supports standard VAT electronic normal, special, and fully digitalized invoices (in PDF and OFD). It works with standard IMAP mailboxes including QQ Mail, NetEase 163, Enterprise WeChat, Gmail, and Outlook.</p>
+                  <p>It supports common Chinese electronic VAT invoices, including ordinary, special, and fully digital invoices in PDF and OFD. The current desktop app supports only QQ Mail (@qq.com) and NetEase 163 Mail (@163.com) over IMAP, using a mailbox authorization code.</p>
                 </div>
               </details>
               <details class="faq-item">
@@ -166,7 +166,7 @@
             </div>
           </div>
 
-          <div class="project-cta"><div data-copy="zh"><p class="readme-eyebrow">OPEN SOURCE</p><h2>先用演示流程理解边界，再处理自己的发票。</h2><p>此页依据当前 README 整理，同步至 2026-08-30。安装、邮箱配置、隐私说明和免责声明以 GitHub 原文为准。</p><div class="hero-actions"><a class="button button-primary" href="https://github.com/EthanYoQ/Invoice-Downloader/releases/latest">下载最新版本</a><a class="button button-ghost" href="https://github.com/EthanYoQ/Invoice-Downloader#readme" target="_blank" rel="noreferrer">阅读完整 README</a></div></div><div data-copy="en" hidden><p class="readme-eyebrow">OPEN SOURCE</p><h2>Understand the demonstrated flow and its boundaries before using personal invoices.</h2><p>This page is adapted from the current README and synced on August 30, 2026. GitHub remains the source of truth for installation, privacy, and disclaimers.</p><div class="hero-actions"><a class="button button-primary" href="https://github.com/EthanYoQ/Invoice-Downloader/releases/latest">Download latest release</a><a class="button button-ghost" href="https://github.com/EthanYoQ/Invoice-Downloader/blob/main/README.en.md" target="_blank" rel="noreferrer">Read full README</a></div></div></div>
+          <div class="project-cta"><div data-copy="zh"><p class="readme-eyebrow">OPEN SOURCE</p><h2>先用演示流程理解边界，再处理自己的发票。</h2><p>此页依据当前 README 整理，同步至 2026-08-30。安装、邮箱配置和免责声明见 GitHub；当前桌面版的数据处理方式见上方隐私说明。</p><div class="hero-actions"><a class="button button-primary" href="https://github.com/EthanYoQ/Invoice-Downloader/releases/latest">下载最新版本</a><a class="button button-ghost" href="https://github.com/EthanYoQ/Invoice-Downloader#readme" target="_blank" rel="noreferrer">阅读完整 README</a></div></div><div data-copy="en" hidden><p class="readme-eyebrow">OPEN SOURCE</p><h2>Understand the demonstrated flow and its boundaries before using personal invoices.</h2><p>This page is adapted from the current README and synced on August 30, 2026. See GitHub for installation, mailbox setup, and disclaimers, and the privacy section above for how the current desktop app handles data.</p><div class="hero-actions"><a class="button button-primary" href="https://github.com/EthanYoQ/Invoice-Downloader/releases/latest">Download latest release</a><a class="button button-ghost" href="https://github.com/EthanYoQ/Invoice-Downloader/blob/main/README.en.md" target="_blank" rel="noreferrer">Read full README</a></div></div></div>
         </section>
       </article>
     </div>
