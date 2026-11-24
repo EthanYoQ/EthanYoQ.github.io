@@ -140,6 +140,20 @@
 
         </section>
 
+        <section class="readme-section reveal" id="long-form-continuity">
+          <div>
+            <p class="readme-eyebrow">LONG-FORM CONTINUITY</p>
+            <h2>AI 写长篇小说时，怎么检查人物、伏笔和前后矛盾？</h2>
+            <p>在书童 Pagekin 1.5.3 的《灰灯客栈》实录里，严伯第一章已死，第三章蓝图却让他回来送账本。系统指出了出场冲突，但提示引用的是井边钥匙的情节。回到人物时间线并打开第一章原文，才能确认这一幕是写漏了，还是本来就要写成回忆。</p>
+            <ol class="workflow-list">
+              <li><strong>写下一章前，确认人物还能不能出场。</strong><span>从人物时间线回到原文，核对人物状态和事件发生的时间。</span></li>
+              <li><strong>给伏笔留一个要回收的章节。</strong><span>实录把铜钥匙的伏笔延后一章，再撤销并核对原期限。</span></li>
+              <li><strong>改完前章，再检查后面的蓝图。</strong><span>钥匙改成随身携带后，下一章仍安排人物去井边找。重新定稿后，用后续蓝图检查找出受影响的安排，再由作者决定怎么改。</span></li>
+            </ol>
+            <p><a href="https://www.bilibili.com/video/BV1NVyXznEz5/">观看 1.5.3 中文操作实录</a>。还在规划第一章时，可以先用<a href="/ai-novel-writer/chapter-blueprint/">章节大纲模板和首章蓝图实例</a>。</p>
+          </div>
+        </section>
+
         <section class="readme-section reveal" id="tutorial">
           <h2>用书童 Pagekin 写小说：从故事构思到第一章</h2>
           <p>这段 1.4.0 中文界面实录演示如何配置模型、生成故事设定和章节蓝图、写出第一章草稿，再审稿和修稿。后半段演示如何导入已有原稿并接着续写。</p>
@@ -174,7 +188,7 @@
         </section>
 
         <section class="readme-section reveal" id="install">
-          <div><p class="readme-eyebrow">INSTALL</p><h2>安装并配置模型，开始第一本书。</h2><p>当前下载版本为 v1.4.0。本页截图来自 1.3.2，界面可能与新版不同。</p><div class="note-grid"><div class="note-card"><strong>Windows x64</strong><p>下载 NSIS 安装程序。当前未代码签名，安装前请确认来源为官方 GitHub Release。</p></div><div class="note-card"><strong>macOS Apple Silicon / Intel</strong><p>分别下载 arm64 或 x64 DMG。当前未使用 Developer ID 签名且未公证。</p></div></div><pre class="code-block">ai-novel-writer-setup-&lt;version&gt;.exe&#10;ai-novel-writer-mac-arm64-&lt;version&gt;-installer.dmg&#10;ai-novel-writer-mac-x64-&lt;version&gt;-installer.dmg</pre>
+          <div><p class="readme-eyebrow">INSTALL</p><h2>安装并配置模型，开始第一本书。</h2><p>安装包以<a href="https://github.com/EthanYoQ/Pagekin/releases/latest">官方 GitHub 最新正式版</a>为准。本页入门截图来自 1.3.2，教程与实录分别标注录制版本。</p><div class="note-grid"><div class="note-card"><strong>Windows x64</strong><p>下载 NSIS 安装程序。当前未代码签名，安装前请确认来源为官方 GitHub Release。</p></div><div class="note-card"><strong>macOS Apple Silicon / Intel</strong><p>分别下载 arm64 或 x64 DMG。当前未使用 Developer ID 签名且未公证。</p></div></div><pre class="code-block">ai-novel-writer-setup-&lt;version&gt;.exe&#10;ai-novel-writer-mac-arm64-&lt;version&gt;-installer.dmg&#10;ai-novel-writer-mac-x64-&lt;version&gt;-installer.dmg</pre>
           <ol><li>从<a href="https://github.com/EthanYoQ/Pagekin/releases/latest">官方 Release</a>下载与你的系统和 Mac 芯片匹配的安装包。</li><li>安装并打开 Pagekin，在“设置”的模型配置中添加模型。云端服务按提供商要求填写 API Key、base_url 和模型名称。本地 Ollama 需先启动服务并准备模型，再填写本地地址和模型名称。</li><li>保存配置并选择可用模型。新建小说，填写故事方向并选择写作语言，再保存设定。</li></ol>
           <p>接着看<a href="#tutorial">1.4.0 写作教程</a>。如果你正在规划一章，可以用<a href="/ai-novel-writer/chapter-blueprint/">章节大纲模板与实例</a>整理本章目的和事件。</p></div>
 
